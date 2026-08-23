@@ -1,18 +1,324 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>EverGreen Videos</title>
+    <meta name="description"
+          content="Watch EverGreen Club activities, community events, and member stories.">
 
-<link rel="stylesheet"
-href="assets/css/style.css">
+    <title>EverGreen Club | Videos</title>
+
+    <link rel="icon"
+          href="assets/images/logo.svg">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================
+           VIDEO PAGE
+           ===================================== */
+
+        .video-section {
+            padding: 70px 8%;
+        }
+
+
+        .video-intro {
+            max-width: 750px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+
+        .video-intro h2 {
+            color: #0B4F9C;
+            margin-bottom: 15px;
+        }
+
+
+        .video-intro p {
+            color: #68737D;
+        }
+
+
+        /* =====================================
+           VIDEO GRID
+           ===================================== */
+
+        .video-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+        .video-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid #E5E9EF;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .video-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.14);
+
+        }
+
+
+        /* =====================================
+           VIDEO PLAYER
+           ===================================== */
+
+        .video-container {
+
+            background: #101820;
+
+            aspect-ratio: 16 / 9;
+
+        }
+
+
+        .video-container video {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+        }
+
+
+        /* =====================================
+           VIDEO INFORMATION
+           ===================================== */
+
+        .video-info {
+            padding: 25px;
+        }
+
+
+        .video-category {
+
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            background: #EAF3FC;
+
+            color: #0B4F9C;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        .video-info h3 {
+
+            color: #0B4F9C;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .video-info p {
+
+            color: #68737D;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================
+           FEATURED VIDEO
+           ===================================== */
+
+        .featured-video {
+
+            max-width: 900px;
+
+            margin: 0 auto 60px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.12);
+
+        }
+
+
+        .featured-video .video-container {
+            aspect-ratio: 16 / 9;
+        }
+
+
+        .featured-info {
+
+            padding: 30px;
+
+            text-align: center;
+
+        }
+
+
+        .featured-info h2 {
+
+            color: #0B4F9C;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .featured-info p {
+            color: #68737D;
+        }
+
+
+        /* =====================================
+           DARK MODE
+           ===================================== */
+
+        body.dark .video-intro h2 {
+            color: #8FC5FF;
+        }
+
+
+        body.dark .video-intro p {
+            color: #B5C0C9;
+        }
+
+
+        body.dark .video-card {
+
+            background: #18232D;
+
+            border-color: #2D3A45;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25);
+
+        }
+
+
+        body.dark .video-info h3 {
+            color: #8FC5FF;
+        }
+
+
+        body.dark .video-info p {
+            color: #B5C0C9;
+        }
+
+
+        body.dark .video-category {
+
+            background: #243B50;
+
+            color: #8FC5FF;
+
+        }
+
+
+        body.dark .featured-video {
+
+            background: #18232D;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.30);
+
+        }
+
+
+        body.dark .featured-info h2 {
+            color: #8FC5FF;
+        }
+
+
+        body.dark .featured-info p {
+            color: #B5C0C9;
+        }
+
+
+        /* =====================================
+           MOBILE
+           ===================================== */
+
+        @media (max-width: 650px) {
+
+            .video-section {
+                padding: 50px 6%;
+            }
+
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .video-info {
+                padding: 22px;
+            }
+
+
+            .featured-info {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -20,121 +326,359 @@ href="assets/css/style.css">
 <body>
 
 
-<nav class="navbar">
+<!-- =========================================
+     NAVIGATION
+     ========================================= -->
 
-<div class="logo">
-<img src="assets/images/logo.svg">
-</div>
+<header>
 
+    <nav class="navbar">
 
-<ul class="nav-links">
+        <a href="index.html"
+           class="logo">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="events.html">Events</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="videos.html">Videos</a></li>
-<li><a href="members.html">Members</a></li>
-<li><a href="contact.html">Contact</a></li>
+            <img
+                src="assets/images/logo.svg"
+                alt="EverGreen Club Logo">
 
-</ul>
-
-</nav>
+        </a>
 
 
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="events.html">
+                    Events
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="videos.html">
+                    Videos
+                </a>
+            </li>
+
+            <li>
+                <a href="members.html">
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- Navigation Buttons -->
+
+        <div class="nav-actions">
+
+            <button
+                id="darkModeButton"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                🌙
+
+            </button>
+
+
+            <button
+                id="menuButton"
+                aria-label="Open navigation menu"
+                title="Open navigation menu">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     PAGE BANNER
+     ========================================= -->
 
 <section class="page-banner">
 
-<h1>
-Video Gallery
-</h1>
+    <h1>
+        Video Gallery
+    </h1>
 
-<p>
-Watch EverGreen activities and memories
-</p>
-
-</section>
-
-
-
-<section class="cards">
-
-
-<div class="card">
-
-<h3>
-Club Introduction
-</h3>
-
-
-<video controls width="100%">
-
-<source src="assets/videos/intro.mp4"
-type="video/mp4">
-
-Your browser does not support video.
-
-</video>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Community Event
-</h3>
-
-
-<video controls width="100%">
-
-<source src="assets/videos/event.mp4"
-type="video/mp4">
-
-</video>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Member Stories
-</h3>
-
-
-<video controls width="100%">
-
-<source src="assets/videos/member-story.mp4"
-type="video/mp4">
-
-</video>
-
-
-</div>
-
+    <p>
+        Watch EverGreen activities and memories
+    </p>
 
 </section>
 
 
 
+<!-- =========================================
+     VIDEO SECTION
+     ========================================= -->
+
+<section class="video-section">
+
+
+    <div class="video-intro">
+
+        <h2>
+            Stories in Motion
+        </h2>
+
+        <p>
+
+            Explore videos from EverGreen activities,
+            community events, and the people who make
+            our club special.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FEATURED VIDEO
+         ===================================== -->
+
+    <div class="featured-video">
+
+        <div class="video-container">
+
+            <video controls>
+
+                <source
+                    src="assets/videos/intro.mp4"
+                    type="video/mp4">
+
+                Your browser does not support
+                HTML5 video.
+
+            </video>
+
+        </div>
+
+
+        <div class="featured-info">
+
+            <span class="video-category">
+                Featured
+            </span>
+
+
+            <h2>
+                Club Introduction
+            </h2>
+
+
+            <p>
+
+                Learn more about EverGreen Club,
+                our community, and the people
+                who make it special.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         MORE VIDEOS
+         ===================================== -->
+
+    <div class="video-grid">
+
+
+        <!-- Community Event -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <video controls preload="metadata">
+
+                    <source
+                        src="assets/videos/event.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support
+                    HTML5 video.
+
+                </video>
+
+            </div>
+
+
+            <div class="video-info">
+
+                <span class="video-category">
+                    Community
+                </span>
+
+
+                <h3>
+                    Community Event
+                </h3>
+
+
+                <p>
+
+                    Take a look at one of our
+                    community events and see
+                    EverGreen members in action.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Member Stories -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <video controls preload="metadata">
+
+                    <source
+                        src="assets/videos/member-story.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support
+                    HTML5 video.
+
+                </video>
+
+            </div>
+
+
+            <div class="video-info">
+
+                <span class="video-category">
+                    Members
+                </span>
+
+
+                <h3>
+                    Member Stories
+                </h3>
+
+
+                <p>
+
+                    Hear from EverGreen members
+                    and learn what the club means
+                    to our community.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CALL TO ACTION
+     ========================================= -->
+
+<section class="mission">
+
+    <h2>
+        Have a Story to Share?
+    </h2>
+
+
+    <p>
+
+        If you have a video from an EverGreen
+        activity or event that you'd like to
+        share, we'd love to hear from you.
+
+    </p>
+
+
+    <a
+        class="btn primary"
+        href="contact.html">
+
+        Contact Us
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
 
 <footer>
 
-<img src="assets/images/logo.svg"
-width="180">
+    <img
+        src="assets/images/logo.svg"
+        width="180"
+        alt="EverGreen Club Logo">
 
-<p>
-© 2026 EverGreen Club
-</p>
+
+    <p>
+
+        © 2026 EverGreen Club.
+        All Rights Reserved.
+
+    </p>
 
 </footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/darkmode.js"></script>
 
 
 </body>
