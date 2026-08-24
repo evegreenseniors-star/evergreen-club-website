@@ -1,6 +1,7 @@
 /* =========================================
    EVERGREEN CLUB
    Main Website Styles
+   Compact Version
    ========================================= */
 
 
@@ -97,7 +98,6 @@ a {
 button {
 
     font-family: inherit;
-
 }
 
 
@@ -119,7 +119,7 @@ button {
 
     align-items: center;
 
-    padding: 12px 5%;
+    padding: 10px 5%;
 
     background: rgba(255, 255, 255, 0.96);
 
@@ -132,18 +132,19 @@ button {
 }
 
 
-/* Logo */
+/* =========================================
+   LOGO
+   ========================================= */
 
 .logo {
 
     display: inline-block;
-
 }
 
 
 .logo img {
 
-    width: 190px;
+    width: 180px;
 
     transition:
         transform 0.3s ease;
@@ -153,11 +154,12 @@ button {
 .logo img:hover {
 
     transform: scale(1.03);
-
 }
 
 
-/* Navigation links */
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
 
 .nav-links {
 
@@ -165,10 +167,9 @@ button {
 
     align-items: center;
 
-    gap: 28px;
+    gap: 25px;
 
     list-style: none;
-
 }
 
 
@@ -182,8 +183,7 @@ button {
 
     font-weight: 600;
 
-    padding: 8px 0;
-
+    padding: 6px 0;
 }
 
 
@@ -207,21 +207,78 @@ button {
 
     transition:
         width 0.3s ease;
-
 }
 
 
 .nav-links a:hover::after {
 
     width: 100%;
-
 }
 
 
 .nav-links a:hover {
 
     color: var(--blue-dark);
+}
 
+
+/* =========================================
+   NAVIGATION ACTIONS
+   ========================================= */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   DARK MODE BUTTON
+   ========================================= */
+
+#darkModeButton {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+#darkModeButton:hover {
+
+    background: var(--blue-light);
+
+    transform: scale(1.08);
+}
+
+
+body.dark #darkModeButton:hover {
+
+    background: #263440;
 }
 
 
@@ -242,7 +299,6 @@ button {
     color: var(--blue);
 
     cursor: pointer;
-
 }
 
 
@@ -254,22 +310,15 @@ button {
 
     position: relative;
 
-    min-height: 80vh;
+    min-height: 75vh;
 
     background:
-
         linear-gradient(
-
             120deg,
-
             rgba(11, 79, 156, 0.88),
-
             rgba(11, 79, 156, 0.60),
-
             rgba(212, 175, 55, 0.45)
-
         ),
-
         url("../images/hero.jpg");
 
     background-size: cover;
@@ -301,19 +350,13 @@ button {
     inset: 0;
 
     background:
-
         radial-gradient(
-
             circle at center,
-
             transparent 20%,
-
             rgba(0, 0, 0, 0.15)
-
         );
 
     pointer-events: none;
-
 }
 
 
@@ -322,13 +365,13 @@ button {
     position: relative;
 
     z-index: 1;
-
 }
 
 
 .hero h1 {
 
-    font-size: clamp(42px, 7vw, 68px);
+    font-size:
+        clamp(42px, 7vw, 68px);
 
     font-weight: 700;
 
@@ -344,9 +387,10 @@ button {
 
 .hero h2 {
 
-    margin: 20px 0;
+    margin: 15px 0;
 
-    font-size: clamp(20px, 3vw, 30px);
+    font-size:
+        clamp(20px, 3vw, 30px);
 
     font-weight: 400;
 
@@ -376,7 +420,6 @@ button {
         transform: translateY(0);
 
     }
-
 }
 
 
@@ -388,9 +431,9 @@ button {
 
     display: inline-block;
 
-    padding: 13px 30px;
+    padding: 11px 27px;
 
-    margin: 15px 8px;
+    margin: 12px 8px;
 
     border-radius: 30px;
 
@@ -399,11 +442,8 @@ button {
     font-weight: 600;
 
     transition:
-
         transform 0.3s ease,
-
         box-shadow 0.3s ease,
-
         background 0.3s ease;
 }
 
@@ -417,14 +457,15 @@ button {
 }
 
 
-/* Primary */
+/* =========================================
+   PRIMARY BUTTON
+   ========================================= */
 
 .primary {
 
     background: var(--gold);
 
     color: white;
-
 }
 
 
@@ -433,11 +474,12 @@ button {
     background: var(--gold-dark);
 
     color: white;
-
 }
 
 
-/* Secondary */
+/* =========================================
+   SECONDARY BUTTON
+   ========================================= */
 
 .secondary {
 
@@ -446,7 +488,6 @@ button {
     color: white;
 
     background: transparent;
-
 }
 
 
@@ -455,7 +496,6 @@ button {
     background: white;
 
     color: var(--blue);
-
 }
 
 
@@ -465,7 +505,7 @@ button {
 
 .mission {
 
-    padding: 90px 10%;
+    padding: 55px 10%;
 
     text-align: center;
 
@@ -477,9 +517,9 @@ button {
 
     color: var(--blue);
 
-    font-size: 36px;
+    font-size: 32px;
 
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 
@@ -491,7 +531,7 @@ button {
 
     color: var(--text-light);
 
-    font-size: 17px;
+    font-size: 16px;
 }
 
 
@@ -507,20 +547,15 @@ button {
         repeat(4, 1fr);
 
     background:
-
         linear-gradient(
-
             135deg,
-
             var(--blue),
-
             var(--blue-dark)
-
         );
 
     color: white;
 
-    padding: 60px 8%;
+    padding: 45px 8%;
 
     text-align: center;
 }
@@ -528,7 +563,7 @@ button {
 
 .stats div {
 
-    padding: 15px;
+    padding: 10px;
 
     transition:
         transform 0.3s ease;
@@ -538,13 +573,12 @@ button {
 .stats div:hover {
 
     transform: translateY(-5px);
-
 }
 
 
 .stats h2 {
 
-    font-size: 42px;
+    font-size: 40px;
 
     color: var(--gold);
 
@@ -571,9 +605,9 @@ button {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 30px;
+    gap: 24px;
 
-    padding: 70px 10%;
+    padding: 45px 10%;
 }
 
 
@@ -581,7 +615,7 @@ button {
 
     background: white;
 
-    padding: 32px;
+    padding: 26px;
 
     border-radius: var(--radius);
 
@@ -590,9 +624,7 @@ button {
     box-shadow: var(--shadow-small);
 
     transition:
-
         transform 0.35s ease,
-
         box-shadow 0.35s ease;
 }
 
@@ -610,7 +642,7 @@ button {
 
     color: var(--blue);
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 
@@ -624,7 +656,7 @@ button {
 
     display: inline-block;
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     color: var(--blue);
 
@@ -647,24 +679,18 @@ button {
 .page-banner {
 
     background:
-
         linear-gradient(
-
             135deg,
-
             var(--blue),
-
             var(--blue-dark),
-
             var(--gold)
-
         );
 
     color: white;
 
     text-align: center;
 
-    padding: 90px 20px;
+    padding: 55px 20px;
 }
 
 
@@ -673,7 +699,7 @@ button {
     font-size:
         clamp(38px, 6vw, 55px);
 
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 
     color: white;
 }
@@ -681,7 +707,7 @@ button {
 
 .page-banner p {
 
-    font-size: 20px;
+    font-size: 18px;
 
     opacity: 0.95;
 }
@@ -694,31 +720,25 @@ button {
 footer {
 
     background:
-
         linear-gradient(
-
             135deg,
-
             var(--blue-dark),
-
             #062B55
-
         );
 
     color: white;
 
     text-align: center;
 
-    padding: 50px 20px;
+    padding: 30px 20px;
 
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 
 footer img {
 
-    margin: 0 auto 20px;
-
+    margin: 0 auto 12px;
 }
 
 
@@ -750,7 +770,9 @@ body.dark {
 }
 
 
-/* Dark navigation */
+/* =========================================
+   DARK NAVIGATION
+   ========================================= */
 
 body.dark .navbar {
 
@@ -774,7 +796,9 @@ body.dark #menuButton {
 }
 
 
-/* Dark mission */
+/* =========================================
+   DARK MISSION
+   ========================================= */
 
 body.dark .mission {
 
@@ -788,7 +812,9 @@ body.dark .mission h2 {
 }
 
 
-/* Dark cards */
+/* =========================================
+   DARK CARDS
+   ========================================= */
 
 body.dark .card {
 
@@ -809,6 +835,135 @@ body.dark .card h3 {
 
 
 /* =========================================
+   DARK PAGE-SPECIFIC CARDS
+   ========================================= */
+
+body.dark .member-card,
+body.dark .contact-card,
+body.dark .video-card,
+body.dark .featured-video,
+body.dark .contact-form-section {
+
+    background: #18232D;
+
+    border-color: var(--border);
+
+    color: var(--text);
+}
+
+
+body.dark .member-card h3,
+body.dark .contact-card h3,
+body.dark .video-info h3,
+body.dark .featured-info h2,
+body.dark .contact-form-section h2 {
+
+    color: #8FC5FF;
+}
+
+
+body.dark .member-description,
+body.dark .contact-card p,
+body.dark .video-info p,
+body.dark .featured-info p,
+body.dark .contact-form-section > p {
+
+    color: var(--text-light);
+}
+
+
+/* =========================================
+   DARK FORM
+   ========================================= */
+
+body.dark .form-group label {
+
+    color: var(--text);
+}
+
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+
+    background: #101820;
+
+    color: var(--text);
+
+    border-color: var(--border);
+}
+
+
+body.dark .form-group input::placeholder,
+body.dark .form-group textarea::placeholder {
+
+    color: #8A98A5;
+}
+
+
+/* =========================================
+   DARK CONTACT LINKS
+   ========================================= */
+
+body.dark .contact-card a {
+
+    color: #8FC5FF;
+}
+
+
+body.dark .contact-card a:hover {
+
+    color: var(--gold);
+}
+
+
+/* =========================================
+   DARK VIDEO CATEGORY
+   ========================================= */
+
+body.dark .video-category {
+
+    background: #24394B;
+
+    color: #8FC5FF;
+}
+
+
+/* =========================================
+   DARK GALLERY
+   ========================================= */
+
+body.dark .gallery-item {
+
+    background: #18232D;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+body.dark .gallery-intro h2 {
+
+    color: #8FC5FF;
+}
+
+
+body.dark .gallery-intro p {
+
+    color: var(--text-light);
+}
+
+
+/* =========================================
+   DARK MOBILE MENU
+   ========================================= */
+
+body.dark .nav-links {
+
+    background: #101820;
+}
+
+
+/* =========================================
    MOBILE
    ========================================= */
 
@@ -816,22 +971,25 @@ body.dark .card h3 {
 
     .navbar {
 
-        padding: 12px 6%;
-
+        padding: 10px 6%;
     }
 
 
     .logo img {
 
         width: 160px;
-
     }
 
 
     #menuButton {
 
         display: block;
+    }
 
+
+    .nav-actions {
+
+        gap: 5px;
     }
 
 
@@ -853,13 +1011,12 @@ body.dark .card h3 {
 
         gap: 0;
 
-        padding: 15px 0;
+        padding: 10px 0;
 
         background: white;
 
         box-shadow:
             0 10px 20px rgba(0, 0, 0, 0.10);
-
     }
 
 
@@ -868,7 +1025,6 @@ body.dark .card h3 {
         width: 100%;
 
         text-align: center;
-
     }
 
 
@@ -876,15 +1032,13 @@ body.dark .card h3 {
 
         display: block;
 
-        padding: 14px;
-
+        padding: 11px;
     }
 
 
     .nav-links.show {
 
         display: flex;
-
     }
 
 
@@ -893,7 +1047,6 @@ body.dark .card h3 {
     body.dark .nav-links {
 
         background: #101820;
-
     }
 
 
@@ -902,8 +1055,7 @@ body.dark .card h3 {
         grid-template-columns:
             1fr 1fr;
 
-        padding: 45px 5%;
-
+        padding: 40px 5%;
     }
 
 
@@ -911,45 +1063,57 @@ body.dark .card h3 {
 
         grid-template-columns: 1fr;
 
-        padding: 55px 7%;
-
+        padding: 40px 7%;
     }
 
 
     .hero {
 
-        min-height: 70vh;
+        min-height: 65vh;
 
         padding: 40px 20px;
-
     }
 
 
     .hero h1 {
 
         font-size: 42px;
-
     }
 
 
     .hero h2 {
 
         font-size: 20px;
-
     }
 
 
     .mission {
 
-        padding: 65px 7%;
+        padding: 45px 7%;
+    }
 
+
+    .mission h2 {
+
+        font-size: 28px;
     }
 
 
     .page-banner {
 
-        padding: 65px 20px;
+        padding: 45px 20px;
+    }
 
+
+    .page-banner h1 {
+
+        font-size: 40px;
+    }
+
+
+    .page-banner p {
+
+        font-size: 17px;
     }
 
 }
@@ -964,21 +1128,18 @@ body.dark .card h3 {
     .stats {
 
         grid-template-columns: 1fr;
-
     }
 
 
     .stats h2 {
 
         font-size: 36px;
-
     }
 
 
     .hero h1 {
 
         font-size: 36px;
-
     }
 
 
@@ -986,10 +1147,27 @@ body.dark .card h3 {
 
         display: block;
 
-        margin: 12px auto;
+        margin: 10px auto;
 
         max-width: 240px;
+    }
 
+
+    .mission {
+
+        padding: 40px 6%;
+    }
+
+
+    .page-banner {
+
+        padding: 40px 15px;
+    }
+
+
+    .page-banner h1 {
+
+        font-size: 34px;
     }
 
 }
