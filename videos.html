@@ -30,25 +30,36 @@
            ===================================== */
 
         .video-section {
-            padding: 70px 8%;
+
+            padding: 60px 8%;
+
         }
 
 
         .video-intro {
+
             max-width: 750px;
-            margin: 0 auto 50px;
+
+            margin: 0 auto 40px;
+
             text-align: center;
+
         }
 
 
         .video-intro h2 {
+
             color: #0B4F9C;
-            margin-bottom: 15px;
+
+            margin-bottom: 10px;
+
         }
 
 
         .video-intro p {
+
             color: #68737D;
+
         }
 
 
@@ -63,7 +74,7 @@
             grid-template-columns:
                 repeat(auto-fit, minmax(300px, 1fr));
 
-            gap: 30px;
+            gap: 25px;
 
         }
 
@@ -99,7 +110,7 @@
 
 
         /* =====================================
-           VIDEO PLAYER
+           LOCAL VIDEO PLAYER
            ===================================== */
 
         .video-container {
@@ -125,11 +136,45 @@
 
 
         /* =====================================
+           YOUTUBE VIDEO
+           ===================================== */
+
+        .youtube-container {
+
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            background: #101820;
+
+            overflow: hidden;
+
+        }
+
+
+        .youtube-container iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
+
+            display: block;
+
+        }
+
+
+        /* =====================================
            VIDEO INFORMATION
            ===================================== */
 
         .video-info {
-            padding: 25px;
+
+            padding: 22px;
+
         }
 
 
@@ -137,7 +182,7 @@
 
             display: inline-block;
 
-            margin-bottom: 10px;
+            margin-bottom: 8px;
 
             padding: 5px 12px;
 
@@ -162,7 +207,7 @@
 
             color: #0B4F9C;
 
-            margin-bottom: 10px;
+            margin-bottom: 8px;
 
         }
 
@@ -184,7 +229,7 @@
 
             max-width: 900px;
 
-            margin: 0 auto 60px;
+            margin: 0 auto 50px;
 
             background: white;
 
@@ -199,13 +244,15 @@
 
 
         .featured-video .video-container {
+
             aspect-ratio: 16 / 9;
+
         }
 
 
         .featured-info {
 
-            padding: 30px;
+            padding: 25px;
 
             text-align: center;
 
@@ -216,29 +263,21 @@
 
             color: #0B4F9C;
 
-            margin-bottom: 10px;
+            margin-bottom: 8px;
 
         }
 
 
         .featured-info p {
+
             color: #68737D;
+
         }
 
 
         /* =====================================
            DARK MODE
            ===================================== */
-
-        body.dark .video-intro h2 {
-            color: #8FC5FF;
-        }
-
-
-        body.dark .video-intro p {
-            color: #B5C0C9;
-        }
-
 
         body.dark .video-card {
 
@@ -253,18 +292,22 @@
 
 
         body.dark .video-info h3 {
+
             color: #8FC5FF;
+
         }
 
 
         body.dark .video-info p {
+
             color: #B5C0C9;
+
         }
 
 
         body.dark .video-category {
 
-            background: #243B50;
+            background: #24384A;
 
             color: #8FC5FF;
 
@@ -282,12 +325,16 @@
 
 
         body.dark .featured-info h2 {
+
             color: #8FC5FF;
+
         }
 
 
         body.dark .featured-info p {
+
             color: #B5C0C9;
+
         }
 
 
@@ -298,22 +345,23 @@
         @media (max-width: 650px) {
 
             .video-section {
-                padding: 50px 6%;
+
+                padding: 45px 6%;
+
             }
 
 
             .video-grid {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .video-info {
-                padding: 22px;
-            }
 
+                padding: 20px;
 
-            .featured-info {
-                padding: 25px 20px;
             }
 
         }
@@ -476,7 +524,7 @@
             <video controls>
 
                 <source
-                    src="assets/videos/intro.MP4"
+                    src="assets/videos/intro.mp4"
                     type="video/mp4">
 
                 Your browser does not support
@@ -520,7 +568,9 @@
     <div class="video-grid">
 
 
-        <!-- Community Event -->
+        <!-- =================================
+             COMMUNITY EVENT
+             ================================= -->
 
         <div class="video-card">
 
@@ -529,7 +579,7 @@
                 <video controls preload="metadata">
 
                     <source
-                        src="assets/videos/event.MP4"
+                        src="assets/videos/event.mp4"
                         type="video/mp4">
 
                     Your browser does not support
@@ -566,7 +616,9 @@
 
 
 
-        <!-- Member Stories -->
+        <!-- =================================
+             MEMBER STORIES
+             ================================= -->
 
         <div class="video-card">
 
@@ -575,7 +627,7 @@
                 <video controls preload="metadata">
 
                     <source
-                        src="assets/videos/member-story.MP4"
+                        src="assets/videos/member-story.mp4"
                         type="video/mp4">
 
                     Your browser does not support
@@ -603,6 +655,51 @@
                     Hear from EverGreen members
                     and learn what the club means
                     to our community.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             YOUTUBE VIDEO
+             ================================= -->
+
+        <div class="video-card">
+
+            <div class="youtube-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/QK_1dwZGmNQ"
+                    title="桃花儿美桃花儿开"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="video-info">
+
+                <span class="video-category">
+                    YouTube
+                </span>
+
+
+                <h3>
+                    桃花儿美桃花儿开
+                </h3>
+
+
+                <p>
+
+                    Enjoy this beautiful video
+                    shared with the EverGreen
+                    community.
 
                 </p>
 
