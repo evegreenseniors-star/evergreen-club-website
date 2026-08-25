@@ -9,9 +9,17 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
+          data-en="Meet the EverGreen Club leadership team and members who help our community grow."
+          data-zh="认识帮助常青俱乐部社区发展的领导团队和会员。"
           content="Meet the EverGreen Club leadership team and members who help our community grow.">
 
-    <title>EverGreen Club | Members</title>
+    <title
+        data-en="EverGreen Club | Members"
+        data-zh="常青俱乐部 | 会员">
+
+        EverGreen Club | Members
+
+    </title>
 
     <link rel="icon"
           href="assets/images/logo.svg">
@@ -228,6 +236,192 @@
 
 
         /* =====================================
+           LANGUAGE SWITCHER
+           ===================================== */
+
+        .language-switcher {
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+        #languageButton {
+
+            border: none;
+
+            background: transparent;
+
+            color: inherit;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            padding: 8px 10px;
+
+            border-radius: 8px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+
+        }
+
+
+        #languageButton:hover {
+
+            background: rgba(11, 79, 156, 0.10);
+
+        }
+
+
+        .language-menu {
+
+            position: absolute;
+
+            top: calc(100% + 8px);
+
+            right: 0;
+
+            min-width: 140px;
+
+            background: white;
+
+            border: 1px solid #E5E9EF;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            padding: 6px;
+
+            display: none;
+
+            z-index: 1000;
+
+        }
+
+
+        .language-menu.show {
+
+            display: block;
+
+        }
+
+
+        .language-menu button {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 9px 12px;
+
+            border-radius: 7px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            color: #333;
+
+        }
+
+
+        .language-menu button:hover {
+
+            background: #EAF3FC;
+
+            color: #0B4F9C;
+
+        }
+
+
+        /* =====================================
+           DARK MODE
+           ===================================== */
+
+        body.dark .members-intro h2 {
+            color: #8FC5FF;
+        }
+
+
+        body.dark .members-intro p {
+            color: #B5C0C9;
+        }
+
+
+        body.dark .member-card {
+
+            background: #18232D;
+
+            border-color: #2D3A45;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25);
+
+        }
+
+
+        body.dark .member-card h3 {
+            color: #8FC5FF;
+        }
+
+
+        body.dark .member-description {
+            color: #B5C0C9;
+        }
+
+
+        body.dark .member-role {
+
+            background: #24384A;
+
+            color: #8FC5FF;
+
+        }
+
+
+        body.dark .language-menu {
+
+            background: #18232D;
+
+            border-color: #2D3A45;
+
+        }
+
+
+        body.dark .language-menu button {
+
+            color: #E5E9EF;
+
+        }
+
+
+        body.dark .language-menu button:hover {
+
+            background: #24384A;
+
+            color: #8FC5FF;
+
+        }
+
+
+        /* =====================================
            MOBILE
            ===================================== */
 
@@ -275,6 +469,9 @@
 
     <nav class="navbar">
 
+
+        <!-- LOGO -->
+
         <a href="index.html"
            class="logo">
 
@@ -285,78 +482,177 @@
         </a>
 
 
+        <!-- NAVIGATION LINKS -->
+
         <ul class="nav-links">
 
+
             <li>
-                <a href="index.html">
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-zh="首页">
+
                     Home
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="about.html">
+
+                <a href="about.html"
+                   data-en="About"
+                   data-zh="关于我们">
+
                     About
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="events.html">
+
+                <a href="events.html"
+                   data-en="Events"
+                   data-zh="活动">
+
                     Events
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="gallery.html">
+
+                <a href="gallery.html"
+                   data-en="Gallery"
+                   data-zh="相册">
+
                     Gallery
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="videos.html">
+
+                <a href="videos.html"
+                   data-en="Videos"
+                   data-zh="视频">
+
                     Videos
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="members.html">
+
+                <a href="members.html"
+                   data-en="Members"
+                   data-zh="会员">
+
                     Members
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="contact.html">
+
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-zh="联系我们">
+
                     Contact
+
                 </a>
+
             </li>
+
 
         </ul>
 
 
         <!-- =================================
-             DARK MODE BUTTON
+             NAVIGATION ACTIONS
              ================================= -->
 
-        <button
-            id="darkModeButton"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode">
-
-            🌙
-
-        </button>
+        <div class="nav-actions">
 
 
-        <!-- =================================
-             MOBILE MENU BUTTON
-             ================================= -->
+            <!-- LANGUAGE -->
 
-        <button
-            id="menuButton"
-            aria-label="Open navigation menu">
+            <div class="language-switcher">
 
-            ☰
 
-        </button>
+                <button
+                    id="languageButton"
+                    aria-label="Select language"
+                    title="Select language">
+
+                    🌐 English
+
+                </button>
+
+
+                <div
+                    id="languageMenu"
+                    class="language-menu">
+
+
+                    <button
+                        id="englishButton">
+
+                        🇺🇸 English
+
+                    </button>
+
+
+                    <button
+                        id="chineseButton">
+
+                        🇨🇳 中文
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- DARK MODE -->
+
+            <button
+                id="darkModeButton"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+
+                🌙
+
+            </button>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                id="menuButton"
+                aria-label="Open navigation menu">
+
+                ☰
+
+            </button>
+
+
+        </div>
 
     </nav>
 
@@ -370,14 +666,24 @@
 
 <section class="page-banner">
 
-    <h1>
+
+    <h1
+        data-en="Our Team"
+        data-zh="我们的团队">
+
         Our Team
+
     </h1>
 
 
-    <p>
+    <p
+        data-en="Meet the people who help EverGreen grow"
+        data-zh="认识帮助常青俱乐部发展的成员">
+
         Meet the people who help EverGreen grow
+
     </p>
+
 
 </section>
 
@@ -392,18 +698,26 @@
 
     <div class="members-intro">
 
-        <h2>
+
+        <h2
+            data-en="Our Leadership Team"
+            data-zh="我们的领导团队">
+
             Our Leadership Team
+
         </h2>
 
 
-        <p>
+        <p
+            data-en="Our dedicated leaders help organize activities, support members, and strengthen our community."
+            data-zh="我们敬业的领导团队帮助组织活动、支持会员并加强我们的社区。">
 
             Our dedicated leaders help organize
             activities, support members, and
             strengthen our community.
 
         </p>
+
 
     </div>
 
@@ -426,8 +740,13 @@
                 loading="lazy">
 
 
-            <span class="member-role">
+            <span
+                class="member-role"
+                data-en="President"
+                data-zh="会长">
+
                 President
+
             </span>
 
 
@@ -436,7 +755,10 @@
             </h3>
 
 
-            <p class="member-description">
+            <p
+                class="member-description"
+                data-en="Leading club activities and community programs while helping guide the EverGreen community."
+                data-zh="负责领导俱乐部活动和社区项目，并协助指导常青俱乐部社区。">
 
                 Leading club activities and
                 community programs while helping
@@ -463,8 +785,13 @@
                 loading="lazy">
 
 
-            <span class="member-role">
+            <span
+                class="member-role"
+                data-en="Vice President"
+                data-zh="副会长">
+
                 Vice President
+
             </span>
 
 
@@ -473,7 +800,10 @@
             </h3>
 
 
-            <p class="member-description">
+            <p
+                class="member-description"
+                data-en="Supporting members and organizing events that bring the community together."
+                data-zh="支持会员并组织各种活动，让社区成员更加紧密地联系在一起。">
 
                 Supporting members and organizing
                 events that bring the community
@@ -500,8 +830,13 @@
                 loading="lazy">
 
 
-            <span class="member-role">
+            <span
+                class="member-role"
+                data-en="Secretary"
+                data-zh="秘书">
+
                 Secretary
+
             </span>
 
 
@@ -510,7 +845,10 @@
             </h3>
 
 
-            <p class="member-description">
+            <p
+                class="member-description"
+                data-en="Managing communications, records, and important club information."
+                data-zh="负责管理沟通、记录以及重要的俱乐部信息。">
 
                 Managing communications, records,
                 and important club information.
@@ -533,12 +871,19 @@
 
 <section class="mission">
 
-    <h2>
+
+    <h2
+        data-en="Want to Get Involved?"
+        data-zh="想参与进来吗？">
+
         Want to Get Involved?
+
     </h2>
 
 
-    <p>
+    <p
+        data-en="EverGreen is always looking for members who want to participate, volunteer, and help make our community stronger."
+        data-zh="常青俱乐部欢迎愿意参与活动、参加志愿服务并帮助社区变得更加美好的会员。">
 
         EverGreen is always looking for members
         who want to participate, volunteer,
@@ -549,11 +894,14 @@
 
     <a
         class="btn primary"
-        href="contact.html">
+        href="contact.html"
+        data-en="Contact Us"
+        data-zh="联系我们">
 
         Contact Us
 
     </a>
+
 
 </section>
 
@@ -565,18 +913,22 @@
 
 <footer>
 
+
     <img
         src="assets/images/logo.svg"
         width="180"
         alt="EverGreen Club Logo">
 
 
-    <p>
+    <p
+        data-en="© 2026 EverGreen Club. All Rights Reserved."
+        data-zh="© 2026 常青俱乐部。版权所有。">
 
         © 2026 EverGreen Club.
         All Rights Reserved.
 
     </p>
+
 
 </footer>
 
@@ -587,6 +939,10 @@
      ========================================= -->
 
 <script src="assets/js/main.js"></script>
+
+<script src="assets/js/darkmode.js"></script>
+
+<script src="assets/js/language.js"></script>
 
 
 </body>

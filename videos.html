@@ -9,9 +9,17 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
+          data-en="Watch EverGreen Club activities, community events, and member stories."
+          data-zh="观看常青俱乐部的活动、社区活动以及会员故事。"
           content="Watch EverGreen Club activities, community events, and member stories.">
 
-    <title>EverGreen Club | Videos</title>
+    <title
+        data-en="EverGreen Club | Videos"
+        data-zh="常青俱乐部 | 视频">
+
+        EverGreen Club | Videos
+
+    </title>
 
     <link rel="icon"
           href="assets/images/logo.svg">
@@ -276,6 +284,120 @@
 
 
         /* =====================================
+           LANGUAGE SWITCHER
+           ===================================== */
+
+        .language-switcher {
+
+            position: relative;
+
+        }
+
+
+        #languageButton {
+
+            border: none;
+
+            background: transparent;
+
+            color: inherit;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            padding: 8px 10px;
+
+            border-radius: 8px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+
+        }
+
+
+        #languageButton:hover {
+
+            background: rgba(11, 79, 156, 0.10);
+
+        }
+
+
+        .language-menu {
+
+            position: absolute;
+
+            top: calc(100% + 8px);
+
+            right: 0;
+
+            min-width: 140px;
+
+            background: white;
+
+            border: 1px solid #E5E9EF;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            padding: 6px;
+
+            display: none;
+
+            z-index: 1000;
+
+        }
+
+
+        .language-menu.show {
+
+            display: block;
+
+        }
+
+
+        .language-menu button {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 9px 12px;
+
+            border-radius: 7px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            color: #333;
+
+        }
+
+
+        .language-menu button:hover {
+
+            background: #EAF3FC;
+
+            color: #0B4F9C;
+
+        }
+
+
+        /* =====================================
            DARK MODE
            ===================================== */
 
@@ -339,6 +461,35 @@
 
 
         /* =====================================
+           LANGUAGE DARK MODE
+           ===================================== */
+
+        body.dark .language-menu {
+
+            background: #18232D;
+
+            border-color: #2D3A45;
+
+        }
+
+
+        body.dark .language-menu button {
+
+            color: #E5E9EF;
+
+        }
+
+
+        body.dark .language-menu button:hover {
+
+            background: #24384A;
+
+            color: #8FC5FF;
+
+        }
+
+
+        /* =====================================
            MOBILE
            ===================================== */
 
@@ -395,53 +546,144 @@
         <ul class="nav-links">
 
             <li>
-                <a href="index.html">
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-zh="首页">
+
                     Home
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="about.html">
+
+                <a href="about.html"
+                   data-en="About"
+                   data-zh="关于我们">
+
                     About
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="events.html">
+
+                <a href="events.html"
+                   data-en="Events"
+                   data-zh="活动">
+
                     Events
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="gallery.html">
+
+                <a href="gallery.html"
+                   data-en="Gallery"
+                   data-zh="相册">
+
                     Gallery
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="videos.html">
+
+                <a href="videos.html"
+                   data-en="Videos"
+                   data-zh="视频">
+
                     Videos
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="members.html">
+
+                <a href="members.html"
+                   data-en="Members"
+                   data-zh="会员">
+
                     Members
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="contact.html">
+
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-zh="联系我们">
+
                     Contact
+
                 </a>
+
             </li>
 
         </ul>
 
 
-        <!-- Navigation Buttons -->
+        <!-- =====================================
+             NAVIGATION ACTIONS
+             ===================================== -->
 
         <div class="nav-actions">
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-switcher">
+
+                <button
+                    id="languageButton"
+                    aria-label="Select language"
+                    title="Select language">
+
+                    🌐 English
+
+                </button>
+
+
+                <div
+                    id="languageMenu"
+                    class="language-menu">
+
+                    <button
+                        id="englishButton">
+
+                        🇺🇸 English
+
+                    </button>
+
+
+                    <button
+                        id="chineseButton">
+
+                        🇨🇳 中文
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DARK MODE -->
 
             <button
                 id="darkModeButton"
@@ -452,6 +694,8 @@
 
             </button>
 
+
+            <!-- MOBILE MENU -->
 
             <button
                 id="menuButton"
@@ -476,12 +720,21 @@
 
 <section class="page-banner">
 
-    <h1>
+    <h1
+        data-en="Video Gallery"
+        data-zh="视频相册">
+
         Video Gallery
+
     </h1>
 
-    <p>
+
+    <p
+        data-en="Watch EverGreen activities and memories"
+        data-zh="观看常青俱乐部的活动与美好回忆">
+
         Watch EverGreen activities and memories
+
     </p>
 
 </section>
@@ -497,11 +750,18 @@
 
     <div class="video-intro">
 
-        <h2>
+        <h2
+            data-en="Stories in Motion"
+            data-zh="影像故事">
+
             Stories in Motion
+
         </h2>
 
-        <p>
+
+        <p
+            data-en="Explore videos from EverGreen activities, community events, and the people who make our club special."
+            data-zh="探索常青俱乐部的活动、社区活动以及让我们的俱乐部充满活力的人们。">
 
             Explore videos from EverGreen activities,
             community events, and the people who make
@@ -521,7 +781,10 @@
 
         <div class="video-container">
 
-            <video controls>
+            <video
+                controls
+                preload="metadata"
+                playsinline>
 
                 <source
                     src="assets/videos/intro.MP4"
@@ -537,17 +800,28 @@
 
         <div class="featured-info">
 
-            <span class="video-category">
+            <span
+                class="video-category"
+                data-en="Featured"
+                data-zh="精选视频">
+
                 Featured
+
             </span>
 
 
-            <h2>
+            <h2
+                data-en="Club Introduction"
+                data-zh="俱乐部介绍">
+
                 Club Introduction
+
             </h2>
 
 
-            <p>
+            <p
+                data-en="Learn more about EverGreen Club, our community, and the people who make it special."
+                data-zh="了解更多关于常青俱乐部、我们的社区以及让俱乐部充满活力的人们。">
 
                 Learn more about EverGreen Club,
                 our community, and the people
@@ -576,7 +850,10 @@
 
             <div class="video-container">
 
-                <video controls preload="metadata">
+                <video
+                    controls
+                    preload="metadata"
+                    playsinline>
 
                     <source
                         src="assets/videos/event.MP4"
@@ -592,17 +869,28 @@
 
             <div class="video-info">
 
-                <span class="video-category">
+                <span
+                    class="video-category"
+                    data-en="Community"
+                    data-zh="社区活动">
+
                     Community
+
                 </span>
 
 
-                <h3>
+                <h3
+                    data-en="Community Event"
+                    data-zh="社区活动">
+
                     Community Event
+
                 </h3>
 
 
-                <p>
+                <p
+                    data-en="Take a look at one of our community events and see EverGreen members in action."
+                    data-zh="一起来看看我们的社区活动，感受常青会员们的精彩瞬间。">
 
                     Take a look at one of our
                     community events and see
@@ -624,7 +912,10 @@
 
             <div class="video-container">
 
-                <video controls preload="metadata">
+                <video
+                    controls
+                    preload="metadata"
+                    playsinline>
 
                     <source
                         src="assets/videos/member-story.MP4"
@@ -640,17 +931,28 @@
 
             <div class="video-info">
 
-                <span class="video-category">
+                <span
+                    class="video-category"
+                    data-en="Members"
+                    data-zh="会员">
+
                     Members
+
                 </span>
 
 
-                <h3>
+                <h3
+                    data-en="Member Stories"
+                    data-zh="会员故事">
+
                     Member Stories
+
                 </h3>
 
 
-                <p>
+                <p
+                    data-en="Hear from EverGreen members and learn what the club means to our community."
+                    data-zh="听听常青会员的故事，了解俱乐部对我们社区的意义。">
 
                     Hear from EverGreen members
                     and learn what the club means
@@ -685,17 +987,28 @@
 
             <div class="video-info">
 
-                <span class="video-category">
+                <span
+                    class="video-category"
+                    data-en="YouTube"
+                    data-zh="YouTube">
+
                     YouTube
+
                 </span>
 
 
-                <h3>
+                <h3
+                    data-en="桃花儿美桃花儿开"
+                    data-zh="桃花儿美桃花儿开">
+
                     桃花儿美桃花儿开
+
                 </h3>
 
 
-                <p>
+                <p
+                    data-en="Enjoy this beautiful video shared with the EverGreen community."
+                    data-zh="欣赏这段与常青社区分享的精彩视频。">
 
                     Enjoy this beautiful video
                     shared with the EverGreen
@@ -720,12 +1033,18 @@
 
 <section class="mission">
 
-    <h2>
+    <h2
+        data-en="Have a Story to Share?"
+        data-zh="您有故事想分享吗？">
+
         Have a Story to Share?
+
     </h2>
 
 
-    <p>
+    <p
+        data-en="If you have a video from an EverGreen activity or event that you'd like to share, we'd love to hear from you."
+        data-zh="如果您有常青活动或社区活动的视频想与大家分享，我们非常乐意听到您的故事。">
 
         If you have a video from an EverGreen
         activity or event that you'd like to
@@ -736,7 +1055,9 @@
 
     <a
         class="btn primary"
-        href="contact.html">
+        href="contact.html"
+        data-en="Contact Us"
+        data-zh="联系我们">
 
         Contact Us
 
@@ -758,7 +1079,9 @@
         alt="EverGreen Club Logo">
 
 
-    <p>
+    <p
+        data-en="© 2026 EverGreen Club. All Rights Reserved."
+        data-zh="© 2026 常青俱乐部。版权所有。">
 
         © 2026 EverGreen Club.
         All Rights Reserved.
@@ -776,6 +1099,8 @@
 <script src="assets/js/main.js"></script>
 
 <script src="assets/js/darkmode.js"></script>
+
+<script src="assets/js/language.js"></script>
 
 
 </body>

@@ -9,9 +9,17 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
+          data-en="Learn about EverGreen Club, our mission, vision, values, and community activities."
+          data-zh="了解常青俱乐部、我们的使命、愿景、价值观和社区活动。"
           content="Learn about EverGreen Club, our mission, vision, values, and community activities.">
 
-    <title>About EverGreen Club</title>
+    <title
+        data-en="About EverGreen Club"
+        data-zh="关于常青俱乐部">
+
+        About EverGreen Club
+
+    </title>
 
     <link rel="icon"
           href="assets/images/logo.svg">
@@ -21,6 +29,153 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================
+           LANGUAGE SWITCHER
+           ===================================== */
+
+        .language-switcher {
+
+            position: relative;
+
+        }
+
+
+        #languageButton {
+
+            border: none;
+
+            background: transparent;
+
+            color: inherit;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            padding: 8px 10px;
+
+            border-radius: 8px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+
+        }
+
+
+        #languageButton:hover {
+
+            background: rgba(11, 79, 156, 0.10);
+
+        }
+
+
+        .language-menu {
+
+            position: absolute;
+
+            top: calc(100% + 8px);
+
+            right: 0;
+
+            min-width: 140px;
+
+            background: white;
+
+            border: 1px solid #E5E9EF;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            padding: 6px;
+
+            display: none;
+
+            z-index: 1000;
+
+        }
+
+
+        .language-menu.show {
+
+            display: block;
+
+        }
+
+
+        .language-menu button {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 9px 12px;
+
+            border-radius: 7px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            color: #333;
+
+        }
+
+
+        .language-menu button:hover {
+
+            background: #EAF3FC;
+
+            color: #0B4F9C;
+
+        }
+
+
+        /* =====================================
+           DARK MODE LANGUAGE MENU
+           ===================================== */
+
+        body.dark .language-menu {
+
+            background: #18232D;
+
+            border-color: #2D3A45;
+
+        }
+
+
+        body.dark .language-menu button {
+
+            color: #E5E9EF;
+
+        }
+
+
+        body.dark .language-menu button:hover {
+
+            background: #24384A;
+
+            color: #8FC5FF;
+
+        }
+
+    </style>
 
 </head>
 
@@ -36,6 +191,9 @@
 
     <nav class="navbar">
 
+
+        <!-- LOGO -->
+
         <a href="index.html"
            class="logo">
 
@@ -46,56 +204,152 @@
         </a>
 
 
+        <!-- NAVIGATION LINKS -->
+
         <ul class="nav-links">
 
+
             <li>
-                <a href="index.html">
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-zh="首页">
+
                     Home
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="about.html">
+
+                <a href="about.html"
+                   data-en="About"
+                   data-zh="关于我们">
+
                     About
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="events.html">
+
+                <a href="events.html"
+                   data-en="Events"
+                   data-zh="活动">
+
                     Events
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="gallery.html">
+
+                <a href="gallery.html"
+                   data-en="Gallery"
+                   data-zh="相册">
+
                     Gallery
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="videos.html">
+
+                <a href="videos.html"
+                   data-en="Videos"
+                   data-zh="视频">
+
                     Videos
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="members.html">
+
+                <a href="members.html"
+                   data-en="Members"
+                   data-zh="会员">
+
                     Members
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="contact.html">
+
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-zh="联系我们">
+
                     Contact
+
                 </a>
+
             </li>
+
 
         </ul>
 
 
-        <!-- Navigation Buttons -->
+        <!-- NAVIGATION ACTIONS -->
 
         <div class="nav-actions">
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-switcher">
+
+
+                <button
+                    id="languageButton"
+                    aria-label="Select language"
+                    title="Select language">
+
+                    🌐 English
+
+                </button>
+
+
+                <div
+                    id="languageMenu"
+                    class="language-menu">
+
+
+                    <button
+                        id="englishButton">
+
+                        🇺🇸 English
+
+                    </button>
+
+
+                    <button
+                        id="chineseButton">
+
+                        🇨🇳 中文
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- DARK MODE -->
 
             <button
                 id="darkModeButton"
@@ -107,6 +361,8 @@
             </button>
 
 
+            <!-- MOBILE MENU -->
+
             <button
                 id="menuButton"
                 aria-label="Open navigation menu"
@@ -115,6 +371,7 @@
                 ☰
 
             </button>
+
 
         </div>
 
@@ -130,13 +387,24 @@
 
 <section class="page-banner">
 
-    <h1>
+
+    <h1
+        data-en="About EverGreen"
+        data-zh="关于常青俱乐部">
+
         About EverGreen
+
     </h1>
 
-    <p>
+
+    <p
+        data-en="Growing friendships and strengthening our community"
+        data-zh="发展友谊，共建更美好的社区">
+
         Growing friendships and strengthening our community
+
     </p>
+
 
 </section>
 
@@ -148,22 +416,42 @@
 
 <section class="mission">
 
-    <h2>
+
+    <h2
+        data-en="Our Mission"
+        data-zh="我们的使命">
+
         Our Mission
+
     </h2>
 
 
     <p>
 
-        EverGreen brings members together through
-        community activities, educational programs,
-        social events, and volunteer opportunities.
+        <span
+            data-en="EverGreen brings members together through community activities, educational programs, social events, and volunteer opportunities."
+            data-zh="常青俱乐部通过社区活动、教育项目、社交活动和志愿服务机会，将会员们聚集在一起。">
+
+            EverGreen brings members together through
+            community activities, educational programs,
+            social events, and volunteer opportunities.
+
+        </span>
+
 
         <br><br>
 
-        Our goal is to create a welcoming environment
-        where everyone can participate, contribute,
-        make meaningful connections, and grow together.
+
+        <span
+            data-en="Our goal is to create a welcoming environment where everyone can participate, contribute, make meaningful connections, and grow together."
+            data-zh="我们的目标是创造一个温馨友好的环境，让每个人都可以参与、贡献、建立有意义的联系，并共同成长。">
+
+            Our goal is to create a welcoming environment
+            where everyone can participate, contribute,
+            make meaningful connections, and grow together.
+
+        </span>
+
 
     </p>
 
@@ -178,19 +466,32 @@
 <section class="cards">
 
 
-    <!-- Vision -->
+    <!-- =====================================
+         VISION
+         ===================================== -->
 
     <div class="card">
 
+
         <div style="font-size: 40px; margin-bottom: 15px;">
+
             🌱
+
         </div>
 
-        <h3>
+
+        <h3
+            data-en="Our Vision"
+            data-zh="我们的愿景">
+
             Our Vision
+
         </h3>
 
-        <p>
+
+        <p
+            data-en="To build a connected and active community where members support one another, share experiences, and create lasting friendships."
+            data-zh="建立一个紧密而充满活力的社区，让会员彼此支持、分享经验，并建立长久的友谊。">
 
             To build a connected and active community
             where members support one another,
@@ -199,69 +500,218 @@
 
         </p>
 
+
     </div>
 
 
 
-    <!-- Values -->
+    <!-- =====================================
+         VALUES
+         ===================================== -->
 
     <div class="card">
 
+
         <div style="font-size: 40px; margin-bottom: 15px;">
+
             ❤️
+
         </div>
 
-        <h3>
+
+        <h3
+            data-en="Our Values"
+            data-zh="我们的价值观">
+
             Our Values
+
         </h3>
+
 
         <p>
 
-            <strong>Friendship</strong><br>
-            Building meaningful relationships.
+
+            <strong
+                data-en="Friendship"
+                data-zh="友谊">
+
+                Friendship
+
+            </strong>
 
             <br>
 
-            <strong>Respect</strong><br>
-            Welcoming everyone's ideas and experiences.
+
+            <span
+                data-en="Building meaningful relationships."
+                data-zh="建立有意义的人际关系。">
+
+                Building meaningful relationships.
+
+            </span>
+
+
+            <br><br>
+
+
+            <strong
+                data-en="Respect"
+                data-zh="尊重">
+
+                Respect
+
+            </strong>
 
             <br>
 
-            <strong>Service</strong><br>
-            Giving back to our community.
+
+            <span
+                data-en="Welcoming everyone's ideas and experiences."
+                data-zh="尊重并欢迎每个人的想法和经历。">
+
+                Welcoming everyone's ideas and experiences.
+
+            </span>
+
+
+            <br><br>
+
+
+            <strong
+                data-en="Service"
+                data-zh="服务">
+
+                Service
+
+            </strong>
 
             <br>
 
-            <strong>Growth</strong><br>
-            Learning and growing together.
+
+            <span
+                data-en="Giving back to our community."
+                data-zh="回馈我们的社区。">
+
+                Giving back to our community.
+
+            </span>
+
+
+            <br><br>
+
+
+            <strong
+                data-en="Growth"
+                data-zh="成长">
+
+                Growth
+
+            </strong>
+
+            <br>
+
+
+            <span
+                data-en="Learning and growing together."
+                data-zh="一起学习，共同成长。">
+
+                Learning and growing together.
+
+            </span>
+
 
         </p>
+
 
     </div>
 
 
 
-    <!-- Activities -->
+    <!-- =====================================
+         ACTIVITIES
+         ===================================== -->
 
     <div class="card">
 
+
         <div style="font-size: 40px; margin-bottom: 15px;">
+
             🤝
+
         </div>
 
-        <h3>
+
+        <h3
+            data-en="Our Activities"
+            data-zh="我们的活动">
+
             Our Activities
+
         </h3>
+
 
         <p>
 
-            Social gatherings<br>
-            Community service<br>
-            Learning events<br>
-            Club projects<br>
-            Recreational activities
+
+            <span
+                data-en="Social gatherings"
+                data-zh="社交聚会">
+
+                Social gatherings
+
+            </span>
+
+
+            <br>
+
+
+            <span
+                data-en="Community service"
+                data-zh="社区服务">
+
+                Community service
+
+            </span>
+
+
+            <br>
+
+
+            <span
+                data-en="Learning events"
+                data-zh="学习活动">
+
+                Learning events
+
+            </span>
+
+
+            <br>
+
+
+            <span
+                data-en="Club projects"
+                data-zh="俱乐部项目">
+
+                Club projects
+
+            </span>
+
+
+            <br>
+
+
+            <span
+                data-en="Recreational activities"
+                data-zh="休闲活动">
+
+                Recreational activities
+
+            </span>
+
 
         </p>
+
 
     </div>
 
@@ -276,23 +726,44 @@
 
 <section class="mission">
 
-    <h2>
+
+    <h2
+        data-en="What We Do"
+        data-zh="我们的工作">
+
         What We Do
+
     </h2>
 
 
     <p>
 
-        EverGreen provides opportunities for members
-        to stay active, meet new people, learn new
-        things, and contribute to the community.
+
+        <span
+            data-en="EverGreen provides opportunities for members to stay active, meet new people, learn new things, and contribute to the community."
+            data-zh="常青俱乐部为会员提供保持活力、认识新朋友、学习新知识以及为社区做贡献的机会。">
+
+            EverGreen provides opportunities for members
+            to stay active, meet new people, learn new
+            things, and contribute to the community.
+
+        </span>
+
 
         <br><br>
 
-        From social gatherings and educational
-        programs to volunteer projects and special
-        celebrations, there is always an opportunity
-        to connect and participate.
+
+        <span
+            data-en="From social gatherings and educational programs to volunteer projects and special celebrations, there is always an opportunity to connect and participate."
+            data-zh="从社交聚会和教育项目，到志愿服务和特别庆祝活动，总有机会让大家相聚并参与其中。">
+
+            From social gatherings and educational
+            programs to volunteer projects and special
+            celebrations, there is always an opportunity
+            to connect and participate.
+
+        </span>
+
 
     </p>
 
@@ -306,12 +777,19 @@
 
 <section class="mission">
 
-    <h2>
+
+    <h2
+        data-en="Come Grow With Us"
+        data-zh="与我们一起成长">
+
         Come Grow With Us
+
     </h2>
 
 
-    <p>
+    <p
+        data-en="We welcome new members and friends who want to become part of our community."
+        data-zh="我们欢迎希望成为社区一员的新会员和朋友们。">
 
         We welcome new members and friends who want
         to become part of our community.
@@ -321,11 +799,14 @@
 
     <a
         class="btn primary"
-        href="contact.html">
+        href="contact.html"
+        data-en="Contact Us"
+        data-zh="联系我们">
 
         Contact Us
 
     </a>
+
 
 </section>
 
@@ -337,16 +818,22 @@
 
 <footer>
 
+
     <img
         src="assets/images/logo.svg"
         width="180"
         alt="EverGreen Club Logo">
 
 
-    <p>
+    <p
+        data-en="© 2026 EverGreen Club. All Rights Reserved."
+        data-zh="© 2026 常青俱乐部。版权所有。">
+
         © 2026 EverGreen Club.
         All Rights Reserved.
+
     </p>
+
 
 </footer>
 
@@ -359,6 +846,8 @@
 <script src="assets/js/main.js"></script>
 
 <script src="assets/js/darkmode.js"></script>
+
+<script src="assets/js/language.js"></script>
 
 
 </body>

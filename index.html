@@ -9,9 +9,17 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
+          data-en="EverGreen Club - Growing Together and Building Community"
+          data-zh="常青俱乐部 - 一起成长，共建社区"
           content="EverGreen Club - Growing Together and Building Community">
 
-    <title>EverGreen Club | Growing Together</title>
+    <title
+        data-en="EverGreen Club | Growing Together"
+        data-zh="常青俱乐部 | 一起成长">
+
+        EverGreen Club | Growing Together
+
+    </title>
 
     <link rel="icon"
           href="assets/images/logo.svg">
@@ -21,6 +29,153 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================
+           LANGUAGE SWITCHER
+           ===================================== */
+
+        .language-switcher {
+
+            position: relative;
+
+        }
+
+
+        #languageButton {
+
+            border: none;
+
+            background: transparent;
+
+            color: inherit;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            padding: 8px 10px;
+
+            border-radius: 8px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+
+        }
+
+
+        #languageButton:hover {
+
+            background: rgba(11, 79, 156, 0.10);
+
+        }
+
+
+        .language-menu {
+
+            position: absolute;
+
+            top: calc(100% + 8px);
+
+            right: 0;
+
+            min-width: 140px;
+
+            background: white;
+
+            border: 1px solid #E5E9EF;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            padding: 6px;
+
+            display: none;
+
+            z-index: 1000;
+
+        }
+
+
+        .language-menu.show {
+
+            display: block;
+
+        }
+
+
+        .language-menu button {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 9px 12px;
+
+            border-radius: 7px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            color: #333;
+
+        }
+
+
+        .language-menu button:hover {
+
+            background: #EAF3FC;
+
+            color: #0B4F9C;
+
+        }
+
+
+        /* =====================================
+           DARK MODE LANGUAGE MENU
+           ===================================== */
+
+        body.dark .language-menu {
+
+            background: #18232D;
+
+            border-color: #2D3A45;
+
+        }
+
+
+        body.dark .language-menu button {
+
+            color: #E5E9EF;
+
+        }
+
+
+        body.dark .language-menu button:hover {
+
+            background: #24384A;
+
+            color: #8FC5FF;
+
+        }
+
+    </style>
 
 </head>
 
@@ -36,65 +191,168 @@
 
     <nav class="navbar">
 
+
+        <!-- LOGO -->
+
         <a href="index.html"
            class="logo">
 
-            <img src="assets/images/logo.svg"
-                 alt="EverGreen Club Logo">
+            <img
+                src="assets/images/logo.svg"
+                alt="EverGreen Club Logo">
 
         </a>
 
 
+
+        <!-- NAVIGATION LINKS -->
+
         <ul class="nav-links">
 
+
             <li>
-                <a href="index.html">
+
+                <a href="index.html"
+                   data-en="Home"
+                   data-zh="首页">
+
                     Home
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="about.html">
+
+                <a href="about.html"
+                   data-en="About"
+                   data-zh="关于我们">
+
                     About
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="events.html">
+
+                <a href="events.html"
+                   data-en="Events"
+                   data-zh="活动">
+
                     Events
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="gallery.html">
+
+                <a href="gallery.html"
+                   data-en="Gallery"
+                   data-zh="相册">
+
                     Gallery
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="videos.html">
+
+                <a href="videos.html"
+                   data-en="Videos"
+                   data-zh="视频">
+
                     Videos
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="members.html">
+
+                <a href="members.html"
+                   data-en="Members"
+                   data-zh="会员">
+
                     Members
+
                 </a>
+
             </li>
 
+
             <li>
-                <a href="contact.html">
+
+                <a href="contact.html"
+                   data-en="Contact"
+                   data-zh="联系我们">
+
                     Contact
+
                 </a>
+
             </li>
+
 
         </ul>
 
 
-        <!-- Navigation Buttons -->
+
+        <!-- NAVIGATION BUTTONS -->
 
         <div class="nav-actions">
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-switcher">
+
+
+                <button
+                    id="languageButton"
+                    aria-label="Select language"
+                    title="Select language">
+
+                    🌐 English
+
+                </button>
+
+
+                <div
+                    id="languageMenu"
+                    class="language-menu">
+
+
+                    <button
+                        id="englishButton">
+
+                        🇺🇸 English
+
+                    </button>
+
+
+                    <button
+                        id="chineseButton">
+
+                        🇨🇳 中文
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DARK MODE -->
 
             <button
                 id="darkModeButton"
@@ -106,6 +364,9 @@
             </button>
 
 
+
+            <!-- MOBILE MENU -->
+
             <button
                 id="menuButton"
                 aria-label="Open navigation menu"
@@ -114,6 +375,7 @@
                 ☰
 
             </button>
+
 
         </div>
 
@@ -129,19 +391,31 @@
 
 <section class="hero">
 
+
     <div class="hero-content">
 
-        <h1>
+
+        <h1
+            data-en="Welcome to EverGreen"
+            data-zh="欢迎来到常青俱乐部">
+
             Welcome to EverGreen
+
         </h1>
 
 
-        <h2>
+        <h2
+            data-en="Growing Together • Building Community"
+            data-zh="一起成长 • 共建社区">
+
             Growing Together • Building Community
+
         </h2>
 
 
-        <p>
+        <p
+            data-en="A place where friends connect, share experiences, discover new opportunities, and build a stronger community together."
+            data-zh="这是一个让朋友们相聚、分享经验、发现新机会，并共同建设更加美好社区的地方。">
 
             A place where friends connect,
             share experiences, discover new
@@ -151,11 +425,17 @@
         </p>
 
 
+
+        <!-- HERO BUTTONS -->
+
         <div class="hero-buttons">
+
 
             <a
                 class="btn primary"
-                href="events.html">
+                href="events.html"
+                data-en="Upcoming Events"
+                data-zh="即将举行的活动">
 
                 Upcoming Events
 
@@ -164,13 +444,17 @@
 
             <a
                 class="btn secondary"
-                href="contact.html">
+                href="contact.html"
+                data-en="Join Our Community"
+                data-zh="加入我们的社区">
 
                 Join Our Community
 
             </a>
 
+
         </div>
+
 
     </div>
 
@@ -184,12 +468,19 @@
 
 <section class="mission">
 
-    <h2>
+
+    <h2
+        data-en="Our Mission"
+        data-zh="我们的使命">
+
         Our Mission
+
     </h2>
 
 
-    <p>
+    <p
+        data-en="EverGreen is dedicated to bringing people together through activities, events, learning opportunities, friendship, and community service."
+        data-zh="常青俱乐部致力于通过活动、社区活动、学习机会、友谊和社区服务，将大家凝聚在一起。">
 
         EverGreen is dedicated to bringing people
         together through activities, events,
@@ -197,6 +488,7 @@
         and community service.
 
     </p>
+
 
 </section>
 
@@ -208,17 +500,23 @@
 
 <section class="stats">
 
+
     <div>
 
         <h2>
             250+
         </h2>
 
-        <p>
+        <p
+            data-en="Members"
+            data-zh="会员">
+
             Members
+
         </p>
 
     </div>
+
 
 
     <div>
@@ -227,11 +525,16 @@
             48
         </h2>
 
-        <p>
+        <p
+            data-en="Events"
+            data-zh="活动">
+
             Events
+
         </p>
 
     </div>
+
 
 
     <div>
@@ -240,11 +543,16 @@
             15
         </h2>
 
-        <p>
+        <p
+            data-en="Years Serving"
+            data-zh="服务年数">
+
             Years Serving
+
         </p>
 
     </div>
+
 
 
     <div>
@@ -253,11 +561,16 @@
             1200+
         </h2>
 
-        <p>
+        <p
+            data-en="Volunteer Hours"
+            data-zh="志愿服务小时">
+
             Volunteer Hours
+
         </p>
 
     </div>
+
 
 </section>
 
@@ -269,13 +582,24 @@
 
 <section class="cards">
 
+
+    <!-- UPCOMING EVENTS -->
+
     <div class="card">
 
-        <h3>
+
+        <h3
+            data-en="Upcoming Events"
+            data-zh="即将举行的活动">
+
             Upcoming Events
+
         </h3>
 
-        <p>
+
+        <p
+            data-en="Discover meetings, activities, celebrations, and community events happening throughout the year."
+            data-zh="了解全年举行的会议、活动、庆祝活动和社区活动。">
 
             Discover meetings, activities,
             celebrations, and community events
@@ -283,59 +607,95 @@
 
         </p>
 
-        <a href="events.html">
+
+        <a
+            href="events.html"
+            data-en="View Events →"
+            data-zh="查看活动 →">
 
             View Events →
 
         </a>
 
+
     </div>
 
 
 
+    <!-- PHOTO GALLERY -->
+
     <div class="card">
 
-        <h3>
+
+        <h3
+            data-en="Photo Gallery"
+            data-zh="照片相册">
+
             Photo Gallery
+
         </h3>
 
-        <p>
+
+        <p
+            data-en="Explore memories and special moments from EverGreen activities and events."
+            data-zh="探索常青俱乐部活动和社区活动中的美好回忆与精彩瞬间。">
 
             Explore memories and special moments
             from EverGreen activities and events.
 
         </p>
 
-        <a href="gallery.html">
+
+        <a
+            href="gallery.html"
+            data-en="View Gallery →"
+            data-zh="查看相册 →">
 
             View Gallery →
 
         </a>
 
+
     </div>
 
 
 
+    <!-- CLUB MEMBERS -->
+
     <div class="card">
 
-        <h3>
+
+        <h3
+            data-en="Club Members"
+            data-zh="俱乐部会员">
+
             Club Members
+
         </h3>
 
-        <p>
+
+        <p
+            data-en="Meet the people who help make EverGreen a welcoming community."
+            data-zh="认识那些让常青俱乐部成为温馨社区的人们。">
 
             Meet the people who help make
             EverGreen a welcoming community.
 
         </p>
 
-        <a href="members.html">
+
+        <a
+            href="members.html"
+            data-en="Meet Members →"
+            data-zh="认识会员 →">
 
             Meet Members →
 
         </a>
 
+
     </div>
+
 
 </section>
 
@@ -347,12 +707,19 @@
 
 <section class="mission">
 
-    <h2>
+
+    <h2
+        data-en="Be Part of EverGreen"
+        data-zh="成为常青俱乐部的一员">
+
         Be Part of EverGreen
+
     </h2>
 
 
-    <p>
+    <p
+        data-en="Whether you're looking to meet new friends, participate in activities, volunteer, or simply become part of our community, we'd love to hear from you."
+        data-zh="无论您是想结交新朋友、参加活动、参与志愿服务，还是希望成为我们社区的一员，我们都非常欢迎您。">
 
         Whether you're looking to meet new friends,
         participate in activities, volunteer,
@@ -364,11 +731,14 @@
 
     <a
         class="btn primary"
-        href="contact.html">
+        href="contact.html"
+        data-en="Contact Us"
+        data-zh="联系我们">
 
         Contact Us
 
     </a>
+
 
 </section>
 
@@ -380,18 +750,22 @@
 
 <footer>
 
+
     <img
         src="assets/images/logo.svg"
         width="180"
         alt="EverGreen Club Logo">
 
 
-    <p>
+    <p
+        data-en="© 2026 EverGreen Club. All Rights Reserved."
+        data-zh="© 2026 常青俱乐部。版权所有。">
 
         © 2026 EverGreen Club.
         All Rights Reserved.
 
     </p>
+
 
 </footer>
 
@@ -404,6 +778,8 @@
 <script src="assets/js/main.js"></script>
 
 <script src="assets/js/darkmode.js"></script>
+
+<script src="assets/js/language.js"></script>
 
 
 </body>
