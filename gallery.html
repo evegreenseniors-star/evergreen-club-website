@@ -16,9 +16,7 @@
     <title
         data-en="EverGreen Club | Gallery"
         data-zh="常青俱乐部 | 相册">
-
         EverGreen Club | Gallery
-
     </title>
 
     <link rel="icon"
@@ -36,6 +34,10 @@
          ===================================== -->
 
     <style>
+
+        /* =================================
+           GALLERY
+           ================================= */
 
         .gallery-section {
             padding: 70px 8%;
@@ -61,48 +63,32 @@
 
 
         .gallery-grid {
-
             display: grid;
-
             grid-template-columns:
                 repeat(auto-fit, minmax(250px, 1fr));
-
             gap: 25px;
-
         }
 
 
         .gallery-item {
-
             position: relative;
-
             overflow: hidden;
-
             border-radius: 18px;
-
             background: white;
-
             box-shadow:
                 0 8px 25px rgba(0, 0, 0, 0.10);
-
             cursor: pointer;
-
             aspect-ratio: 4 / 3;
-
         }
 
 
         .gallery-item img {
-
             width: 100%;
-
             height: 100%;
-
             object-fit: cover;
-
+            display: block;
             transition:
                 transform 0.5s ease;
-
         }
 
 
@@ -112,17 +98,11 @@
 
 
         .gallery-overlay {
-
             position: absolute;
-
             left: 0;
-
             right: 0;
-
             bottom: 0;
-
             padding: 25px 20px 18px;
-
             color: white;
 
             background:
@@ -138,22 +118,19 @@
             transition:
                 opacity 0.3s ease,
                 transform 0.3s ease;
-
         }
 
 
         .gallery-item:hover .gallery-overlay {
-
             opacity: 1;
-
             transform: translateY(0);
-
         }
 
 
         .gallery-overlay h3 {
             color: white;
             font-size: 17px;
+            margin: 0;
         }
 
 
@@ -162,7 +139,6 @@
            ================================= */
 
         .lightbox {
-
             display: none;
 
             position: fixed;
@@ -175,11 +151,9 @@
                 rgba(0, 0, 0, 0.92);
 
             align-items: center;
-
             justify-content: center;
 
             padding: 30px;
-
         }
 
 
@@ -189,10 +163,11 @@
 
 
         .lightbox img {
-
             max-width: 90vw;
-
             max-height: 82vh;
+
+            width: auto;
+            height: auto;
 
             object-fit: contain;
 
@@ -200,16 +175,13 @@
 
             box-shadow:
                 0 20px 60px rgba(0, 0, 0, 0.5);
-
         }
 
 
         .lightbox-close {
-
             position: absolute;
 
             top: 20px;
-
             right: 30px;
 
             color: white;
@@ -220,14 +192,16 @@
 
             font-size: 40px;
 
+            line-height: 1;
+
             cursor: pointer;
 
+            z-index: 2001;
         }
 
 
         .lightbox-prev,
         .lightbox-next {
-
             position: absolute;
 
             top: 50%;
@@ -235,14 +209,14 @@
             transform: translateY(-50%);
 
             width: 50px;
-
             height: 50px;
 
             border: none;
 
             border-radius: 50%;
 
-            background: rgba(255, 255, 255, 0.9);
+            background:
+                rgba(255, 255, 255, 0.9);
 
             color: #0B4F9C;
 
@@ -250,6 +224,11 @@
 
             cursor: pointer;
 
+            z-index: 2001;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
         }
 
 
@@ -265,11 +244,8 @@
 
         .lightbox-prev:hover,
         .lightbox-next:hover {
-
             background: #D4AF37;
-
             color: white;
-
         }
 
 
@@ -278,14 +254,11 @@
            ================================= */
 
         .language-switcher {
-
             position: relative;
-
         }
 
 
         #languageButton {
-
             border: none;
 
             background: transparent;
@@ -307,19 +280,16 @@
             transition:
                 background 0.3s ease,
                 color 0.3s ease;
-
         }
 
 
         #languageButton:hover {
-
-            background: rgba(11, 79, 156, 0.10);
-
+            background:
+                rgba(11, 79, 156, 0.10);
         }
 
 
         .language-menu {
-
             position: absolute;
 
             top: calc(100% + 8px);
@@ -342,19 +312,15 @@
             display: none;
 
             z-index: 1000;
-
         }
 
 
         .language-menu.show {
-
             display: block;
-
         }
 
 
         .language-menu button {
-
             width: 100%;
 
             border: none;
@@ -374,16 +340,12 @@
             cursor: pointer;
 
             color: #333;
-
         }
 
 
         .language-menu button:hover {
-
             background: #EAF3FC;
-
             color: #0B4F9C;
-
         }
 
 
@@ -402,37 +364,27 @@
 
 
         body.dark .gallery-item {
-
             background: #18232D;
 
             box-shadow:
                 0 10px 30px rgba(0, 0, 0, 0.25);
-
         }
 
 
         body.dark .language-menu {
-
             background: #18232D;
-
             border-color: #2D3A45;
-
         }
 
 
         body.dark .language-menu button {
-
             color: #E5E9EF;
-
         }
 
 
         body.dark .language-menu button:hover {
-
             background: #24384A;
-
             color: #8FC5FF;
-
         }
 
 
@@ -457,15 +409,22 @@
             }
 
 
+            .lightbox {
+                padding: 15px;
+            }
+
+
+            .lightbox img {
+                max-width: 92vw;
+                max-height: 75vh;
+            }
+
+
             .lightbox-prev,
             .lightbox-next {
-
                 width: 42px;
-
                 height: 42px;
-
                 font-size: 20px;
-
             }
 
 
@@ -476,6 +435,13 @@
 
             .lightbox-next {
                 right: 10px;
+            }
+
+
+            .lightbox-close {
+                top: 12px;
+                right: 18px;
+                font-size: 34px;
             }
 
         }
@@ -617,7 +583,6 @@
 
             <div class="language-switcher">
 
-
                 <button
                     id="languageButton"
                     aria-label="Select language"
@@ -685,7 +650,6 @@
 </header>
 
 
-
 <!-- =========================================
      PAGE BANNER
      ========================================= -->
@@ -712,7 +676,6 @@
 
 
 </section>
-
 
 
 <!-- =========================================
@@ -748,7 +711,6 @@
     </div>
 
 
-
     <div class="gallery-grid">
 
 
@@ -762,26 +724,24 @@
 
 
             <img
-                src="assets/images/gallery/photo1.jpg"
-                alt="EverGreen Club activity"
+                src="assets/images/gallery/photography-workshop.jpg"
+                alt="EverGreenSeniors Photography Workshop"
                 loading="lazy">
 
 
             <div class="gallery-overlay">
 
                 <h3
-                    data-en="EverGreen Memories"
-                    data-zh="常青俱乐部美好回忆">
+                    data-en="EverGreenSeniors Photography Workshop"
+                    data-zh="常青社摄影讲座">
 
-                    EverGreen Memories
+                    EverGreenSeniors Photography Workshop
 
                 </h3>
 
             </div>
 
-
         </div>
-
 
 
         <!-- =================================
@@ -811,9 +771,7 @@
 
             </div>
 
-
         </div>
-
 
 
         <!-- =================================
@@ -843,9 +801,7 @@
 
             </div>
 
-
         </div>
-
 
 
         <!-- =================================
@@ -875,14 +831,12 @@
 
             </div>
 
-
         </div>
 
 
     </div>
 
 </section>
-
 
 
 <!-- =========================================
@@ -923,7 +877,6 @@
 
 
 </section>
-
 
 
 <!-- =========================================
@@ -980,7 +933,6 @@
 </div>
 
 
-
 <!-- =========================================
      FOOTER
      ========================================= -->
@@ -1007,12 +959,15 @@
 </footer>
 
 
-
 <!-- =========================================
      GALLERY JAVASCRIPT
      ========================================= -->
 
 <script>
+
+    /* =================================
+       GALLERY ELEMENTS
+       ================================= */
 
     const galleryItems =
         document.querySelectorAll(".gallery-item");
@@ -1038,9 +993,13 @@
         document.getElementById("lightboxNext");
 
 
+    /* =================================
+       GALLERY IMAGES
+       ================================= */
+
     const images = [
 
-        "assets/images/gallery/photo1.jpg",
+        "assets/images/gallery/photography-workshop.jpg",
 
         "assets/images/gallery/photo2.jpg",
 
@@ -1053,6 +1012,10 @@
 
     let currentIndex = 0;
 
+
+    /* =================================
+       SHOW IMAGE
+       ================================= */
 
     function showImage(index) {
 
@@ -1068,6 +1031,10 @@
     }
 
 
+    /* =================================
+       CLOSE LIGHTBOX
+       ================================= */
+
     function closeLightbox() {
 
         lightbox.classList.remove("show");
@@ -1076,6 +1043,10 @@
 
     }
 
+
+    /* =================================
+       NEXT IMAGE
+       ================================= */
 
     function nextImage() {
 
@@ -1093,13 +1064,18 @@
     }
 
 
+    /* =================================
+       PREVIOUS IMAGE
+       ================================= */
+
     function previousImage() {
 
         currentIndex--;
 
         if (currentIndex < 0) {
 
-            currentIndex = images.length - 1;
+            currentIndex =
+                images.length - 1;
 
         }
 
@@ -1108,6 +1084,10 @@
 
     }
 
+
+    /* =================================
+       CLICK GALLERY IMAGE
+       ================================= */
 
     galleryItems.forEach(
         (item, index) => {
@@ -1125,11 +1105,19 @@
     );
 
 
+    /* =================================
+       CLOSE BUTTON
+       ================================= */
+
     closeButton.addEventListener(
         "click",
         closeLightbox
     );
 
+
+    /* =================================
+       NEXT BUTTON
+       ================================= */
 
     nextButton.addEventListener(
         "click",
@@ -1137,11 +1125,19 @@
     );
 
 
+    /* =================================
+       PREVIOUS BUTTON
+       ================================= */
+
     previousButton.addEventListener(
         "click",
         previousImage
     );
 
+
+    /* =================================
+       CLICK OUTSIDE IMAGE TO CLOSE
+       ================================= */
 
     lightbox.addEventListener(
         "click",
@@ -1157,34 +1153,47 @@
     );
 
 
+    /* =================================
+       KEYBOARD CONTROLS
+       ================================= */
+
     document.addEventListener(
         "keydown",
         (event) => {
 
-            if (!lightbox.classList.contains("show")) {
+            if (
+                !lightbox.classList.contains("show")
+            ) {
+
                 return;
+
             }
 
 
             if (event.key === "Escape") {
+
                 closeLightbox();
+
             }
 
 
             if (event.key === "ArrowRight") {
+
                 nextImage();
+
             }
 
 
             if (event.key === "ArrowLeft") {
+
                 previousImage();
+
             }
 
         }
     );
 
 </script>
-
 
 
 <!-- =========================================
