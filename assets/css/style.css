@@ -22,24 +22,34 @@
 
 :root {
 
-    --blue: #0B4F9C;
-    --blue-dark: #083A73;
-    --blue-light: #EAF3FC;
+    /* Logo-inspired color palette */
+    --primary: #238B57;
+    --primary-dark: #145C3A;
+    --primary-light: #EAF6EF;
 
-    --gold: #D4AF37;
-    --gold-dark: #B89422;
-    --gold-light: #F8F0D8;
+    --blue: #176FA8;
+    --blue-dark: #0E4F7A;
+    --blue-light: #EAF3F8;
 
-    --green: #2F7D55;
+    --green: #3FA66A;
+    --green-dark: #1D7048;
+    --green-light: #EDF8F1;
+
+    --gold: #D7A928;
+    --gold-dark: #AD8318;
+    --gold-light: #FFF6D8;
+
+    /* Logo red is kept as a small accent only. */
+    --brand-red: #C92A2A;
 
     --white: #FFFFFF;
 
-    --background: #F8FAFC;
+    --background: #F7FAF8;
 
-    --text: #333333;
-    --text-light: #68737D;
+    --text: #26352D;
+    --text-light: #66736D;
 
-    --border: #E5E9EF;
+    --border: #DDE8E1;
 
     --shadow-small:
         0 4px 12px rgba(0, 0, 0, 0.08);
@@ -179,7 +189,7 @@ button {
 
     text-decoration: none;
 
-    color: var(--blue);
+    color: var(--primary);
 
     font-weight: 600;
 
@@ -218,7 +228,7 @@ button {
 
 .nav-links a:hover {
 
-    color: var(--blue-dark);
+    color: var(--primary-dark);
 }
 
 
@@ -278,7 +288,7 @@ button {
 
 body.dark #darkModeButton:hover {
 
-    background: #263440;
+    background: #20382B;
 }
 
 
@@ -296,7 +306,7 @@ body.dark #darkModeButton:hover {
 
     border: none;
 
-    color: var(--blue);
+    color: var(--primary);
 
     cursor: pointer;
 }
@@ -315,9 +325,9 @@ body.dark #darkModeButton:hover {
     background:
         linear-gradient(
             120deg,
-            rgba(11, 79, 156, 0.88),
-            rgba(11, 79, 156, 0.60),
-            rgba(212, 175, 55, 0.45)
+            rgba(29, 112, 72, 0.90),
+            rgba(23, 111, 168, 0.62),
+            rgba(215, 169, 40, 0.28)
         ),
         url("../images/hero.jpg");
 
@@ -463,7 +473,7 @@ body.dark #darkModeButton:hover {
 
 .primary {
 
-    background: var(--gold);
+    background: var(--primary);
 
     color: white;
 }
@@ -471,7 +481,7 @@ body.dark #darkModeButton:hover {
 
 .primary:hover {
 
-    background: var(--gold-dark);
+    background: var(--primary-dark);
 
     color: white;
 }
@@ -495,7 +505,7 @@ body.dark #darkModeButton:hover {
 
     background: white;
 
-    color: var(--blue);
+    color: var(--green-dark);
 }
 
 
@@ -515,7 +525,7 @@ body.dark #darkModeButton:hover {
 
 .mission h2 {
 
-    color: var(--blue);
+    color: var(--primary);
 
     font-size: 32px;
 
@@ -549,8 +559,8 @@ body.dark #darkModeButton:hover {
     background:
         linear-gradient(
             135deg,
-            var(--blue),
-            var(--blue-dark)
+            var(--green),
+            var(--green-dark)
         );
 
     color: white;
@@ -640,7 +650,7 @@ body.dark #darkModeButton:hover {
 .card h2,
 .card h3 {
 
-    color: var(--blue);
+    color: var(--primary);
 
     margin-bottom: 10px;
 }
@@ -658,7 +668,7 @@ body.dark #darkModeButton:hover {
 
     margin-top: 12px;
 
-    color: var(--blue);
+    color: var(--primary);
 
     font-weight: 600;
 
@@ -681,9 +691,9 @@ body.dark #darkModeButton:hover {
     background:
         linear-gradient(
             135deg,
+            var(--green-dark),
             var(--blue),
-            var(--blue-dark),
-            var(--gold)
+            var(--green)
         );
 
     color: white;
@@ -722,8 +732,8 @@ footer {
     background:
         linear-gradient(
             135deg,
-            var(--blue-dark),
-            #062B55
+            var(--green-dark),
+            #124632
         );
 
     color: white;
@@ -754,15 +764,15 @@ footer p {
 
 body.dark {
 
-    --background: #101820;
+    --background: #0C1712;
 
-    --white: #18232D;
+    --white: #14221A;
 
-    --text: #E8EDF2;
+    --text: #EAF2ED;
 
-    --text-light: #B5C0C9;
+    --text-light: #B8C8BE;
 
-    --border: #2D3A45;
+    --border: #294238;
 
     background: var(--background);
 
@@ -777,7 +787,7 @@ body.dark {
 body.dark .navbar {
 
     background:
-        rgba(16, 24, 32, 0.96);
+        rgba(12, 23, 18, 0.96);
 
     border-bottom-color:
         var(--border);
@@ -786,7 +796,7 @@ body.dark .navbar {
 
 body.dark .nav-links a {
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -802,13 +812,13 @@ body.dark #menuButton {
 
 body.dark .mission {
 
-    background: #18232D;
+    background: #14221A;
 }
 
 
 body.dark .mission h2 {
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -818,7 +828,7 @@ body.dark .mission h2 {
 
 body.dark .card {
 
-    background: #18232D;
+    background: #14221A;
 
     border-color: var(--border);
 
@@ -830,7 +840,7 @@ body.dark .card {
 body.dark .card h2,
 body.dark .card h3 {
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -844,7 +854,7 @@ body.dark .video-card,
 body.dark .featured-video,
 body.dark .contact-form-section {
 
-    background: #18232D;
+    background: #14221A;
 
     border-color: var(--border);
 
@@ -858,7 +868,7 @@ body.dark .video-info h3,
 body.dark .featured-info h2,
 body.dark .contact-form-section h2 {
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -885,7 +895,7 @@ body.dark .form-group label {
 body.dark .form-group input,
 body.dark .form-group textarea {
 
-    background: #101820;
+    background: #0C1712;
 
     color: var(--text);
 
@@ -896,7 +906,7 @@ body.dark .form-group textarea {
 body.dark .form-group input::placeholder,
 body.dark .form-group textarea::placeholder {
 
-    color: #8A98A5;
+    color: #91A79A;
 }
 
 
@@ -906,7 +916,7 @@ body.dark .form-group textarea::placeholder {
 
 body.dark .contact-card a {
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -922,9 +932,9 @@ body.dark .contact-card a:hover {
 
 body.dark .video-category {
 
-    background: #24394B;
+    background: #17372A;
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -934,7 +944,7 @@ body.dark .video-category {
 
 body.dark .gallery-item {
 
-    background: #18232D;
+    background: #14221A;
 
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.25);
@@ -943,7 +953,7 @@ body.dark .gallery-item {
 
 body.dark .gallery-intro h2 {
 
-    color: #8FC5FF;
+    color: #8FD3A9;
 }
 
 
@@ -959,7 +969,7 @@ body.dark .gallery-intro p {
 
 body.dark .nav-links {
 
-    background: #101820;
+    background: #0C1712;
 }
 
 
@@ -975,7 +985,7 @@ body.dark .nav-links {
     }
 
 
-    .logo img {
+   .logo img {
 
         width: 160px;
     }
@@ -1046,7 +1056,7 @@ body.dark .nav-links {
 
     body.dark .nav-links {
 
-        background: #101820;
+        background: #0C1712;
     }
 
 
@@ -1170,4 +1180,109 @@ body.dark .nav-links {
         font-size: 34px;
     }
 
+}
+
+/* =========================================
+   LOGO / BRAND POLISH
+   ========================================= */
+
+/* The current logo is displayed cleanly and proportionally.
+   Keep it clean and proportional in the navigation. */
+.logo img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    object-position: center;
+}
+
+footer img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   LOGO-COLOR OVERRIDES FOR PAGE COMPONENTS
+   ========================================= */
+
+.gallery-intro h2 {
+    color: var(--primary) !important;
+}
+
+.gallery-intro p {
+    color: var(--text-light) !important;
+}
+
+.gallery-item {
+    border: 1px solid var(--border);
+}
+
+.video-category {
+    background: var(--green-light);
+    color: var(--green-dark);
+}
+
+.contact-card a {
+    color: var(--primary);
+}
+
+.contact-card a:hover {
+    color: var(--green);
+}
+
+
+/* =========================================
+   ACCESSIBILITY / FOCUS
+   ========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   DARK MODE BRAND OVERRIDES
+   ========================================= */
+
+body.dark .gallery-intro h2 {
+    color: var(--primary) !important;
+}
+
+body.dark .gallery-intro p {
+    color: var(--text-light) !important;
+}
+
+body.dark .video-category {
+    background: #17372A;
+    color: #8FD3A9;
+}
+
+body.dark .contact-card a {
+    color: var(--primary);
+}
+
+body.dark .contact-card a:hover {
+    color: var(--green);
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
