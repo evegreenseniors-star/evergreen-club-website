@@ -9,16 +9,14 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          data-en="Learn about EverGreen Club, our mission, vision, values, and community activities."
-          data-zh="了解常青俱乐部、我们的使命、愿景、价值观和社区活动。"
-          content="Learn about EverGreen Club, our mission, vision, values, and community activities.">
+          data-en="Learn about the Central Florida EverGreen Seniors Club, our history, mission, activities, leadership, and community."
+          data-zh="了解中佛州长青社的历史、使命、活动、领导团队及社区服务。"
+          content="Learn about the Central Florida EverGreen Seniors Club, our history, mission, activities, leadership, and community.">
 
     <title
         data-en="About EverGreen Club"
-        data-zh="关于常青俱乐部">
-
+        data-zh="关于中佛州长青社">
         About EverGreen Club
-
     </title>
 
     <link rel="icon"
@@ -38,52 +36,36 @@
            ===================================== */
 
         .language-switcher {
-
             position: relative;
-
         }
 
 
         #languageButton {
-
             border: none;
-
             background: transparent;
-
             color: inherit;
-
             font-family: inherit;
-
             font-size: 14px;
-
             font-weight: 500;
-
             cursor: pointer;
-
             padding: 8px 10px;
-
             border-radius: 8px;
 
             transition:
                 background 0.3s ease,
                 color 0.3s ease;
-
         }
 
 
         #languageButton:hover {
-
             background: rgba(11, 79, 156, 0.10);
-
         }
 
 
         .language-menu {
-
             position: absolute;
 
             top: calc(100% + 8px);
-
             right: 0;
 
             min-width: 140px;
@@ -102,19 +84,15 @@
             display: none;
 
             z-index: 1000;
-
         }
 
 
         .language-menu.show {
-
             display: block;
-
         }
 
 
         .language-menu button {
-
             width: 100%;
 
             border: none;
@@ -134,16 +112,12 @@
             cursor: pointer;
 
             color: #333;
-
         }
 
 
         .language-menu button:hover {
-
             background: #EAF3FC;
-
             color: #0B4F9C;
-
         }
 
 
@@ -152,26 +126,309 @@
            ===================================== */
 
         body.dark .language-menu {
-
             background: #18232D;
-
             border-color: #2D3A45;
-
         }
 
 
         body.dark .language-menu button {
-
             color: #E5E9EF;
-
         }
 
 
         body.dark .language-menu button:hover {
-
             background: #24384A;
-
             color: #8FC5FF;
+        }
+
+
+        /* =====================================
+           ABOUT PAGE CONTENT
+           ===================================== */
+
+        .about-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 6%;
+        }
+
+
+        .about-section {
+            max-width: 950px;
+            margin: 0 auto 70px;
+        }
+
+
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+
+        .about-section p {
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+
+        .about-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 70px;
+        }
+
+
+        .about-intro h2 {
+            margin-bottom: 25px;
+        }
+
+
+        .about-intro p {
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+
+        /* =====================================
+           HISTORY TIMELINE
+           ===================================== */
+
+        .history-timeline {
+            max-width: 900px;
+            margin: 0 auto 70px;
+        }
+
+
+        .history-item {
+            position: relative;
+
+            padding: 25px 30px 25px 110px;
+
+            margin-bottom: 25px;
+
+            background: white;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .history-year {
+            position: absolute;
+
+            left: 25px;
+            top: 25px;
+
+            width: 65px;
+            height: 65px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #0B4F9C;
+
+            color: white;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            text-align: center;
+        }
+
+
+        .history-item h3 {
+            margin-bottom: 10px;
+            color: #0B4F9C;
+        }
+
+
+        .history-item p {
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================
+           FEATURE CARDS
+           ===================================== */
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 28px;
+
+            max-width: 1050px;
+
+            margin: 0 auto 70px;
+        }
+
+
+        .feature-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .feature-icon {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .feature-card h3 {
+            color: #0B4F9C;
+
+            margin-bottom: 15px;
+        }
+
+
+        .feature-card p {
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+
+        /* =====================================
+           LEADERSHIP
+           ===================================== */
+
+        .leadership-box {
+            max-width: 900px;
+
+            margin: 0 auto 70px;
+
+            padding: 35px;
+
+            background: white;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            text-align: center;
+        }
+
+
+        .leadership-box p {
+            line-height: 1.9;
+        }
+
+
+        /* =====================================
+           CLOSING MESSAGE
+           ===================================== */
+
+        .community-message {
+            max-width: 900px;
+
+            margin: 0 auto 70px;
+
+            text-align: center;
+
+            padding: 40px 30px;
+
+            border-radius: 20px;
+
+            background: rgba(11, 79, 156, 0.06);
+        }
+
+
+        .community-message p {
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+
+        /* =====================================
+           DARK MODE
+           ===================================== */
+
+        body.dark .history-item,
+        body.dark .feature-card,
+        body.dark .leadership-box {
+            background: #18232D;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+
+        body.dark .history-item h3,
+        body.dark .feature-card h3 {
+            color: #8FC5FF;
+        }
+
+
+        body.dark .community-message {
+            background: #182C3D;
+        }
+
+
+        /* =====================================
+           MOBILE
+           ===================================== */
+
+        @media (max-width: 700px) {
+
+            .about-content {
+                padding: 50px 6%;
+            }
+
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .history-item {
+                padding:
+                    85px 22px 25px 22px;
+            }
+
+
+            .history-year {
+                left: 22px;
+                top: 20px;
+            }
+
+
+            .leadership-box {
+                padding: 28px 22px;
+            }
+
+
+            .community-message {
+                padding: 30px 22px;
+            }
 
         }
 
@@ -199,7 +456,7 @@
 
             <img
                 src="assets/images/logo.png"
-                alt="Cental Florida EverGreen Seniors Club Logo">
+                alt="Central Florida EverGreen Seniors Club Logo">
 
         </a>
 
@@ -312,7 +569,6 @@
 
             <div class="language-switcher">
 
-
                 <button
                     id="languageButton"
                     aria-label="Select language"
@@ -387,10 +643,9 @@
 
 <section class="page-banner">
 
-
     <h1
         data-en="About EverGreen"
-        data-zh="关于常青俱乐部">
+        data-zh="关于中佛州长青社">
 
         About EverGreen
 
@@ -398,60 +653,11 @@
 
 
     <p
-        data-en="Growing friendships and strengthening our community"
-        data-zh="发展友谊，共建更美好的社区">
+        data-en="Growing friendships, celebrating culture, and enriching lives"
+        data-zh="发展友谊，传承文化，共享美好生活">
 
-        Growing friendships and strengthening our community
-
-    </p>
-
-
-</section>
-
-
-
-<!-- =========================================
-     OUR MISSION
-     ========================================= -->
-
-<section class="mission">
-
-
-    <h2
-        data-en="Our Mission"
-        data-zh="我们的使命">
-
-        Our Mission
-
-    </h2>
-
-
-    <p>
-
-        <span
-            data-en="EverGreen brings members together through community activities, educational programs, social events, and volunteer opportunities."
-            data-zh="常青俱乐部通过社区活动、教育项目、社交活动和志愿服务机会，将会员们聚集在一起。">
-
-            EverGreen brings members together through
-            community activities, educational programs,
-            social events, and volunteer opportunities.
-
-        </span>
-
-
-        <br><br>
-
-
-        <span
-            data-en="Our goal is to create a welcoming environment where everyone can participate, contribute, make meaningful connections, and grow together."
-            data-zh="我们的目标是创造一个温馨友好的环境，让每个人都可以参与、贡献、建立有意义的联系，并共同成长。">
-
-            Our goal is to create a welcoming environment
-            where everyone can participate, contribute,
-            make meaningful connections, and grow together.
-
-        </span>
-
+        Growing friendships, celebrating culture,
+        and enriching lives
 
     </p>
 
@@ -460,352 +666,635 @@
 
 
 <!-- =========================================
-     VISION / VALUES / ACTIVITIES
+     ABOUT / ABSTRACT
      ========================================= -->
 
-<section class="cards">
+<section class="about-content">
 
 
-    <!-- =====================================
-         VISION
-         ===================================== -->
+    <div class="about-intro">
 
-    <div class="card">
+        <h2
+            data-en="About Central Florida EverGreen Seniors Club"
+            data-zh="关于中佛州长青社">
 
+            About Central Florida EverGreen Seniors Club
 
-        <div style="font-size: 40px; margin-bottom: 15px;">
-
-            🌱
-
-        </div>
-
-
-        <h3
-            data-en="Our Vision"
-            data-zh="我们的愿景">
-
-            Our Vision
-
-        </h3>
+        </h2>
 
 
         <p
-            data-en="To build a connected and active community where members support one another, share experiences, and create lasting friendships."
-            data-zh="建立一个紧密而充满活力的社区，让会员彼此支持、分享经验，并建立长久的友谊。">
+            data-en="The Central Florida EverGreen Seniors Club, established in 2016, is a nonprofit organization serving Chinese seniors aged 55 and above in the greater Orlando area. The club provides a welcoming and vibrant community through cultural celebrations, social gatherings, wellness activities, performing arts, and recreational programs."
+            data-zh="中佛州长青社成立于2016年，是一个服务于大奥兰多地区55岁及以上华人长者的非营利组织。社团通过传统节庆、联谊聚会、健康活动、文艺表演及各类休闲项目，为会员营造温馨、活跃、充满活力的社区环境。">
 
-            To build a connected and active community
-            where members support one another,
-            share experiences, and create lasting
-            friendships.
+            The Central Florida EverGreen Seniors Club,
+            established in 2016, is a nonprofit organization
+            serving Chinese seniors aged 55 and above in
+            the greater Orlando area. The club provides a
+            welcoming and vibrant community through
+            cultural celebrations, social gatherings,
+            wellness activities, performing arts, and
+            recreational programs.
 
         </p>
 
+
+        <p
+            data-en="With more than 100 members, EverGreen promotes friendship, active aging, cultural connection, and a strong sense of belonging. We strive to enrich the lives of our members by creating opportunities to stay active, build friendships, share experiences, and enjoy life together."
+            data-zh="目前会员人数已逾百人。长青社致力于促进友谊、倡导积极健康的退休生活、传承中华文化，并为会员提供一个温暖而有归属感的大家庭。我们通过丰富多彩的活动，让会员保持活力、结交朋友、分享经验，共同享受美好生活。">
+
+            With more than 100 members, EverGreen promotes
+            friendship, active aging, cultural connection,
+            and a strong sense of belonging. We strive to
+            enrich the lives of our members by creating
+            opportunities to stay active, build friendships,
+            share experiences, and enjoy life together.
+
+        </p>
 
     </div>
 
 
 
     <!-- =====================================
-         VALUES
+         MISSION / VISION / VALUES
          ===================================== -->
 
-    <div class="card">
+    <div class="feature-grid">
 
 
-        <div style="font-size: 40px; margin-bottom: 15px;">
+        <div class="feature-card">
 
-            ❤️
+            <div class="feature-icon">
+                🌱
+            </div>
+
+            <h3
+                data-en="Our Mission"
+                data-zh="我们的使命">
+
+                Our Mission
+
+            </h3>
+
+            <p
+                data-en="To bring members together through community activities, educational programs, social events, wellness programs, and volunteer opportunities, creating a welcoming environment where everyone can participate, contribute, and grow together."
+                data-zh="通过社区活动、教育项目、社交聚会、健康活动和志愿服务机会，将会员们聚集在一起，创造一个温馨友好的环境，让每个人都可以参与、贡献并共同成长。">
+
+                To bring members together through community
+                activities, educational programs, social
+                events, wellness programs, and volunteer
+                opportunities, creating a welcoming
+                environment where everyone can participate,
+                contribute, and grow together.
+
+            </p>
 
         </div>
 
 
-        <h3
-            data-en="Our Values"
-            data-zh="我们的价值观">
 
-            Our Values
+        <div class="feature-card">
 
-        </h3>
+            <div class="feature-icon">
+                ❤️
+            </div>
 
+            <h3
+                data-en="Our Values"
+                data-zh="我们的价值观">
 
-        <p>
+                Our Values
 
+            </h3>
 
-            <strong
-                data-en="Friendship"
-                data-zh="友谊">
+            <p
+                data-en="Friendship, respect, service, and growth guide our community. We value meaningful relationships, welcome different experiences and ideas, give back to our community, and continue learning and growing together."
+                data-zh="友谊、尊重、服务与成长是我们共同的价值。我们重视真挚的人际关系，尊重并欢迎不同的经历与想法，积极回馈社区，并在相互陪伴中不断学习、共同成长。">
 
-                Friendship
+                Friendship, respect, service, and growth guide
+                our community. We value meaningful
+                relationships, welcome different experiences
+                and ideas, give back to our community, and
+                continue learning and growing together.
 
-            </strong>
+            </p>
 
-            <br>
-
-
-            <span
-                data-en="Building meaningful relationships."
-                data-zh="建立有意义的人际关系。">
-
-                Building meaningful relationships.
-
-            </span>
-
-
-            <br><br>
-
-
-            <strong
-                data-en="Respect"
-                data-zh="尊重">
-
-                Respect
-
-            </strong>
-
-            <br>
-
-
-            <span
-                data-en="Welcoming everyone's ideas and experiences."
-                data-zh="尊重并欢迎每个人的想法和经历。">
-
-                Welcoming everyone's ideas and experiences.
-
-            </span>
-
-
-            <br><br>
-
-
-            <strong
-                data-en="Service"
-                data-zh="服务">
-
-                Service
-
-            </strong>
-
-            <br>
-
-
-            <span
-                data-en="Giving back to our community."
-                data-zh="回馈我们的社区。">
-
-                Giving back to our community.
-
-            </span>
-
-
-            <br><br>
-
-
-            <strong
-                data-en="Growth"
-                data-zh="成长">
-
-                Growth
-
-            </strong>
-
-            <br>
-
-
-            <span
-                data-en="Learning and growing together."
-                data-zh="一起学习，共同成长。">
-
-                Learning and growing together.
-
-            </span>
-
-
-        </p>
-
+        </div>
 
     </div>
 
 
 
     <!-- =====================================
-         ACTIVITIES
+         OUR HISTORY
          ===================================== -->
 
-    <div class="card">
+    <div class="about-section">
 
+        <h2
+            data-en="Our History"
+            data-zh="社团历史">
 
-        <div style="font-size: 40px; margin-bottom: 15px;">
+            Our History
 
-            🤝
-
-        </div>
-
-
-        <h3
-            data-en="Our Activities"
-            data-zh="我们的活动">
-
-            Our Activities
-
-        </h3>
-
-
-        <p>
-
-
-            <span
-                data-en="Social gatherings"
-                data-zh="社交聚会">
-
-                Social gatherings
-
-            </span>
-
-
-            <br>
-
-
-            <span
-                data-en="Community service"
-                data-zh="社区服务">
-
-                Community service
-
-            </span>
-
-
-            <br>
-
-
-            <span
-                data-en="Learning events"
-                data-zh="学习活动">
-
-                Learning events
-
-            </span>
-
-
-            <br>
-
-
-            <span
-                data-en="Club projects"
-                data-zh="俱乐部项目">
-
-                Club projects
-
-            </span>
-
-
-            <br>
-
-
-            <span
-                data-en="Recreational activities"
-                data-zh="休闲活动">
-
-                Recreational activities
-
-            </span>
-
-
-        </p>
-
+        </h2>
 
     </div>
 
 
-</section>
+
+    <div class="history-timeline">
+
+
+        <div class="history-item">
+
+            <div class="history-year">
+                2016
+            </div>
+
+            <h3
+                data-en="The Beginning"
+                data-zh="社团成立">
+
+                The Beginning
+
+            </h3>
+
+            <p
+                data-en="The Central Florida EverGreen Seniors Club was initiated by Ms. Wendi Chen, with Mr. Ping Qiao, Mr. Rongcai Wu, Ms. Xiaoying Huang, and others serving as founding members. On August 8, 2016, Ms. Chen officially submitted the organization's formation documents to the State of Florida."
+                data-zh="中佛州长青社由陈文迪女士发起，乔平先生、吴荣财先生和黄晓英女士等为创始会员。2016年8月8日，陈文迪女士向州政府正式提报成立。">
+
+                The Central Florida EverGreen Seniors Club
+                was initiated by Ms. Wendi Chen, with
+                Mr. Ping Qiao, Mr. Rongcai Wu,
+                Ms. Xiaoying Huang, and others serving
+                as founding members. On August 8, 2016,
+                Ms. Chen officially submitted the
+                organization's formation documents to
+                the State of Florida.
+
+            </p>
+
+        </div>
 
 
 
-<!-- =========================================
-     WHAT WE DO
-     ========================================= -->
+        <div class="history-item">
 
-<section class="mission">
+            <div class="history-year">
+                2016
+            </div>
 
+            <h3
+                data-en="The Inaugural Meeting"
+                data-zh="成立大会">
 
-    <h2
-        data-en="What We Do"
-        data-zh="我们的工作">
+                The Inaugural Meeting
 
-        What We Do
+            </h3>
 
-    </h2>
+            <p
+                data-en="In the early days, many generous supporters made donations and provided strong encouragement to the new organization. On August 12, 2016, EverGreen held its inaugural meeting at First Bank in Orlando. Mr. Ping Qiao was elected as the first president, Ms. Xiaoying Huang as vice president, and Mr. Rongcai Wu was responsible for financial affairs."
+                data-zh="成立初期，许多热心人士慷慨捐款，给予社团大力支持。2016年8月12日，长青社在奥兰多第一银行举行成立大会。大会选举乔平先生为第一任社长，黄晓英女士为副社长，吴荣财先生负责财务工作。">
 
+                In the early days, many generous supporters
+                made donations and provided strong
+                encouragement to the new organization.
+                On August 12, 2016, EverGreen held its
+                inaugural meeting at First Bank in Orlando.
+                Mr. Ping Qiao was elected as the first
+                president, Ms. Xiaoying Huang as vice
+                president, and Mr. Rongcai Wu was
+                responsible for financial affairs.
 
-    <p>
+            </p>
 
-
-        <span
-            data-en="EverGreen provides opportunities for members to stay active, meet new people, learn new things, and contribute to the community."
-            data-zh="常青俱乐部为会员提供保持活力、认识新朋友、学习新知识以及为社区做贡献的机会。">
-
-            EverGreen provides opportunities for members
-            to stay active, meet new people, learn new
-            things, and contribute to the community.
-
-        </span>
-
-
-        <br><br>
-
-
-        <span
-            data-en="From social gatherings and educational programs to volunteer projects and special celebrations, there is always an opportunity to connect and participate."
-            data-zh="从社交聚会和教育项目，到志愿服务和特别庆祝活动，总有机会让大家相聚并参与其中。">
-
-            From social gatherings and educational
-            programs to volunteer projects and special
-            celebrations, there is always an opportunity
-            to connect and participate.
-
-        </span>
-
-
-    </p>
-
-</section>
+        </div>
 
 
 
-<!-- =========================================
-     CALL TO ACTION
-     ========================================= -->
+        <div class="history-item">
 
-<section class="mission">
+            <div class="history-year">
+                2016–18
+            </div>
+
+            <h3
+                data-en="Growing Together"
+                data-zh="共同成长">
+
+                Growing Together
+
+            </h3>
+
+            <p
+                data-en="In its early years, EverGreen regularly gathered in the activity room at First Bank. Members enjoyed singing, sharing food, and talking together in a warm and friendly atmosphere. With assistance from Mr. Shaoying Tian, the club successfully registered as a 501(c)(3) nonprofit organization and was approved to use the senior center facility on Marks Street."
+                data-zh="成立之初，长青社定期在第一银行活动室举行聚会，活动内容包括唱歌、美食分享和聊天交流等，气氛温馨融洽。在田少英先生的协助下，长青社成功注册为501(c)(3)非营利组织，并获准使用位于Marks Street的老人中心场地。">
+
+                In its early years, EverGreen regularly
+                gathered in the activity room at First Bank.
+                Members enjoyed singing, sharing food, and
+                talking together in a warm and friendly
+                atmosphere. With assistance from
+                Mr. Shaoying Tian, the club successfully
+                registered as a 501(c)(3) nonprofit
+                organization and was approved to use the
+                senior center facility on Marks Street.
+
+            </p>
+
+        </div>
 
 
-    <h2
-        data-en="Come Grow With Us"
-        data-zh="与我们一起成长">
 
-        Come Grow With Us
+        <div class="history-item">
 
-    </h2>
+            <div class="history-year">
+                2018+
+            </div>
+
+            <h3
+                data-en="A Home at Marks Street"
+                data-zh="在Marks Street安居发展">
+
+                A Home at Marks Street
+
+            </h3>
+
+            <p
+                data-en="Since 2018, EverGreen's regular activities have continued at the Marks Street senior center. Over the years, the club has grown into a vibrant community with more than 100 members."
+                data-zh="自2018年起，长青社的社团活动一直在Marks Street老人中心举办至今。多年来，社团不断发展壮大，目前会员人数已逾百人。">
+
+                Since 2018, EverGreen's regular activities
+                have continued at the Marks Street senior
+                center. Over the years, the club has grown
+                into a vibrant community with more than
+                100 members.
+
+            </p>
+
+        </div>
+
+    </div>
 
 
-    <p
-        data-en="We welcome new members and friends who want to become part of our community."
-        data-zh="我们欢迎希望成为社区一员的新会员和朋友们。">
 
-        We welcome new members and friends who want
-        to become part of our community.
+    <!-- =====================================
+         CELEBRATING TRADITIONS
+         ===================================== -->
 
-    </p>
+    <div class="about-section">
+
+        <h2
+            data-en="Celebrating Traditions"
+            data-zh="节庆相聚，其乐融融">
+
+            Celebrating Traditions
+
+        </h2>
 
 
-    <a
-        class="btn primary"
-        href="contact.html"
-        data-en="Contact Us"
-        data-zh="联系我们">
+        <p
+            data-en="EverGreen celebrates a wide variety of Chinese traditional festivals, including Chinese New Year, the Dragon Boat Festival, and the Mid-Autumn Festival. Living in the United States, we also embrace local traditions by celebrating holidays such as Halloween and Christmas together."
+            data-zh="长青社每年都会举办丰富多彩的活动，庆祝春节、端午节、中秋节等中华传统佳节。同时身在海外，我们也入乡随俗，一同庆祝万圣节、圣诞节等西方节日。">
 
-        Contact Us
+            EverGreen celebrates a wide variety of Chinese
+            traditional festivals, including Chinese New Year,
+            the Dragon Boat Festival, and the Mid-Autumn
+            Festival. Living in the United States, we also
+            embrace local traditions by celebrating holidays
+            such as Halloween and Christmas together.
 
-    </a>
+        </p>
+
+
+        <p
+            data-en="Food is an important part of our gatherings. Members often bring their favorite homemade dishes to share, while the club also orders delicious meals from local Chinese restaurants. During the Dragon Boat Festival, board members prepare zongzi by hand for our members, offering meat, vegetarian, and sweet varieties. At our Mid-Autumn Festival gatherings, mooncakes symbolize reunion and bring an especially warm feeling to the celebration."
+            data-zh="美食是社团聚会的重要环节。会员们常常带来各自的拿手好菜与大家分享，社团也会从中餐馆订购佳肴，让大家吃得开心、玩得尽兴。每到端午，理事们都会提前精心筹备，亲手为会员包裹粽子，肉粽、素粽、甜粽等多种口味满足不同喜好。中秋聚会时，除了丰盛佳肴，更少不了寓意团圆的月饼，暖意满满。">
+
+            Food is an important part of our gatherings.
+            Members often bring their favorite homemade
+            dishes to share, while the club also orders
+            delicious meals from local Chinese restaurants.
+            During the Dragon Boat Festival, board members
+            prepare zongzi by hand for our members,
+            offering meat, vegetarian, and sweet varieties.
+            At our Mid-Autumn Festival gatherings,
+            mooncakes symbolize reunion and bring an
+            especially warm feeling to the celebration.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         LEADERSHIP
+         ===================================== -->
+
+    <div class="about-section">
+
+        <h2
+            data-en="Strong Leadership & Continuity"
+            data-zh="组织稳健，传承有序">
+
+            Strong Leadership & Continuity
+
+        </h2>
+
+    </div>
+
+
+    <div class="leadership-box">
+
+        <p
+            data-en="Mr. Rongcai Wu later served as the club's second president, with Ms. Chunying Zheng serving as vice president. Today, the club is led by Dr. Bing Zhang as president and Ms. Chunying Zheng as vice president."
+            data-zh="之后，吴荣财先生当选为第二任社长，郑春英女士担任副社长。目前，长青社由张兵博士担任社长，郑春英女士担任副社长。">
+
+            Mr. Rongcai Wu later served as the club's
+            second president, with Ms. Chunying Zheng
+            serving as vice president. Today, the club
+            is led by Dr. Bing Zhang as president and
+            Ms. Chunying Zheng as vice president.
+
+        </p>
+
+
+        <p
+            data-en="Dr. Zhang has generously supported EverGreen and its development for many years. Ms. Zheng coordinates the club's day-to-day activities. In addition, EverGreen has seven board members who oversee areas including cultural programs, finance, logistics, membership, and community relations. Former president Mr. Rongcai Wu continues to serve as an advisor and contribute to the club's development."
+            data-zh="张兵社长多年来持续为长青社慷慨捐资，大力支持社团发展；郑春英副社长负责统筹社团日常事务。此外，长青社设有七位理事，分别分管文艺、财务、后勤、人事及交流等工作。老社长吴荣财先生现任社团顾问，继续为长青社的发展贡献力量。">
+
+            Dr. Zhang has generously supported EverGreen
+            and its development for many years. Ms. Zheng
+            coordinates the club's day-to-day activities.
+            In addition, EverGreen has seven board members
+            who oversee areas including cultural programs,
+            finance, logistics, membership, and community
+            relations. Former president Mr. Rongcai Wu
+            continues to serve as an advisor and contribute
+            to the club's development.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         ARTS & CULTURE
+         ===================================== -->
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎭
+            </div>
+
+            <h3
+                data-en="Arts & Culture"
+                data-zh="文艺生活，活力绽放">
+
+                Arts & Culture
+
+            </h3>
+
+
+            <p
+                data-en="Performing arts are an important part of EverGreen's community life. Members regularly practice traditional dance, fashion shows, and other performances. Some members have dance experience, while many discovered their love of dance after joining the club. Members encourage and learn from one another in a warm and supportive environment."
+                data-zh="文艺活动多姿多彩，是长青社日常活动的重要组成部分。社团定期排练民族舞、时装秀等节目，成员中既有具备舞蹈基础的姐妹，也有许多加入长青社后才首次接触舞蹈的爱好者。大家互帮互学，其乐融融。">
+
+                Performing arts are an important part of
+                EverGreen's community life. Members
+                regularly practice traditional dance,
+                fashion shows, and other performances.
+                Some members have dance experience,
+                while many discovered their love of dance
+                after joining the club. Members encourage
+                and learn from one another in a warm and
+                supportive environment.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎶
+            </div>
+
+            <h3
+                data-en="Choir & Performances"
+                data-zh="合唱与舞台演出">
+
+                Choir & Performances
+
+            </h3>
+
+
+            <p
+                data-en="In 2025, EverGreen established a choir. Members practice Chinese and international choral music together, including rounds, two-part harmony, and multi-part singing. The club has also performed at Chinese New Year celebrations hosted by the Orlando Chinese Professional Association and has been invited to participate in events at Guang Ming Temple and Orange County multicultural celebrations."
+                data-zh="2025年，长青社成立了合唱队。成员共同练习中外合唱歌曲，开展轮唱、二声部乃至多声部合唱练习。社团还多次参加奥兰多专业人士协会（OCPA）举办的春节晚会，并受邀参加奥兰多佛光山光明寺浴佛节及桔郡多元文化节等演出。">
+
+                In 2025, EverGreen established a choir.
+                Members practice Chinese and international
+                choral music together, including rounds,
+                two-part harmony, and multi-part singing.
+                The club has also performed at Chinese
+                New Year celebrations hosted by the
+                Orlando Chinese Professional Association
+                and has been invited to participate in events
+                at Guang Ming Temple and Orange County
+                multicultural celebrations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         HEALTH & HOBBIES
+         ===================================== -->
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🧘
+            </div>
+
+            <h3
+                data-en="Health & Wellness"
+                data-zh="健康与兴趣并重">
+
+                Health & Wellness
+
+            </h3>
+
+
+            <p
+                data-en="EverGreen offers line dancing and Baduanjin exercises to support members' health, fitness, and interests. These activities provide opportunities to stay active while enjoying time with friends."
+                data-zh="长青社还组织排舞、八段锦练习，满足不同会员的兴趣与健身需求。大家在锻炼身体的同时，也享受与朋友相聚的快乐时光。">
+
+                EverGreen offers line dancing and Baduanjin
+                exercises to support members' health,
+                fitness, and interests. These activities
+                provide opportunities to stay active while
+                enjoying time with friends.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎲
+            </div>
+
+            <h3
+                data-en="Hobbies & Social Groups"
+                data-zh="兴趣活动与交流">
+
+                Hobbies & Social Groups
+
+            </h3>
+
+
+            <p
+                data-en="Chess, Mahjong, and other recreational activities are popular among members. The emphasis is not on winning or losing, but on social connection, mental exercise, and friendship. EverGreen also has interest groups for fishing, gardening, and other hobbies where members share experiences and enjoy their interests together."
+                data-zh="棋牌、麻将等活动深受会员喜爱。成员们不以输赢论高低，重在交流互动、锻炼思维与反应能力，同时增进友谊。社团还建立了钓鱼群、园艺群等多个兴趣交流群组，会员可根据爱好交流经验、分享成果。">
+
+                Chess, Mahjong, and other recreational
+                activities are popular among members.
+                The emphasis is not on winning or losing,
+                but on social connection, mental exercise,
+                and friendship. EverGreen also has interest
+                groups for fishing, gardening, and other
+                hobbies where members share experiences
+                and enjoy their interests together.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         WARM COMMUNITY
+         ===================================== -->
+
+    <div class="community-message">
+
+        <h2
+            data-en="A Warm Community"
+            data-zh="温暖相伴，共享人生">
+
+            A Warm Community
+
+        </h2>
+
+
+        <p
+            data-en="Many EverGreen members have entered retirement, and here they have found a sense of belonging, friendship, and companionship. Together, we rediscover the joy and meaning of life through shared experiences and meaningful activities."
+            data-zh="长青社大部分成员已步入退休生活，在这里，大家找到了归属感与温暖陪伴，重新发现生活的乐趣与价值。大家通过共同的经历和丰富多彩的活动，享受退休生活的美好时光。">
+
+            Many EverGreen members have entered retirement,
+            and here they have found a sense of belonging,
+            friendship, and companionship. Together, we
+            rediscover the joy and meaning of life through
+            shared experiences and meaningful activities.
+
+        </p>
+
+
+        <p
+            data-en="We warmly welcome friends aged 55 and above to join our community, share life's wonderful moments, enjoy the years ahead, and keep life evergreen."
+            data-zh="我们诚挚欢迎年满55岁的朋友加入这个温暖的大家庭，一同分享从容岁月，共赏人生美景，让岁月如歌，人生长青。">
+
+            We warmly welcome friends aged 55 and above
+            to join our community, share life's wonderful
+            moments, enjoy the years ahead, and keep
+            life evergreen.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         CONTRIBUTOR
+         ===================================== -->
+
+    <div class="about-section"
+         style="text-align:center; display:none;">
+
+        <p
+            data-en="Written by the EverGreen Club Board of Directors"
+            data-zh="撰稿｜长青社理事会">
+
+            Written by the EverGreen Club Board of Directors
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         CALL TO ACTION
+         ===================================== -->
+
+    <section class="mission">
+
+        <h2
+            data-en="Come Grow With Us"
+            data-zh="与我们一起成长">
+
+            Come Grow With Us
+
+        </h2>
+
+
+        <p
+            data-en="We welcome new members and friends aged 55 and above who would like to become part of our warm and vibrant community."
+            data-zh="我们诚挚欢迎年满55岁的朋友加入这个温暖而充满活力的大家庭。">
+
+            We welcome new members and friends aged 55
+            and above who would like to become part of
+            our warm and vibrant community.
+
+        </p>
+
+
+        <a
+            class="btn primary"
+            href="contact.html"
+            data-en="Contact Us"
+            data-zh="联系我们">
+
+            Contact Us
+
+        </a>
+
+    </section>
 
 
 </section>
@@ -827,7 +1316,7 @@
 
     <p
         data-en="© 2026 Central Florida EverGreen Seniors Club. All Rights Reserved."
-        data-zh="© 2026 中佛洲常青老年人俱乐部。版权所有。">
+        data-zh="© 2026 中佛州长青社。版权所有。">
 
         © 2026 Central Florida EverGreen Seniors Club.
         All Rights Reserved.
