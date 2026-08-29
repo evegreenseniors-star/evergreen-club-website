@@ -5,71 +5,265 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          data-en="Watch EverGreen Club activities, community events, and member stories."
-          data-zh="观看常青俱乐部的活动、社区活动以及会员故事。"
-          content="Watch EverGreen Club activities, community events, and member stories.">
+    <meta name="description" data-en="Watch EverGreen Club activities, community events, and member stories."
+        data-zh="观看常青俱乐部的活动、社区活动以及会员故事。"
+        content="Watch EverGreen Club activities, community events, and member stories.">
 
-    <title
-        data-en="EverGreen Club | Videos"
-        data-zh="常青俱乐部 | 视频">
+    <title data-en="EverGreen Club | Videos" data-zh="常青俱乐部 | 视频">
 
         EverGreen Club | Videos
 
     </title>
 
-    <link rel="icon"
-          href="assets/images/logo.png">
+    <link rel="icon" href="assets/images/logo.png">
 
-    <link rel="stylesheet"
-          href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
 
     <style>
-
         /* =====================================
            VIDEO PAGE — YEAR ARCHIVE
            ===================================== */
-        .video-section{padding:30px 8%;}
-        .video-intro{max-width:760px;margin:0 auto 50px;text-align:center;}
-        .video-intro h2{color:#0B4F9C;margin-bottom:12px;}
-        .video-intro p{color:#68737D;line-height:1.7;}
-        .year-section{max-width:1200px;margin:0 auto 65px;}
-        .year-heading{display:flex;align-items:center;gap:18px;margin:0 0 25px;}
-        .year-heading h2{margin:0;color:#0B4F9C;font-size:30px;white-space:nowrap;}
-        .year-heading::after{content:"";flex:1;height:1px;background:#DCE5EE;}
-        .year-badge{display:inline-flex;align-items:center;justify-content:center;min-width:64px;height:32px;padding:0 12px;border-radius:18px;background:#EAF3FC;color:#0B4F9C;font-size:13px;font-weight:700;}
-        .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;}
-        .video-card{background:white;border-radius:18px;overflow:hidden;border:1px solid #E5E9EF;box-shadow:0 8px 25px rgba(0,0,0,.08);transition:transform .3s ease,box-shadow .3s ease;}
-        .video-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.14);}
-        .youtube-container{position:relative;width:100%;aspect-ratio:16/9;background:#101820;overflow:hidden;}
-        .youtube-container iframe{width:100%;height:100%;border:0;display:block;}
-        .video-info{padding:18px 20px 20px;}
-        .video-category{display:inline-block;margin-bottom:8px;padding:5px 11px;border-radius:20px;background:#EAF3FC;color:#0B4F9C;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
-        .video-info h3{color:#0B4F9C;margin:0 0 7px;font-size:18px;}
-        .video-info p{color:#68737D;font-size:13px;line-height:1.6;margin:0;}
-        .channel-card{grid-column:1/-1;}
-        .channel-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 25px;border:1px solid #DCE5EE;border-radius:18px;background:#F7FAFD;color:#0B4F9C;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease;}
-        .channel-link:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.08);}
-        .channel-link strong{display:block;margin-bottom:4px;}
-        .channel-link span{color:#68737D;font-size:13px;}
-        body.dark .year-heading h2{color:#8FC5FF;}
-        body.dark .year-heading::after{background:#2D3A45;}
-        body.dark .year-badge,body.dark .video-category{background:#24384A;color:#8FC5FF;}
-        body.dark .video-card{background:#18232D;border-color:#2D3A45;box-shadow:0 10px 30px rgba(0,0,0,.25);}
-        body.dark .video-info h3{color:#8FC5FF;}
-        body.dark .video-info p{color:#B5C0C9;}
-        body.dark .channel-link{background:#18232D;border-color:#2D3A45;}
-        body.dark .channel-link strong{color:#8FC5FF;}
-        body.dark .channel-link span{color:#B5C0C9;}
-        @media(max-width:900px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-        @media(max-width:650px){.video-section{padding:45px 6%;}.video-grid{grid-template-columns:1fr;}.year-heading{gap:12px}.year-heading h2{font-size:25px}.channel-card{grid-column:auto}.channel-link{display:block}.video-info{padding:18px;}}
+        .video-section {
+            padding: 30px 8%;
+        }
+
+        .video-intro {
+            max-width: 760px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .video-intro h2 {
+            color: #0B4F9C;
+            margin-bottom: 12px;
+        }
+
+        .video-intro p {
+            color: #68737D;
+            line-height: 1.7;
+        }
+
+        .year-section {
+            max-width: 1200px;
+            margin: 0 auto 65px;
+        }
+
+        .year-heading {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 0 0 25px;
+        }
+
+        .year-heading h2 {
+            margin: 0;
+            color: #0B4F9C;
+            font-size: 30px;
+            white-space: nowrap;
+        }
+
+        .year-heading::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #DCE5EE;
+        }
+
+        .year-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 64px;
+            height: 32px;
+            padding: 0 12px;
+            border-radius: 18px;
+            background: #EAF3FC;
+            color: #0B4F9C;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #E5E9EF;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .14);
+        }
+
+        .youtube-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #101820;
+            overflow: hidden;
+        }
+
+        .youtube-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .video-info {
+            padding: 18px 20px 20px;
+        }
+
+        .video-category {
+            display: inline-block;
+            margin-bottom: 8px;
+            padding: 5px 11px;
+            border-radius: 20px;
+            background: #EAF3FC;
+            color: #0B4F9C;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .video-info h3 {
+            color: #0B4F9C;
+            margin: 0 0 7px;
+            font-size: 18px;
+        }
+
+        .video-info p {
+            color: #68737D;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .channel-card {
+            grid-column: 1/-1;
+        }
+
+        .channel-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 22px 25px;
+            border: 1px solid #DCE5EE;
+            border-radius: 18px;
+            background: #F7FAFD;
+            color: #0B4F9C;
+            text-decoration: none;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .channel-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+
+        .channel-link strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .channel-link span {
+            color: #68737D;
+            font-size: 13px;
+        }
+
+        body.dark .year-heading h2 {
+            color: #8FC5FF;
+        }
+
+        body.dark .year-heading::after {
+            background: #2D3A45;
+        }
+
+        body.dark .year-badge,
+        body.dark .video-category {
+            background: #24384A;
+            color: #8FC5FF;
+        }
+
+        body.dark .video-card {
+            background: #18232D;
+            border-color: #2D3A45;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+        body.dark .video-info h3 {
+            color: #8FC5FF;
+        }
+
+        body.dark .video-info p {
+            color: #B5C0C9;
+        }
+
+        body.dark .channel-link {
+            background: #18232D;
+            border-color: #2D3A45;
+        }
+
+        body.dark .channel-link strong {
+            color: #8FC5FF;
+        }
+
+        body.dark .channel-link span {
+            color: #B5C0C9;
+        }
+
+        @media(max-width:900px) {
+            .video-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media(max-width:650px) {
+            .video-section {
+                padding: 45px 6%;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .year-heading {
+                gap: 12px
+            }
+
+            .year-heading h2 {
+                font-size: 25px
+            }
+
+            .channel-card {
+                grid-column: auto
+            }
+
+            .channel-link {
+                display: block
+            }
+
+            .video-info {
+                padding: 18px;
+            }
+        }
+
         /* =====================================
            LANGUAGE SWITCHER
            ===================================== */
@@ -303,7 +497,6 @@
             }
 
         }
-
     </style>
 
 </head>
@@ -312,316 +505,446 @@
 <body>
 
 
-<!-- =========================================
+    <!-- =========================================
      NAVIGATION
      ========================================= -->
 
-<header>
+    <header>
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <a href="index.html"
-           class="logo">
+            <a href="index.html" class="logo">
 
-            <img
-                src="assets/images/logo.png"
-                alt="Central Florida EverGreen Seniors Club Logo">
+                <img src="assets/images/logo.png" alt="Central Florida EverGreen Seniors Club Logo">
 
-        </a>
+            </a>
 
 
-        <ul class="nav-links">
+            <ul class="nav-links">
 
-            <li>
+                <li>
 
-                <a href="index.html"
-                   data-en="Home"
-                   data-zh="首页">
+                    <a href="index.html" data-en="Home" data-zh="首页">
 
-                    Home
+                        Home
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="about.html"
-                   data-en="About"
-                   data-zh="关于我们">
+                    <a href="about.html" data-en="About" data-zh="关于我们">
 
-                    About
+                        About
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="events.html"
-                   data-en="Events"
-                   data-zh="活动">
+                    <a href="events.html" data-en="Events" data-zh="活动">
 
-                    Events
+                        Events
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="gallery.html"
-                   data-en="Gallery"
-                   data-zh="相册">
+                    <a href="gallery.html" data-en="Gallery" data-zh="相册">
 
-                    Gallery
+                        Gallery
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="videos.html"
-                   data-en="Videos"
-                   data-zh="视频">
+                    <a href="videos.html" data-en="Videos" data-zh="视频">
 
-                    Videos
+                        Videos
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="members.html"
-                   data-en="Members"
-                   data-zh="会员">
+                    <a href="members.html" data-en="Members" data-zh="会员">
 
-                    Members
+                        Members
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="contact.html"
-                   data-en="Contact"
-                   data-zh="联系我们">
+                    <a href="contact.html" data-en="Contact" data-zh="联系我们">
 
-                    Contact
+                        Contact
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
-        </ul>
+            </ul>
 
 
-        <!-- =====================================
+            <!-- =====================================
              NAVIGATION ACTIONS
              ===================================== -->
 
-        <div class="nav-actions">
+            <div class="nav-actions">
 
 
-            <!-- LANGUAGE -->
+                <!-- LANGUAGE -->
 
-            <div class="language-switcher">
+                <div class="language-switcher">
 
-                <button
-                    id="languageButton"
-                    aria-label="Select language"
-                    title="Select language">
+                    <button id="languageButton" aria-label="Select language" title="Select language">
 
-                    🌐 English
+                        🌐 English
+
+                    </button>
+
+
+                    <div id="languageMenu" class="language-menu">
+
+                        <button id="englishButton">
+
+                            🇺🇸 English
+
+                        </button>
+
+
+                        <button id="chineseButton">
+
+                            🇨🇳 中文
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DARK MODE -->
+
+                <button id="darkModeButton" aria-label="Toggle dark mode" title="Toggle dark mode">
+
+                    🌙
 
                 </button>
 
 
-                <div
-                    id="languageMenu"
-                    class="language-menu">
+                <!-- MOBILE MENU -->
 
-                    <button
-                        id="englishButton">
+                <button id="menuButton" aria-label="Open navigation menu" title="Open navigation menu">
 
-                        🇺🇸 English
+                    ☰
 
-                    </button>
-
-
-                    <button
-                        id="chineseButton">
-
-                        🇨🇳 中文
-
-                    </button>
-
-                </div>
+                </button>
 
             </div>
 
+        </nav>
 
-            <!-- DARK MODE -->
-
-            <button
-                id="darkModeButton"
-                aria-label="Toggle dark mode"
-                title="Toggle dark mode">
-
-                🌙
-
-            </button>
-
-
-            <!-- MOBILE MENU -->
-
-            <button
-                id="menuButton"
-                aria-label="Open navigation menu"
-                title="Open navigation menu">
-
-                ☰
-
-            </button>
-
-        </div>
-
-    </nav>
-
-</header>
+    </header>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      PAGE BANNER
      ========================================= -->
 
-<section class="page-banner">
+    <section class="page-banner">
 
-    <h1
-        data-en="Video Gallery"
-        data-zh="视频相册">
+        <h1 data-en="Video Gallery" data-zh="视频相册">
 
-        Video Gallery
+            Video Gallery
 
-    </h1>
+        </h1>
 
 
-    <p
-        data-en="Explore EverGreen videos by year"
-        data-zh="按年份浏览常青俱乐部视频">
+        <p data-en="Explore EverGreen videos by year" data-zh="按年份浏览常青俱乐部视频">
 
-        Watch EverGreen activities and memories
+            Watch EverGreen activities and memories
 
-    </p>
+        </p>
 
-</section>
+    </section>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      VIDEO SECTION — YEAR ARCHIVE
      ========================================= -->
-<section class="video-section">
-<div class="video-intro"><h2 data-en="Stories in Motion" data-zh="影像故事">Stories in Motion</h2><p data-en="Explore EverGreen Club videos organized by year, from recent activities to treasured community memories." data-zh="按年份浏览常青俱乐部的视频，从近期活动到珍贵的社区回忆。">Explore EverGreen Club videos organized by year, from recent activities to treasured community memories.</p></div><section class="year-section"><div class="year-heading"><span class="year-badge">2026</span><h2 data-en="2026 Videos" data-zh="2026年视频">2026 Videos</h2></div><div class="video-grid">
-    
-    <article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/OgXt-GYiLgo" title="EverGreen Club 2026 Video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2026" data-zh="2026年">2026</span><h3 data-en="EverGreen Club — 2026 Video 1" data-zh="常青俱乐部 — 2026年视频 1">EverGreen Club — 2026 Video 1</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article>
-    
-        <article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/NKz4hNloxzg" title="EverGreen Club 2026 Video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2026" data-zh="2026年">2026</span><h3 data-en="EverGreen Club — 2026 Video 2" data-zh="常青俱乐部 — 2026年视频 2">EverGreen Club — 2026 Video 2</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article>
-    
-    <article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/_UqO0GTp8_g" title="EverGreen Club 2026 Video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2026" data-zh="2026年">2026</span><h3 data-en="EverGreen Club — 2026 Video 3" data-zh="常青俱乐部 — 2026年视频 3">EverGreen Club — 2026 Video 3</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article>
-    
-    <!--
+    <section class="video-section">
+        <div class="video-intro">
+            <h2 data-en="Stories in Motion" data-zh="影像故事">Stories in Motion</h2>
+            <p data-en="Explore EverGreen Club videos organized by year, from recent activities to treasured community memories."
+                data-zh="按年份浏览常青俱乐部的视频，从近期活动到珍贵的社区回忆。">Explore EverGreen Club videos organized by year, from recent
+                activities to treasured community memories.</p>
+        </div>
+        <section class="year-section">
+            <div class="year-heading"><span class="year-badge">2026</span>
+                <h2 data-en="2026 Videos" data-zh="2026年视频">2026 Videos</h2>
+            </div>
+            <div class="video-grid">
+
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/OgXt-GYiLgo"
+                            title="EverGreen Club 2026 Video 1" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2026" data-zh="2026年">2026</span>
+                        <h3 data-en="EverGreen Club — 2026 Video 1" data-zh="常青俱乐部 — 2026年视频 1">EverGreen Club — 2026
+                            Video 1</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/NKz4hNloxzg"
+                            title="EverGreen Club 2026 Video 1" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2026" data-zh="2026年">2026</span>
+                        <h3 data-en="EverGreen Club — 2026 Video 2" data-zh="常青俱乐部 — 2026年视频 2">EverGreen Club — 2026
+                            Video 2</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/_UqO0GTp8_g"
+                            title="EverGreen Club 2026 Video 2" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2026" data-zh="2026年">2026</span>
+                        <h3 data-en="EverGreen Club — 2026 Video 3" data-zh="常青俱乐部 — 2026年视频 3">EverGreen Club — 2026
+                            Video 3</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+
+                <!--
     <article class="channel-card"><a class="channel-link" href="https://m.youtube.com/@%E9%95%BF%E9%9D%92%E7%A4%BE/videos" target="_blank" rel="noopener noreferrer">
     
     <div style="display: none;"><strong data-en="Visit Our YouTube Channel" data-zh="访问我们的 YouTube 频道">Visit Our YouTube Channel</strong><span data-en="See all of the latest EverGreen Club videos and updates." data-zh="查看常青俱乐部最新的视频和动态。">See all of the latest EverGreen Club videos and updates.</span></div>
-    -->
-    
-    <span aria-hidden="true">↗</span></a></article></div></section><section class="year-section"><div class="year-heading"><span class="year-badge">2025</span><h2 data-en="2025 Videos" data-zh="2025年视频">2025 Videos</h2></div><div class="video-grid">
-        <article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/mszLdXM3bWg" title="EverGreen Club 2025 Video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2025" data-zh="2025年">2025</span><h3 data-en="EverGreen Club — 2025 Video 1" data-zh="常青俱乐部 — 2025年视频 1">EverGreen Club — 2025 Video 1</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article></div></section><section class="year-section"><div class="year-heading"><span class="year-badge">2024</span><h2 data-en="2024 Videos" data-zh="2024年视频">2024 Videos</h2></div><div class="video-grid"><article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/QmHLzlgnVOw" title="EverGreen Club 2024 Video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2024" data-zh="2024年">2024</span><h3 data-en="EverGreen Club — 2024 Video 1" data-zh="常青俱乐部 — 2024年视频 1">EverGreen Club — 2024 Video 1</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article><article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/QmHLzlgnVOw" title="EverGreen Club 2024 Video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2024" data-zh="2024年">2024</span><h3 data-en="EverGreen Club — 2024 Video 2" data-zh="常青俱乐部 — 2024年视频 2">EverGreen Club — 2024 Video 2</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article></div></section><section class="year-section"><div class="year-heading"><span class="year-badge">2023</span><h2 data-en="2023 Videos" data-zh="2023年视频">2023 Videos</h2></div><div class="video-grid"><article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/zKveXZjGhk4" title="EverGreen Club 2023 Video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2023" data-zh="2023年">2023</span><h3 data-en="EverGreen Club — 2023 Video 1" data-zh="常青俱乐部 — 2023年视频 1">EverGreen Club — 2023 Video 1</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article><article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/pnd-j_YQ-rY" title="EverGreen Club 2023 Video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2023" data-zh="2023年">2023</span><h3 data-en="EverGreen Club — 2023 Video 2" data-zh="常青俱乐部 — 2023年视频 2">EverGreen Club — 2023 Video 2</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article><article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/UrZA1pv8-F8" title="EverGreen Club 2023 Video 3" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2023" data-zh="2023年">2023</span><h3 data-en="EverGreen Club — 2023 Video 3" data-zh="常青俱乐部 — 2023年视频 3">EverGreen Club — 2023 Video 3</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article></div></section><section class="year-section"><div class="year-heading"><span class="year-badge">2022</span><h2 data-en="2022 Videos" data-zh="2022年视频">2022 Videos</h2></div><div class="video-grid"><article class="video-card"><div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/iySZOK08iAM" title="EverGreen Club 2022 Video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-info"><span class="video-category" data-en="2022" data-zh="2022年">2022</span><h3 data-en="EverGreen Club — 2022 Video 1" data-zh="常青俱乐部 — 2022年视频 1">EverGreen Club — 2022 Video 1</h3><p data-en="A video memory from EverGreen Club activities and community events." data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community events.</p></div></article></div></section></section>
+                 <span aria-hidden="true">↗</span></a></article>   
+                -->
+            </div>
+        </section>
+        <section class="year-section">
+            <div class="year-heading"><span class="year-badge">2025</span>
+                <h2 data-en="2025 Videos" data-zh="2025年视频">2025 Videos</h2>
+            </div>
+            <div class="video-grid">
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/mszLdXM3bWg"
+                            title="EverGreen Club 2025 Video 1" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2025" data-zh="2025年">2025</span>
+                        <h3 data-en="EverGreen Club — 2025 Video 1" data-zh="常青俱乐部 — 2025年视频 1">EverGreen Club — 2025
+                            Video 1</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="year-section">
+            <div class="year-heading"><span class="year-badge">2024</span>
+                <h2 data-en="2024 Videos" data-zh="2024年视频">2024 Videos</h2>
+            </div>
+            <div class="video-grid">
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/QmHLzlgnVOw"
+                            title="EverGreen Club 2024 Video 1" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2024" data-zh="2024年">2024</span>
+                        <h3 data-en="EverGreen Club — 2024 Video 1" data-zh="常青俱乐部 — 2024年视频 1">EverGreen Club — 2024
+                            Video 1</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/QmHLzlgnVOw"
+                            title="EverGreen Club 2024 Video 2" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2024" data-zh="2024年">2024</span>
+                        <h3 data-en="EverGreen Club — 2024 Video 2" data-zh="常青俱乐部 — 2024年视频 2">EverGreen Club — 2024
+                            Video 2</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="year-section">
+            <div class="year-heading"><span class="year-badge">2023</span>
+                <h2 data-en="2023 Videos" data-zh="2023年视频">2023 Videos</h2>
+            </div>
+            <div class="video-grid">
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/zKveXZjGhk4"
+                            title="EverGreen Club 2023 Video 1" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2023" data-zh="2023年">2023</span>
+                        <h3 data-en="EverGreen Club — 2023 Video 1" data-zh="常青俱乐部 — 2023年视频 1">EverGreen Club — 2023
+                            Video 1</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/pnd-j_YQ-rY"
+                            title="EverGreen Club 2023 Video 2" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2023" data-zh="2023年">2023</span>
+                        <h3 data-en="EverGreen Club — 2023 Video 2" data-zh="常青俱乐部 — 2023年视频 2">EverGreen Club — 2023
+                            Video 2</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/UrZA1pv8-F8"
+                            title="EverGreen Club 2023 Video 3" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2023" data-zh="2023年">2023</span>
+                        <h3 data-en="EverGreen Club — 2023 Video 3" data-zh="常青俱乐部 — 2023年视频 3">EverGreen Club — 2023
+                            Video 3</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="year-section">
+            <div class="year-heading"><span class="year-badge">2022</span>
+                <h2 data-en="2022 Videos" data-zh="2022年视频">2022 Videos</h2>
+            </div>
+            <div class="video-grid">
+                <article class="video-card">
+                    <div class="youtube-container"><iframe src="https://www.youtube-nocookie.com/embed/iySZOK08iAM"
+                            title="EverGreen Club 2022 Video 1" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
+                    <div class="video-info"><span class="video-category" data-en="2022" data-zh="2022年">2022</span>
+                        <h3 data-en="EverGreen Club — 2022 Video 1" data-zh="常青俱乐部 — 2022年视频 1">EverGreen Club — 2022
+                            Video 1</h3>
+                        <p data-en="A video memory from EverGreen Club activities and community events."
+                            data-zh="常青俱乐部活动与社区活动的视频回忆。">A video memory from EverGreen Club activities and community
+                            events.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </section>
 
-<!-- =========================================
+    <!-- =========================================
      CALL TO ACTION
      ========================================= -->
 
-<section class="mission">
+    <section class="mission">
 
-    <h2
-        data-en="Have a Story to Share?"
-        data-zh="您有故事想分享吗？">
+        <h2 data-en="Have a Story to Share?" data-zh="您有故事想分享吗？">
 
-        Have a Story to Share?
+            Have a Story to Share?
 
-    </h2>
+        </h2>
 
 
-    <p
-        data-en="If you have a video from an EverGreen activity or event that you'd like to share, we'd love to hear from you."
-        data-zh="如果您有常青活动或社区活动的视频想与大家分享，我们非常乐意听到您的故事。">
+        <p data-en="If you have a video from an EverGreen activity or event that you'd like to share, we'd love to hear from you."
+            data-zh="如果您有常青活动或社区活动的视频想与大家分享，我们非常乐意听到您的故事。">
 
-        If you have a video from an EverGreen
-        activity or event that you'd like to
-        share, we'd love to hear from you.
+            If you have a video from an EverGreen
+            activity or event that you'd like to
+            share, we'd love to hear from you.
 
-    </p>
+        </p>
 
 
-    <a
-        class="btn primary"
-        href="contact.html"
-        data-en="Contact Us"
-        data-zh="联系我们">
+        <a class="btn primary" href="contact.html" data-en="Contact Us" data-zh="联系我们">
 
-        Contact Us
+            Contact Us
 
-    </a>
+        </a>
 
-</section>
+    </section>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      FOOTER
      ========================================= -->
 
-<footer>
+    <footer>
 
-    <img
-        src="assets/images/logo.png"
-        width="180"
-        alt="Central Florida EverGreen Seniors Club Logo">
+        <img src="assets/images/logo.png" width="180" alt="Central Florida EverGreen Seniors Club Logo">
 
 
-    <p
-        data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang."
-        data-zh="© 2026 中佛州长青社。版权所有。">
+        <p data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang." data-zh="© 2026 中佛州长青社。版权所有。">
 
-        © 2026 Central Florida EverGreen Seniors Club.
-        All Rights Reserved.
-    </p>
+            © 2026 Central Florida EverGreen Seniors Club.
+            All Rights Reserved.
+        </p>
 
-</footer>
+    </footer>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      JAVASCRIPT
      ========================================= -->
 
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
-<script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/darkmode.js"></script>
 
-<script src="assets/js/language.js"></script>
+    <script src="assets/js/language.js"></script>
 
 
 </body>
