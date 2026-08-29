@@ -38,202 +38,275 @@
            ===================================== */
 
         .members-section {
-            padding: 70px 8%;
+            padding: 75px 8%;
         }
 
-
         .members-intro {
-            max-width: 750px;
-
+            max-width: 760px;
             margin: 0 auto 55px;
-
             text-align: center;
         }
 
+        .members-eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #B08A2E;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
         .members-intro h2 {
             color: #0B4F9C;
-
-            margin-bottom: 15px;
+            margin: 0 0 15px;
+            font-size: 34px;
         }
-
 
         .members-intro p {
             color: #68737D;
+            line-height: 1.8;
+            margin: 0;
         }
 
-
         /* =====================================
-           MEMBER GRID
+           SECTION HEADINGS
            ===================================== */
 
-        .members-grid {
+        .member-section-heading {
+            max-width: 1120px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
 
+        .member-section-heading .heading-accent {
+            width: 5px;
+            height: 38px;
+            border-radius: 5px;
+            background: #D4AF37;
+            flex: 0 0 auto;
+        }
+
+        .member-section-heading h2 {
+            margin: 0;
+            color: #0B4F9C;
+            font-size: 28px;
+        }
+
+        .member-section-heading p {
+            margin: 4px 0 0;
+            color: #68737D;
+            font-size: 13px;
+        }
+
+        /* =====================================
+           LEADERSHIP GRID
+           ===================================== */
+
+        .leadership-grid {
+            max-width: 1120px;
+            margin: 0 auto 75px;
             display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(260px, 1fr));
-
-            gap: 30px;
-
-            max-width: 1000px;
-
-            margin: auto;
-
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
         }
-
-
-        /* =====================================
-           MEMBER CARD
-           ===================================== */
 
         .member-card {
-
+            position: relative;
             text-align: center;
-
             background: white;
-
-            border-radius: 20px;
-
-            padding: 35px 25px;
-
+            border-radius: 22px;
+            padding: 32px 25px 30px;
             border: 1px solid #E5E9EF;
-
-            box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.08);
-
-            transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease;
-
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+            overflow: hidden;
         }
 
+        .member-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #D4AF37;
+            opacity: .9;
+        }
 
         .member-card:hover {
-
-            transform: translateY(-8px);
-
-            box-shadow:
-                0 18px 40px rgba(0, 0, 0, 0.14);
-
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+            border-color: #D9E3ED;
         }
-
-
-        /* =====================================
-           MEMBER PHOTO
-           ===================================== */
 
         .member-photo {
-
-            width: 170px;
-
-            height: 170px;
-
-            margin: 0 auto 22px;
-
+            width: 165px;
+            height: 165px;
+            margin: 5px auto 20px;
+            display: block;
             border-radius: 50%;
-
             object-fit: cover;
-
             object-position: center;
-
             border: 5px solid white;
-
-            box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.15);
-
+            box-shadow: 0 7px 22px rgba(0, 0, 0, 0.14);
             outline: 3px solid #D4AF37;
-
-            transition:
-                transform 0.4s ease;
-
+            transition: transform .35s ease;
         }
-
 
         .member-card:hover .member-photo {
-
-            transform: scale(1.05);
-
+            transform: scale(1.04);
         }
-
-
-        /* =====================================
-           MEMBER INFORMATION
-           ===================================== */
 
         .member-role {
-
             display: inline-block;
-
-            margin-bottom: 8px;
-
-            padding: 5px 14px;
-
+            margin-bottom: 9px;
+            padding: 6px 14px;
             border-radius: 20px;
-
             background: #EAF3FC;
-
             color: #0B4F9C;
-
-            font-size: 12px;
-
-            font-weight: 600;
-
+            font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
-
-            letter-spacing: 0.5px;
-
+            letter-spacing: .7px;
         }
-
 
         .member-card h3 {
-
             color: #0B4F9C;
-
-            margin-bottom: 10px;
-
+            margin: 0 0 10px;
             font-size: 22px;
-
         }
-
 
         .member-description {
-
             color: #68737D;
-
-            font-size: 14px;
-
+            font-size: 13px;
             line-height: 1.7;
-
+            margin: 0;
         }
-
 
         /* =====================================
-           LEADERSHIP TITLE
+           FUTURE BOARD MEMBERS
+           Hidden until content is added
            ===================================== */
 
-        .leadership-title {
+        .future-board {
+            display: none;
+        }
 
+        /* =====================================
+           GENERAL MEMBERS DIRECTORY
+           Ready for future members
+           ===================================== */
+
+        .members-directory {
+            max-width: 1120px;
+            margin: 0 auto 75px;
+        }
+
+        .member-directory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .directory-card {
+            display: none;
             text-align: center;
-
-            margin-bottom: 35px;
-
+            background: white;
+            border: 1px solid #E5E9EF;
+            border-radius: 18px;
+            padding: 25px 18px;
+            box-shadow: 0 7px 22px rgba(0, 0, 0, .06);
         }
 
+        .directory-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            outline: 2px solid #D4AF37;
+            margin-bottom: 14px;
+        }
 
-        .leadership-title h2 {
-
+        .directory-card h3 {
             color: #0B4F9C;
-
+            font-size: 18px;
+            margin: 0;
         }
 
+        /* =====================================
+           DARK MODE
+           ===================================== */
 
-        .leadership-title p {
-
-            color: #68737D;
-
+        body.dark .members-intro h2,
+        body.dark .member-section-heading h2,
+        body.dark .member-card h3,
+        body.dark .directory-card h3 {
+            color: #8FC5FF;
         }
 
+        body.dark .members-intro p,
+        body.dark .member-section-heading p,
+        body.dark .member-description {
+            color: #B5C0C9;
+        }
+
+        body.dark .member-card,
+        body.dark .directory-card {
+            background: #18232D;
+            border-color: #2D3A45;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+        body.dark .member-role {
+            background: #24384A;
+            color: #8FC5FF;
+        }
+
+        /* =====================================
+           MOBILE
+           ===================================== */
+
+        @media (max-width: 900px) {
+            .leadership-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .member-directory-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .members-section {
+                padding: 50px 6%;
+            }
+
+            .members-intro h2 {
+                font-size: 29px;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .member-directory-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .member-card {
+                max-width: 380px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .member-section-heading h2 {
+                font-size: 24px;
+            }
+        }
 
         /* =====================================
            LANGUAGE SWITCHER
@@ -695,43 +768,61 @@
 
 <section class="members-section">
 
-
     <div class="members-intro">
 
+        <span
+            class="members-eyebrow"
+            data-en="EverGreen Community"
+            data-zh="常青社区">
+            EverGreen Community
+        </span>
 
         <h2
-            data-en="Our Leadership Team"
-            data-zh="我们的领导团队">
-
-            Our Leadership Team
-
+            data-en="Leadership & Community"
+            data-zh="领导团队与社区">
+            Leadership & Community
         </h2>
 
-
         <p
-            data-en="Our dedicated leaders help organize activities, support members, and strengthen our community."
-            data-zh="我们敬业的领导团队帮助组织活动、支持会员并加强我们的社区。">
-
-            Our dedicated leaders help organize
-            activities, support members, and
-            strengthen our community.
-
+            data-en="Meet the dedicated people who help guide EverGreen Club, organize activities, and build a welcoming community for everyone."
+            data-zh="认识帮助常青俱乐部发展、组织活动并为大家建设温馨社区的成员。">
+            Meet the dedicated people who help guide EverGreen Club,
+            organize activities, and build a welcoming community for everyone.
         </p>
-
 
     </div>
 
 
+    <!-- =====================================
+         BOARD & LEADERSHIP
+         ===================================== -->
 
-    <div class="members-grid">
+    <div class="member-section-heading">
+
+        <span class="heading-accent"></span>
+
+        <div>
+            <h2
+                data-en="Board & Leadership"
+                data-zh="董事会与领导团队">
+                Board & Leadership
+            </h2>
+
+            <p
+                data-en="Our current club leadership"
+                data-zh="我们的现任领导团队">
+                Our current club leadership
+            </p>
+        </div>
+
+    </div>
 
 
-        <!-- =================================
-             PRESIDENT
-             ================================= -->
+    <div class="leadership-grid">
+
+        <!-- PRESIDENT -->
 
         <div class="member-card">
-
 
             <img
                 class="member-photo"
@@ -739,44 +830,29 @@
                 alt="Bing Zhang, President"
                 loading="lazy">
 
-
             <span
                 class="member-role"
                 data-en="President"
                 data-zh="会长">
-
                 President
-
             </span>
 
-
-            <h3>
-                Bing Zhang
-            </h3>
-
+            <h3>Bing Zhang</h3>
 
             <p
                 class="member-description"
                 data-en="Leading club activities and community programs while helping guide the EverGreen community."
                 data-zh="负责领导俱乐部活动和社区项目，并协助指导常青俱乐部社区。">
-
-                Leading club activities and
-                community programs while helping
-                guide the EverGreen community.
-
+                Leading club activities and community programs
+                while helping guide the EverGreen community.
             </p>
-
 
         </div>
 
 
-
-        <!-- =================================
-             VICE PRESIDENT
-             ================================= -->
+        <!-- VICE PRESIDENT -->
 
         <div class="member-card">
-
 
             <img
                 class="member-photo"
@@ -784,44 +860,29 @@
                 alt="Chunying Zheng, Vice President"
                 loading="lazy">
 
-
             <span
                 class="member-role"
                 data-en="Vice President"
                 data-zh="副会长">
-
                 Vice President
-
             </span>
 
-
-            <h3>
-                Chunying Zheng
-            </h3>
-
+            <h3>Chunying Zheng</h3>
 
             <p
                 class="member-description"
                 data-en="Supporting members and organizing events that bring the community together."
                 data-zh="支持会员并组织各种活动，让社区成员更加紧密地联系在一起。">
-
-                Supporting members and organizing
-                events that bring the community
-                together.
-
+                Supporting members and organizing events
+                that bring the community together.
             </p>
-
 
         </div>
 
 
-
-        <!-- =================================
-             SECRETARY
-             ================================= -->
+        <!-- SECRETARY -->
 
         <div class="member-card">
-
 
             <img
                 class="member-photo"
@@ -829,40 +890,125 @@
                 alt="Christy Malandra, Secretary"
                 loading="lazy">
 
-
             <span
                 class="member-role"
                 data-en="Secretary"
                 data-zh="秘书">
-
                 Secretary
-
             </span>
 
-
-            <h3>
-                Christy Malandra
-            </h3>
-
+            <h3>Christy Malandra</h3>
 
             <p
                 class="member-description"
                 data-en="Managing communications, records, and important club information."
                 data-zh="负责管理沟通、记录以及重要的俱乐部信息。">
-
                 Managing communications, records,
                 and important club information.
-
             </p>
 
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         FUTURE BOARD MEMBERS
+         Add new cards here later.
+         The section stays invisible until enabled.
+         ===================================== -->
+
+    <div class="future-board">
+
+        <div class="member-section-heading">
+
+            <span class="heading-accent"></span>
+
+            <div>
+                <h2
+                    data-en="Board Members"
+                    data-zh="董事会成员">
+                    Board Members
+                </h2>
+
+                <p
+                    data-en="Additional EverGreen Club board members"
+                    data-zh="其他常青俱乐部董事会成员">
+                    Additional EverGreen Club board members
+                </p>
+            </div>
+
+        </div>
+
+        <div class="leadership-grid">
+
+            <!-- COPY A MEMBER CARD HERE FOR EACH NEW BOARD MEMBER -->
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MEMBERS DIRECTORY
+         Ready for future members.
+         Cards are hidden until information is added.
+         ===================================== -->
+
+    <div class="members-directory">
+
+        <div class="member-section-heading">
+
+            <span class="heading-accent"></span>
+
+            <div>
+                <h2
+                    data-en="Our Members"
+                    data-zh="我们的会员">
+                    Our Members
+                </h2>
+
+                <p
+                    data-en="The people who make EverGreen a welcoming community"
+                    data-zh="让常青社区更加温暖的每一位会员">
+                    The people who make EverGreen a welcoming community
+                </p>
+            </div>
 
         </div>
 
 
+        <div class="member-directory-grid">
+
+            <!-- =================================
+                 FUTURE MEMBER CARD TEMPLATE
+                 Copy this card and change the
+                 photo, name, and language text.
+                 ================================= -->
+
+            <div class="directory-card">
+
+                <img
+                    class="directory-photo"
+                    src="assets/images/members/member-01.jpeg"
+                    alt="EverGreen Club Member"
+                    loading="lazy">
+
+                <h3
+                    data-en="Member Name"
+                    data-zh="会员姓名">
+                    Member Name
+                </h3>
+
+            </div>
+
+            <!-- Add additional member cards here -->
+
+        </div>
+
     </div>
 
 </section>
-
 
 
 <!-- =========================================
