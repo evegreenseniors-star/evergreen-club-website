@@ -175,6 +175,48 @@
 
         }
 
+    
+        /* =====================================
+           EVENT BUTTONS
+           Keep button text visible in all modes
+           ===================================== */
+
+        .cards .card a.btn.primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            min-height: 44px;
+            padding: 11px 22px;
+            color: #ffffff !important;
+            background: #0B4F9C;
+            border: 1px solid #0B4F9C;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.2;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cards .card a.btn.primary:hover {
+            color: #ffffff !important;
+            background: #083D78;
+            border-color: #083D78;
+        }
+
+        body.dark .cards .card a.btn.primary {
+            color: #ffffff !important;
+            background: #2F80C9;
+            border-color: #2F80C9;
+        }
+
+        body.dark .cards .card a.btn.primary:hover {
+            color: #ffffff !important;
+            background: #4A9BDE;
+            border-color: #4A9BDE;
+        }
+
     </style>
 
 </head>
