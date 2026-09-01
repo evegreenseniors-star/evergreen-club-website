@@ -40,7 +40,7 @@
            ================================= */
 
         .gallery-section {
-            padding: 30px 8%;
+            padding: 70px 8%;
         }
 
         .gallery-intro {
@@ -143,6 +143,16 @@
             grid-template-columns:
                 repeat(auto-fit, minmax(240px, 1fr));
             gap: 22px;
+        }
+
+        /* Keep single-photo years the same compact card size as 2026. */
+        .event-grid.single-photo-grid {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .event-grid.single-photo-grid .event-card {
+            width: 100%;
+            max-width: 320px;
         }
 
 
@@ -822,38 +832,28 @@
                 <!-- Chinese New Year -->
 
                 <div
-                    class="event-card"
+                    class="event-card has-photo"
+                    data-images="https://drive.google.com/thumbnail?id=1VkCFoidB7SqeSi77AfMlkV1o4LMiHcbN&sz=w1200|https://drive.google.com/thumbnail?id=1yGmRp7qHi4S_tsR7qNonoybCkkX8YlvI&sz=w1200"
                     data-drive-folder="2026/Spring/Chinese New Year">
 
-                    <div class="event-icon">
-                        🧧
+                    <img
+                        src="https://drive.google.com/thumbnail?id=1VkCFoidB7SqeSi77AfMlkV1o4LMiHcbN&sz=w1200"
+                        alt="EverGreen Club Chinese New Year"
+                        loading="lazy">
+
+                    <div class="event-card-photo-overlay">
+                        <h4
+                            data-en="Chinese New Year"
+                            data-zh="春节活动">
+                            Chinese New Year
+                        </h4>
+
+                        <p
+                            data-en="Spring Festival celebrations and activities."
+                            data-zh="春节庆祝活动与精彩瞬间。">
+                            Spring Festival celebrations and activities.
+                        </p>
                     </div>
-
-                    <h4
-                        data-en="Chinese New Year"
-                        data-zh="春节活动">
-
-                        Chinese New Year
-
-                    </h4>
-
-                    <p
-                        data-en="Spring Festival celebrations and activities."
-                        data-zh="春节庆祝活动与精彩瞬间。">
-
-                        Spring Festival celebrations
-                        and activities.
-
-                    </p>
-
-                    <span class="view-photos"
-                          data-en="Photos coming soon →"
-                          data-zh="照片即将上传 →">
-
-                        Photos coming soon →
-
-                    </span>
-
                 </div>
 
 
@@ -1007,37 +1007,28 @@
 
 
                 <div
-                    class="event-card"
-                    data-drive-folder="2026/Summer/Dragon Boat Festival">
+                    class="event-card has-photo"
+                    data-images="https://drive.google.com/thumbnail?id=1ucgTq06_Td8IQB5CotXwswZJ2SJeLA90&sz=w1200|https://drive.google.com/thumbnail?id=17WoJlq4L9bMZNzRzZCKywbcDv7ouYbd8&sz=w1200|https://drive.google.com/thumbnail?id=1XWrbON1FNO51N54o0XYDHJnuw132bs0p&sz=w1200"
+                    data-drive-folder="2026/Summer/Duanwu Festival">
 
-                    <div class="event-icon">
-                        🐉
+                    <img
+                        src="https://drive.google.com/thumbnail?id=1ucgTq06_Td8IQB5CotXwswZJ2SJeLA90&sz=w1200"
+                        alt="EverGreen Club Duanwu Festival"
+                        loading="lazy">
+
+                    <div class="event-card-photo-overlay">
+                        <h4
+                            data-en="Duanwu Festival"
+                            data-zh="端午节">
+                            Duanwu Festival
+                        </h4>
+
+                        <p
+                            data-en="Festival activities and celebrations."
+                            data-zh="端午节庆祝活动。">
+                            Festival activities and celebrations.
+                        </p>
                     </div>
-
-                    <h4
-                        data-en="Dragon Boat Festival"
-                        data-zh="端午节">
-
-                        Dragon Boat Festival
-
-                    </h4>
-
-                    <p
-                        data-en="Festival activities and celebrations."
-                        data-zh="端午节庆祝活动。">
-
-                        Festival activities and celebrations.
-
-                    </p>
-
-                    <span class="view-photos"
-                          data-en="Photos coming soon →"
-                          data-zh="照片即将上传 →">
-
-                        Photos coming soon →
-
-                    </span>
-
                 </div>
 
 
@@ -1106,33 +1097,33 @@
 
 
                 <div
-                    class="event-card has-photo"
-                    data-index="1"
+                    class="event-card"
                     data-drive-folder="2026/Summer/Community Performances">
 
-                    <img
-                        src="https://drive.google.com/thumbnail?id=1MfO2ZnccjWX-nF_cG26atos3g9lq0RMh&sz=w1200"
-                        alt="EverGreen Club Community Performance"
-                        loading="lazy">
-
-                    <div class="event-card-photo-overlay">
-                        <h4
-                            data-en="Community Performances"
-                            data-zh="社区表演">
-
-                            Community Performances
-
-                        </h4>
-
-                        <p
-                            data-en="Performances and special community events."
-                            data-zh="表演和特别社区活动。">
-
-                            Performances and special
-                            community events.
-
-                        </p>
+                    <div class="event-icon">
+                        🎭
                     </div>
+
+                    <h4
+                        data-en="Community Performances"
+                        data-zh="社区表演">
+
+                        Community Performances
+
+                    </h4>
+
+                    <p
+                        data-en="Performances and special community events."
+                        data-zh="表演和特别社区活动。">
+
+                        Performances and special
+                        community events.
+
+                    </p>
+
+                    <span class="view-photos">
+                        Photos coming soon →
+                    </span>
 
                 </div>
 
@@ -1281,35 +1272,27 @@
 
                 <div
                     class="event-card has-photo"
-                    data-index="0"
+                    data-images="https://drive.google.com/thumbnail?id=1J_zra2pBr-xEzVqgMxgSKrkcY7Rq5gj0&sz=w1200"
                     data-drive-folder="2026/Autumn/Interest Groups">
 
                     <img
-                        src="https://drive.google.com/thumbnail?id=1Ww0V6u-c_VCV3q96HldKNk94UvqmB_S6&sz=w1200"
+                        src="https://drive.google.com/thumbnail?id=1J_zra2pBr-xEzVqgMxgSKrkcY7Rq5gj0&sz=w1200"
                         alt="EverGreen Club Interest Groups"
                         loading="lazy">
 
                     <div class="event-card-photo-overlay">
-
                         <h4
                             data-en="Interest Groups"
                             data-zh="兴趣小组">
-
                             Interest Groups
-
                         </h4>
 
                         <p
                             data-en="Activities shared by our interest groups."
                             data-zh="兴趣小组开展的丰富活动。">
-
-                            Activities shared by
-                            our interest groups.
-
+                            Activities shared by our interest groups.
                         </p>
-
                     </div>
-
                 </div>
 
             </div>
@@ -1496,29 +1479,31 @@
 
             </div>
 
-            <div class="event-grid">
+            <div class="event-grid single-photo-grid">
 
-                <div class="event-card coming-soon"
-                     data-drive-folder="2025/Spring">
+                <div
+                    class="event-card has-photo"
+                    data-images="https://drive.google.com/thumbnail?id=16V7Dll5IGCVsJN-PlyDaQGYuRIgwZzQa&sz=w1200"
+                    data-drive-folder="2025/Spring/Outing to Leu Garden">
 
-                    <div class="event-icon">🌸</div>
+                    <img
+                        src="https://drive.google.com/thumbnail?id=16V7Dll5IGCVsJN-PlyDaQGYuRIgwZzQa&sz=w1200"
+                        alt="EverGreen Club Outing to Leu Garden"
+                        loading="lazy">
 
-                    <h4
-                        data-en="Spring"
-                        data-zh="春季">
+                    <div class="event-card-photo-overlay">
+                        <h4
+                            data-en="Outing to Leu Garden"
+                            data-zh="Leu Garden 游园">
+                            Outing to Leu Garden
+                        </h4>
 
-                        Spring
-
-                    </h4>
-
-                    <p>
-                        2025 Spring activities and memories.
-                    </p>
-
-                    <span class="view-photos">
-                        Photos coming soon →
-                    </span>
-
+                        <p
+                            data-en="A spring outing to Leu Garden."
+                            data-zh="春季前往 Leu Garden 的游园活动。">
+                            A spring outing to Leu Garden.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -1600,29 +1585,31 @@
 
             </div>
 
-            <div class="event-grid">
+            <div class="event-grid single-photo-grid">
 
-                <div class="event-card coming-soon"
-                     data-drive-folder="2025/Autumn">
+                <div
+                    class="event-card has-photo"
+                    data-images="https://drive.google.com/thumbnail?id=1W_cZoX20vNdZ2Mv7R2ydCd-1URvMwl6D&sz=w1200"
+                    data-drive-folder="2025/Autumn/Halloween">
 
-                    <div class="event-icon">🍂</div>
+                    <img
+                        src="https://drive.google.com/thumbnail?id=1W_cZoX20vNdZ2Mv7R2ydCd-1URvMwl6D&sz=w1200"
+                        alt="EverGreen Club Halloween"
+                        loading="lazy">
 
-                    <h4
-                        data-en="Autumn"
-                        data-zh="秋季">
+                    <div class="event-card-photo-overlay">
+                        <h4
+                            data-en="Halloween"
+                            data-zh="万圣节">
+                            Halloween
+                        </h4>
 
-                        Autumn
-
-                    </h4>
-
-                    <p>
-                        2025 Autumn activities and memories.
-                    </p>
-
-                    <span class="view-photos">
-                        Photos coming soon →
-                    </span>
-
+                        <p
+                            data-en="Halloween activities and fun memories."
+                            data-zh="万圣节活动与欢乐回忆。">
+                            Halloween activities and fun memories.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -1652,29 +1639,31 @@
 
             </div>
 
-            <div class="event-grid">
+            <div class="event-grid single-photo-grid">
 
-                <div class="event-card coming-soon"
-                     data-drive-folder="2025/Winter">
+                <div
+                    class="event-card has-photo"
+                    data-images="https://drive.google.com/thumbnail?id=1iie1DmaVqBssDw1RIn6tYPJYvPiv2ivb&sz=w1200|https://drive.google.com/thumbnail?id=1wFJa9a671E-Do0bhoE-b-j5iTk5jBrAn&sz=w1200|https://drive.google.com/thumbnail?id=1eVg2kloM8uV2qsopp2NAWw79oPb_9VCW&sz=w1200"
+                    data-drive-folder="2025/Winter/Community Performances">
 
-                    <div class="event-icon">❄️</div>
+                    <img
+                        src="https://drive.google.com/thumbnail?id=1iie1DmaVqBssDw1RIn6tYPJYvPiv2ivb&sz=w1200"
+                        alt="EverGreen Club Community Performances"
+                        loading="lazy">
 
-                    <h4
-                        data-en="Winter"
-                        data-zh="冬季">
+                    <div class="event-card-photo-overlay">
+                        <h4
+                            data-en="Community Performances"
+                            data-zh="社区表演">
+                            Community Performances
+                        </h4>
 
-                        Winter
-
-                    </h4>
-
-                    <p>
-                        2025 Winter activities and memories.
-                    </p>
-
-                    <span class="view-photos">
-                        Photos coming soon →
-                    </span>
-
+                        <p
+                            data-en="Performances and special community events."
+                            data-zh="表演和特别社区活动。">
+                            Performances and special community events.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -1874,29 +1863,31 @@
 
             </div>
 
-            <div class="event-grid">
+            <div class="event-grid single-photo-grid">
 
-                <div class="event-card coming-soon"
-                     data-drive-folder="2024/Winter">
+                <div
+                    class="event-card has-photo"
+                    data-images="https://drive.google.com/thumbnail?id=10lcCeGsDDrP7amnQIH2NIJL34XgirGPQ&sz=w1200"
+                    data-drive-folder="2024/Winter">
 
-                    <div class="event-icon">❄️</div>
+                    <img
+                        src="https://drive.google.com/thumbnail?id=10lcCeGsDDrP7amnQIH2NIJL34XgirGPQ&sz=w1200"
+                        alt="EverGreen Club Winter"
+                        loading="lazy">
 
-                    <h4
-                        data-en="Winter"
-                        data-zh="冬季">
+                    <div class="event-card-photo-overlay">
+                        <h4
+                            data-en="Winter"
+                            data-zh="冬季">
+                            Winter
+                        </h4>
 
-                        Winter
-
-                    </h4>
-
-                    <p>
-                        2024 Winter activities and memories.
-                    </p>
-
-                    <span class="view-photos">
-                        Photos coming soon →
-                    </span>
-
+                        <p
+                            data-en="2024 Winter activities and memories."
+                            data-zh="2024年冬季活动与美好回忆。">
+                            2024 Winter activities and memories.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -2002,7 +1993,7 @@
         alt="Central Florida EverGreen Seniors Club Logo">
 
     <p
-        data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang"
+        data-en="© 2026 Central Florida EverGreen Seniors Club. All Rights Reserved."
         data-zh="© 2026 中佛州长青社。版权所有。">
 
         © 2026 Central Florida EverGreen Seniors Club.
@@ -2021,7 +2012,7 @@
 <script>
 
     /* =================================
-       GALLERY PHOTO DATA
+       GALLERY PHOTO DATA / LIGHTBOX
        ================================= */
 
     const galleryItems =
@@ -2042,19 +2033,33 @@
     const nextButton =
         document.getElementById("lightboxNext");
 
+    let images = [];
+    let currentIndex = 0;
+
 
     /*
-       All gallery photos currently
-       available locally.
+       Google Drive's /uc?export=view URL can fail in some
+       browsers when the page is opened locally.
+
+       Use Drive's thumbnail endpoint instead, but request a
+       much larger image for the lightbox. This works both:
+       • when gallery.html is opened directly on the computer
+       • after the site is deployed to GitHub Pages
     */
+    function getLargeImageUrl(url) {
 
-    const images = [
-        "https://drive.google.com/thumbnail?id=1Ww0V6u-c_VCV3q96HldKNk94UvqmB_S6&sz=w1600",
-        "https://drive.google.com/thumbnail?id=1MfO2ZnccjWX-nF_cG26atos3g9lq0RMh&sz=w1600"
-    ];
+        const match = url.match(/[?&]id=([^&]+)/);
 
+        if (!match) {
+            return url;
+        }
 
-    let currentIndex = 0;
+        return (
+            "https://drive.google.com/thumbnail?id=" +
+            encodeURIComponent(match[1]) +
+            "&sz=w2000"
+        );
+    }
 
 
     /* =================================
@@ -2067,15 +2072,22 @@
             return;
         }
 
-        currentIndex = index;
+        currentIndex =
+            (index + images.length) % images.length;
 
         lightboxImage.src =
-            images[currentIndex];
+            getLargeImageUrl(images[currentIndex]);
+
+        lightboxImage.alt =
+            "Expanded gallery photo " +
+            (currentIndex + 1) +
+            " of " +
+            images.length;
 
         lightbox.classList.add("show");
 
-        document.body.style.overflow =
-            "hidden";
+        document.body.style.overflow = "hidden";
+
     }
 
 
@@ -2087,8 +2099,9 @@
 
         lightbox.classList.remove("show");
 
-        document.body.style.overflow =
-            "";
+        lightboxImage.src = "";
+
+        document.body.style.overflow = "";
 
     }
 
@@ -2103,14 +2116,7 @@
             return;
         }
 
-        currentIndex++;
-
-        if (currentIndex >= images.length) {
-            currentIndex = 0;
-        }
-
-        lightboxImage.src =
-            images[currentIndex];
+        showImage(currentIndex + 1);
 
     }
 
@@ -2125,15 +2131,7 @@
             return;
         }
 
-        currentIndex--;
-
-        if (currentIndex < 0) {
-            currentIndex =
-                images.length - 1;
-        }
-
-        lightboxImage.src =
-            images[currentIndex];
+        showImage(currentIndex - 1);
 
     }
 
@@ -2142,28 +2140,24 @@
        CLICK PHOTO CARD
        ================================= */
 
-    galleryItems.forEach(
-        (item) => {
+    galleryItems.forEach((item) => {
 
-            const index =
-                parseInt(
-                    item.dataset.index || "0",
-                    10
-                );
+        item.addEventListener("click", () => {
 
-            item.addEventListener(
-                "click",
-                () => {
-                    showImage(index);
-                }
-            );
+            images = (item.dataset.images || "")
+                .split("|")
+                .map(url => url.trim())
+                .filter(Boolean);
 
-        }
-    );
+            showImage(0);
+
+        });
+
+    });
 
 
     /* =================================
-       CLOSE BUTTON
+       LIGHTBOX CONTROLS
        ================================= */
 
     closeButton.addEventListener(
@@ -2171,20 +2165,10 @@
         closeLightbox
     );
 
-
-    /* =================================
-       NEXT BUTTON
-       ================================= */
-
     nextButton.addEventListener(
         "click",
         nextImage
     );
-
-
-    /* =================================
-       PREVIOUS BUTTON
-       ================================= */
 
     previousButton.addEventListener(
         "click",
@@ -2192,52 +2176,39 @@
     );
 
 
-    /* =================================
-       CLICK OUTSIDE IMAGE
-       ================================= */
+    /* Click outside the image to close. */
+    lightbox.addEventListener("click", (event) => {
 
-    lightbox.addEventListener(
-        "click",
-        (event) => {
-
-            if (event.target === lightbox) {
-
-                closeLightbox();
-
-            }
-
+        if (event.target === lightbox) {
+            closeLightbox();
         }
-    );
+
+    });
 
 
     /* =================================
        KEYBOARD CONTROLS
        ================================= */
 
-    document.addEventListener(
-        "keydown",
-        (event) => {
+    document.addEventListener("keydown", (event) => {
 
-            if (
-                !lightbox.classList.contains("show")
-            ) {
-                return;
-            }
-
-            if (event.key === "Escape") {
-                closeLightbox();
-            }
-
-            if (event.key === "ArrowRight") {
-                nextImage();
-            }
-
-            if (event.key === "ArrowLeft") {
-                previousImage();
-            }
-
+        if (!lightbox.classList.contains("show")) {
+            return;
         }
-    );
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+
+        if (event.key === "ArrowRight") {
+            nextImage();
+        }
+
+        if (event.key === "ArrowLeft") {
+            previousImage();
+        }
+
+    });
 
 </script>
 
