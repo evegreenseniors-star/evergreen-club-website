@@ -5,34 +5,28 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          data-en="Discover upcoming EverGreen Club events, activities, meetings, and community gatherings."
-          data-zh="了解常青俱乐部即将举行的活动、会议和社区聚会。"
-          content="Discover upcoming EverGreen Club events, activities, meetings, and community gatherings.">
+        data-en="Discover upcoming EverGreen Club events, activities, meetings, and community gatherings."
+        data-zh="了解常青俱乐部即将举行的活动、会议和社区聚会。"
+        content="Discover upcoming EverGreen Club events, activities, meetings, and community gatherings.">
 
-    <title
-        data-en="EverGreen Club | Events"
-        data-zh="常青俱乐部 | 活动">
+    <title data-en="EverGreen Club | Events" data-zh="常青俱乐部 | 活动">
 
         EverGreen Club | Events
 
     </title>
 
-    <link rel="icon"
-          href="assets/images/logo.png">
+    <link rel="icon" href="assets/images/logo.png">
 
-    <link rel="stylesheet"
-          href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
 
     <style>
-
         /* =====================================
            LANGUAGE SWITCHER
            ===================================== */
@@ -175,7 +169,7 @@
 
         }
 
-    
+
         /* =====================================
            EVENT BUTTONS
            Keep button text visible in all modes
@@ -216,7 +210,6 @@
             background: #4A9BDE;
             border-color: #4A9BDE;
         }
-
     </style>
 
 </head>
@@ -225,352 +218,302 @@
 <body>
 
 
-<!-- =========================================
+    <!-- =========================================
      NAVIGATION
      ========================================= -->
 
-<header>
+    <header>
 
-    <nav class="navbar">
-
-
-        <!-- LOGO -->
-
-        <a href="index.html"
-           class="logo">
-
-            <img
-                src="assets/images/logo.png"
-                alt="Cental Florida EverGreen Seniors Club Logo">
-
-        </a>
+        <nav class="navbar">
 
 
-        <!-- NAVIGATION LINKS -->
+            <!-- LOGO -->
 
-        <ul class="nav-links">
+            <a href="index.html" class="logo">
 
+                <img src="assets/images/logo.png" alt="Cental Florida EverGreen Seniors Club Logo">
 
-            <li>
-
-                <a href="index.html"
-                   data-en="Home"
-                   data-zh="首页">
-
-                    Home
-
-                </a>
-
-            </li>
+            </a>
 
 
-            <li>
+            <!-- NAVIGATION LINKS -->
 
-                <a href="about.html"
-                   data-en="About"
-                   data-zh="关于我们">
-
-                    About
-
-                </a>
-
-            </li>
+            <ul class="nav-links">
 
 
-            <li>
+                <li>
 
-                <a href="events.html"
-                   data-en="Events"
-                   data-zh="活动">
+                    <a href="index.html" data-en="Home" data-zh="首页">
 
-                    Events
+                        Home
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="photos.html"
-                   data-en="Photos"
-                   data-zh="照片">
+                    <a href="about.html" data-en="About" data-zh="关于我们">
 
-                    Photos
+                        About
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="videos.html"
-                   data-en="Videos"
-                   data-zh="视频">
+                    <a href="events.html" data-en="Events" data-zh="活动">
 
-                    Videos
+                        Events
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="members.html"
-                   data-en="Members"
-                   data-zh="会员">
+                    <a href="photos.html" data-en="Photos" data-zh="照片">
 
-                    Members
+                        Photos
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="contact.html"
-                   data-en="Contact"
-                   data-zh="联系我们">
+                    <a href="videos.html" data-en="Videos" data-zh="视频">
 
-                    Contact
+                        Videos
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-        </ul>
+                <li>
+
+                    <a href="members.html" data-en="Members" data-zh="会员">
+
+                        Members
+
+                    </a>
+
+                </li>
 
 
-        <!-- NAVIGATION ACTIONS -->
+                <li>
 
-        <div class="nav-actions">
+                    <a href="contact.html" data-en="Contact" data-zh="联系我们">
+
+                        Contact
+
+                    </a>
+
+                </li>
 
 
-            <!-- LANGUAGE -->
-
-            <div class="language-switcher">
+            </ul>
 
 
-                <button
-                    id="languageButton"
-                    aria-label="Select language"
-                    title="Select language">
+            <!-- NAVIGATION ACTIONS -->
 
-                    🌐 English
+            <div class="nav-actions">
+
+
+                <!-- LANGUAGE -->
+
+                <div class="language-switcher">
+
+
+                    <button id="languageButton" aria-label="Select language" title="Select language">
+
+                        🌐 English
+
+                    </button>
+
+
+                    <div id="languageMenu" class="language-menu">
+
+
+                        <button id="englishButton">
+
+                            🇺🇸 English
+
+                        </button>
+
+
+                        <button id="chineseButton">
+
+                            🇨🇳 中文
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- DARK MODE -->
+
+                <button id="darkModeButton" aria-label="Toggle dark mode" title="Toggle dark mode">
+
+                    🌙
 
                 </button>
 
 
-                <div
-                    id="languageMenu"
-                    class="language-menu">
+                <!-- MOBILE MENU -->
 
+                <button id="menuButton" aria-label="Open navigation menu" title="Open navigation menu">
 
-                    <button
-                        id="englishButton">
+                    ☰
 
-                        🇺🇸 English
+                </button>
 
-                    </button>
-
-
-                    <button
-                        id="chineseButton">
-
-                        🇨🇳 中文
-
-                    </button>
-
-
-                </div>
 
             </div>
 
+        </nav>
 
-            <!-- DARK MODE -->
-
-            <button
-                id="darkModeButton"
-                aria-label="Toggle dark mode"
-                title="Toggle dark mode">
-
-                🌙
-
-            </button>
-
-
-            <!-- MOBILE MENU -->
-
-            <button
-                id="menuButton"
-                aria-label="Open navigation menu"
-                title="Open navigation menu">
-
-                ☰
-
-            </button>
-
-
-        </div>
-
-    </nav>
-
-</header>
+    </header>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      PAGE BANNER
      ========================================= -->
 
-<section class="page-banner">
+    <section class="page-banner">
 
 
-    <h1
-        data-en="Upcoming Events"
-        data-zh="即将举行的活动">
+        <h1 data-en="Upcoming Events" data-zh="即将举行的活动">
 
-        Upcoming Events
+            Upcoming Events
 
-    </h1>
+        </h1>
 
 
-    <p
-        data-en="Connect • Participate • Have Fun"
-        data-zh="相聚 • 参与 • 欢乐">
+        <p data-en="Connect • Participate • Have Fun" data-zh="相聚 • 参与 • 欢乐">
 
-        Connect • Participate • Have Fun
+            Connect • Participate • Have Fun
 
-    </p>
+        </p>
 
 
-</section>
+    </section>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      INTRODUCTION
      ========================================= -->
 
-<section class="mission">
+    <section class="mission">
 
 
-    <h2
-        data-en="What's Happening at EverGreen?"
-        data-zh="常青俱乐部最近有什么活动？">
+        <h2 data-en="What's Happening at EverGreen?" data-zh="常青俱乐部最近有什么活动？">
 
-        What's Happening at EverGreen?
+            What's Happening at EverGreen?
 
-    </h2>
+        </h2>
 
 
-    <p
-        data-en="From social gatherings and club meetings to volunteer opportunities, our events are a great way to connect with friends, meet new people, and stay involved in our community."
-        data-zh="从社交聚会和俱乐部会议，到志愿服务机会，我们的活动是结交朋友、认识新朋友并积极参与社区的好方法。">
+        <p data-en="From social gatherings and club meetings to volunteer opportunities, our events are a great way to connect with friends, meet new people, and stay involved in our community."
+            data-zh="从社交聚会和俱乐部会议，到志愿服务机会，我们的活动是结交朋友、认识新朋友并积极参与社区的好方法。">
 
-        From social gatherings and club meetings
-        to volunteer opportunities, our events
-        are a great way to connect with friends,
-        meet new people, and stay involved
-        in our community.
+            From social gatherings and club meetings
+            to volunteer opportunities, our events
+            are a great way to connect with friends,
+            meet new people, and stay involved
+            in our community.
 
-    </p>
+        </p>
 
 
-</section>
+    </section>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      EVENTS
      ========================================= -->
 
-<section class="cards">
+    <section class="cards">
 
 
-    <!-- =====================================
+        <!-- =====================================
          EVENT 1
          ===================================== -->
 
-    <div class="card">
+        <div class="card">
 
 
-        <div style="
+            <div style="
             font-size: 42px;
             margin-bottom: 15px;
         ">
 
-            ☀️
+                ☀️
 
-        </div>
-
-
-        <h3
-            data-en="Mid-Autumn Festival 2026"
-            data-zh="2026年中秋节">
-
-            Mid-Autumn Festival 2026
-
-        </h3>
+            </div>
 
 
-        <p>
+            <h3 data-en="Mid-Autumn Festival 2026" data-zh="2026年中秋节">
 
-            📅
+                Mid-Autumn Festival 2026
 
-            <strong
-                data-en="September 25, 2026"
-                data-zh="2026年9月25日">
-
-                September 25, 2026
-
-            </strong>
-
-        </p>
+            </h3>
 
 
-        <p>
+            <p>
 
-            📍
+                📅
 
-            <span
-                data-en="Community Park"
-                data-zh="社区公园">
+                <strong data-en="September 25, 2026" data-zh="2026年9月25日">
 
-                Community Park
+                    September 25, 2026
 
-            </span>
+                </strong>
 
-        </p>
+            </p>
 
 
-        <p
-            data-en="A fun day with food, games, friendship, and plenty of time to enjoy the outdoors together."
-            data-zh="一起享受美食、游戏和友谊，在户外度过愉快的一天。">
+            <p>
 
-            A fun day with food, games,
-            friendship, and plenty of time
-            to enjoy the outdoors together.
+                📍
 
-        </p>
+                <span data-en="Community Park" data-zh="社区公园">
 
+                    Community Park
 
-        <!-- EVENT IMAGE -->
+                </span>
 
-        <a
-            href="assets/images/ZhongQiuJie2026.JPG"
-            target="_blank"
-            title="View Mid-Autumn Festival flyer">
+            </p>
 
 
-            <img
-                src="assets/images/ZhongQiuJie2026.JPG"
-                alt="Mid-Autumn Festival Event"
-                style="
+            <p data-en="A fun day with food, games, friendship, and plenty of time to enjoy the outdoors together."
+                data-zh="一起享受美食、游戏和友谊，在户外度过愉快的一天。">
+
+                A fun day with food, games,
+                friendship, and plenty of time
+                to enjoy the outdoors together.
+
+            </p>
+
+
+            <!-- EVENT IMAGE -->
+
+            <a href="assets/images/ZhongQiuJie2026.JPG" target="_blank" title="View Mid-Autumn Festival flyer">
+
+
+                <img src="assets/images/ZhongQiuJie2026.JPG" alt="Mid-Autumn Festival Event" style="
                     width: 100%;
                     max-width: 400px;
                     height: auto;
@@ -582,282 +525,270 @@
                 ">
 
 
-        </a>
+            </a>
 
 
-        <p
-            style="
+            <p style="
                 font-size: 13px;
                 margin-top: -10px;
-            "
-            data-en="Click the image to view full size"
-            data-zh="点击图片查看完整尺寸">
+            " data-en="Click the image to view full size" data-zh="点击图片查看完整尺寸">
 
-            Click the image to view full size
+                Click the image to view full size
 
-        </p>
+            </p>
 
 
-        <a
-            class="btn primary"
-            href="contact.html"
-            data-en="Join Us"
-            data-zh="加入我们">
+            <a class="btn primary" href="contact.html" data-en="Join Us" data-zh="加入我们">
 
-            Join Us
+                Join Us
 
-        </a>
+            </a>
 
 
-    </div>
+        </div>
 
 
 
-    <!-- =====================================
+        <!-- =====================================
          EVENT 2
          ===================================== -->
 
-    <div class="card">
+        <div class="card">
 
 
-        <div style="
+            <div style="
             font-size: 42px;
             margin-bottom: 15px;
         ">
 
-            🗓️
+                🗓️
+
+            </div>
+
+
+            <h3 data-en="Weekly Club Meeting" data-zh="每周俱乐部会议">
+
+                Weekly Club Meeting
+
+            </h3>
+
+
+            <p>
+
+                📅<strong id="upcomingFriday"></strong>
+
+                <script>
+                    function getUpcomingFriday() {
+                        const today = new Date();
+                        const day = today.getDay();
+
+                        const daysUntilFriday = (5 - day + 7) % 7;
+
+                        const friday = new Date(today);
+                        friday.setDate(today.getDate() + daysUntilFriday);
+
+                        const englishDate = friday.toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        });
+
+                        const chineseDate =
+                            friday.getFullYear() + "年" +
+                            (friday.getMonth() + 1) + "月" +
+                            friday.getDate() + "日";
+
+                        const element = document.getElementById("upcomingFriday");
+
+                        element.dataset.en = englishDate;
+                        element.dataset.zh = chineseDate;
+
+                        // Use your existing language setting
+                        const currentLanguage = localStorage.getItem("language") || "en";
+                        element.textContent =
+                            currentLanguage === "zh" ? chineseDate : englishDate;
+                    }
+
+                    getUpcomingFriday();
+                </script>
+
+            </p>
+
+
+            <p>
+
+                📍
+
+                <span data-en="Club Meeting Room" data-zh="俱乐部会议室">
+
+                    Club Meeting Room
+
+                </span>
+
+            </p>
+
+
+            <p data-en="Join us as we discuss club plans, upcoming activities, community projects, and new ideas."
+                data-zh="欢迎参加我们的会议，一起讨论俱乐部计划、即将举行的活动、社区项目和新的想法。">
+
+                Join us as we discuss club plans,
+                upcoming activities, community
+                projects, and new ideas.
+
+            </p>
+
+
+            <a class="btn primary" href="contact.html" data-en="Join Us" data-zh="加入我们">
+
+                Join Us
+
+            </a>
+
 
         </div>
 
 
-        <h3
-            data-en="Monthly Club Meeting"
-            data-zh="每月俱乐部会议">
 
-            Monthly Club Meeting
-
-        </h3>
-
-
-        <p>
-
-            📅
-
-            <strong
-                data-en="September 5, 2026"
-                data-zh="2026年9月5日">
-
-                September 5, 2026
-
-            </strong>
-
-        </p>
-
-
-        <p>
-
-            📍
-
-            <span
-                data-en="Club Meeting Room"
-                data-zh="俱乐部会议室">
-
-                Club Meeting Room
-
-            </span>
-
-        </p>
-
-
-        <p
-            data-en="Join us as we discuss club plans, upcoming activities, community projects, and new ideas."
-            data-zh="欢迎参加我们的会议，一起讨论俱乐部计划、即将举行的活动、社区项目和新的想法。">
-
-            Join us as we discuss club plans,
-            upcoming activities, community
-            projects, and new ideas.
-
-        </p>
-
-
-        <a
-            class="btn primary"
-            href="contact.html"
-            data-en="Join Us"
-            data-zh="加入我们">
-
-            Join Us
-
-        </a>
-
-
-    </div>
-
-
-
-    <!-- =====================================
+        <!-- =====================================
          EVENT 3
          ===================================== -->
 
-    <div class="card">
+        <div class="card">
 
 
-        <div style="
+            <div style="
             font-size: 42px;
             margin-bottom: 15px;
         ">
 
-            🤝
+                🤝
+
+            </div>
+
+
+            <h3 data-en="Volunteer Day" data-zh="志愿服务日">
+
+                Volunteer Day
+
+            </h3>
+
+
+            <p>
+
+                📅
+
+                <strong data-en="October 10, 2026" data-zh="2026年10月10日">
+
+                    October 10, 2026
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                📍
+
+                <span data-en="Community Center" data-zh="社区中心">
+
+                    Community Center
+
+                </span>
+
+            </p>
+
+
+            <p data-en="Spend the day giving back and helping make our community a better place for everyone."
+                data-zh="花一天时间回馈社区，为每个人共同建设一个更加美好的社区。">
+
+                Spend the day giving back and
+                helping make our community
+                a better place for everyone.
+
+            </p>
+
+
+            <a class="btn primary" href="contact.html" data-en="Join Us" data-zh="加入我们">
+
+                Join Us
+
+            </a>
+
 
         </div>
 
 
-        <h3
-            data-en="Volunteer Day"
-            data-zh="志愿服务日">
-
-            Volunteer Day
-
-        </h3>
+    </section>
 
 
-        <p>
 
-            📅
+    <!-- =========================================
+     CALL TO ACTION
+     ========================================= -->
 
-            <strong
-                data-en="October 10, 2026"
-                data-zh="2026年10月10日">
-
-                October 10, 2026
-
-            </strong>
-
-        </p>
+    <section class="mission">
 
 
-        <p>
+        <h2 data-en="Have an Event Idea?" data-zh="您有活动建议吗？">
 
-            📍
+            Have an Event Idea?
 
-            <span
-                data-en="Community Center"
-                data-zh="社区中心">
+        </h2>
 
-                Community Center
 
-            </span>
+        <p data-en="We'd love to hear your ideas for future activities, gatherings, and community projects."
+            data-zh="我们非常希望听到您对未来活动、聚会和社区项目的建议。">
+
+            We'd love to hear your ideas for future
+            activities, gatherings, and community
+            projects.
 
         </p>
 
 
-        <p
-            data-en="Spend the day giving back and helping make our community a better place for everyone."
-            data-zh="花一天时间回馈社区，为每个人共同建设一个更加美好的社区。">
+        <a class="btn primary" href="contact.html" data-en="Contact EverGreen" data-zh="联系常青俱乐部">
 
-            Spend the day giving back and
-            helping make our community
-            a better place for everyone.
-
-        </p>
-
-
-        <a
-            class="btn primary"
-            href="contact.html"
-            data-en="Join Us"
-            data-zh="加入我们">
-
-            Join Us
+            Contact EverGreen
 
         </a>
 
 
-    </div>
-
-
-</section>
+    </section>
 
 
 
-<!-- =========================================
-     CALL TO ACTION
-     ========================================= -->
-
-<section class="mission">
-
-
-    <h2
-        data-en="Have an Event Idea?"
-        data-zh="您有活动建议吗？">
-
-        Have an Event Idea?
-
-    </h2>
-
-
-    <p
-        data-en="We'd love to hear your ideas for future activities, gatherings, and community projects."
-        data-zh="我们非常希望听到您对未来活动、聚会和社区项目的建议。">
-
-        We'd love to hear your ideas for future
-        activities, gatherings, and community
-        projects.
-
-    </p>
-
-
-    <a
-        class="btn primary"
-        href="contact.html"
-        data-en="Contact EverGreen"
-        data-zh="联系常青俱乐部">
-
-        Contact EverGreen
-
-    </a>
-
-
-</section>
-
-
-
-<!-- =========================================
+    <!-- =========================================
      FOOTER
      ========================================= -->
 
-<footer>
+    <footer>
 
 
-    <img
-        src="assets/images/logo.png"
-        width="180"
-        alt="Central Florida EverGreen Seniors Club Logo">
+        <img src="assets/images/logo.png" width="180" alt="Central Florida EverGreen Seniors Club Logo">
 
 
-    <p
-        data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang"
-        data-zh="© 2026 中佛州长青社。版权所有。">
+        <p data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang" data-zh="© 2026 中佛州长青社。版权所有。">
 
-        © 2026 Central Florida EverGreen Seniors Club.
-        All Rights Reserved.
+            © 2026 Central Florida EverGreen Seniors Club.
+            All Rights Reserved.
 
-    </p>
+        </p>
 
 
-</footer>
+    </footer>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      JAVASCRIPT
      ========================================= -->
 
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
-<script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/darkmode.js"></script>
 
-<script src="assets/js/language.js"></script>
+    <script src="assets/js/language.js"></script>
 
 
 </body>
