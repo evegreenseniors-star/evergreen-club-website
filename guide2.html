@@ -1,110 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
         data-en="EverGreen Club website user guide."
         data-zh="长青社网站使用说明。"
-        content="EverGreen Club website user guide.">
+        content="长青社网站使用说明">
 
-    <title data-en="EverGreen Club | Guide" data-zh="常青俱乐部 | 使用说明">
-        EverGreen Club | Guide
+    <title data-en="Website User Guide" data-zh="网站使用说明">
+        网站使用说明
     </title>
 
-    <link rel="icon" href="assets/images/logo.png">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <style>
-        /* =====================================
-           LANGUAGE SWITCHER
-           ===================================== */
-
-        .language-switcher {
-            position: relative;
-            display: inline-block;
-        }
-
-        #languageButton {
-            border: none;
-            background: transparent;
-            color: inherit;
-            font-family: inherit;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            padding: 8px 10px;
-            border-radius: 8px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        #languageButton:hover {
-            background: rgba(11, 79, 156, 0.10);
-        }
-
-        .language-menu {
-            position: absolute;
-            top: calc(100% + 8px);
-            right: 0;
-            min-width: 140px;
-            background: white;
-            border: 1px solid #E5E9EF;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            padding: 6px;
-            display: none;
-            z-index: 1000;
-        }
-
-        .language-menu.show {
-            display: block;
-        }
-
-        .language-menu button {
-            width: 100%;
-            border: none;
-            background: transparent;
-            text-align: left;
-            padding: 9px 12px;
-            border-radius: 7px;
-            font-family: inherit;
-            font-size: 14px;
-            cursor: pointer;
-            color: #333;
-        }
-
-        .language-menu button:hover {
-            background: #EAF3FC;
-            color: #0B4F9C;
-        }
-
-        /* =====================================
-           DARK MODE LANGUAGE MENU
-           ===================================== */
-
-        body.dark .language-menu {
-            background: #18232D;
-            border-color: #2D3A45;
-        }
-
-        body.dark .language-menu button {
-            color: #E5E9EF;
-        }
-
-        body.dark .language-menu button:hover {
-            background: #24384A;
-            color: #8FC5FF;
-        }
-
-        /* =====================================
+        /* =========================================
            GUIDE PAGE
-           ===================================== */
+        ========================================= */
 
         .guide-page {
             padding: 70px 20px 90px;
@@ -122,8 +49,6 @@
 
         .guide-hero h1 {
             margin-bottom: 12px;
-            color: #0B4F9C;
-            font-size: 34px;
         }
 
         .guide-hero p {
@@ -131,7 +56,6 @@
             margin: 0 auto;
             line-height: 1.8;
             opacity: 0.85;
-            color: #68737D;
         }
 
         .guide-section {
@@ -151,13 +75,11 @@
 
         .guide-section-title h2 {
             margin: 0;
-            color: #0B4F9C;
-            font-size: 28px;
         }
 
         .guide-card {
-            background: white;
-            border: 1px solid #E5E9EF;
+            background: var(--card-bg, rgba(255, 255, 255, 0.75));
+            border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
             border-radius: 18px;
             padding: 30px;
             margin-bottom: 20px;
@@ -167,7 +89,6 @@
         .guide-card h3 {
             margin-top: 0;
             margin-bottom: 20px;
-            color: #0B4F9C;
         }
 
         .guide-card ul,
@@ -179,7 +100,6 @@
         .guide-card li {
             margin-bottom: 13px;
             line-height: 1.75;
-            color: #68737D;
         }
 
         .guide-card li:last-child {
@@ -195,13 +115,12 @@
         .language-card {
             padding: 25px;
             border-radius: 16px;
-            background: #F5F8FA;
+            background: rgba(128, 128, 128, 0.06);
         }
 
         .language-card h3 {
             margin-top: 0;
             margin-bottom: 18px;
-            color: #0B4F9C;
         }
 
         .language-card ul,
@@ -212,19 +131,19 @@
         .language-card li {
             margin-bottom: 11px;
             line-height: 1.7;
-            color: #68737D;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
             gap: 20px;
         }
 
         .feature-item {
             padding: 25px;
             border-radius: 16px;
-            background: #F5F8FA;
+            background: rgba(128, 128, 128, 0.06);
         }
 
         .feature-item .feature-icon {
@@ -234,78 +153,158 @@
 
         .feature-item h3 {
             margin: 0 0 8px;
-            color: #0B4F9C;
         }
 
         .feature-item p {
             margin: 0;
             line-height: 1.7;
             opacity: 0.85;
-            color: #68737D;
         }
 
         .welcome-box {
             text-align: center;
             padding: 40px 30px;
             border-radius: 20px;
-            background: rgba(11, 79, 156, 0.06);
-            border: 1px solid rgba(11, 79, 156, 0.12);
+            background: linear-gradient(
+                135deg,
+                rgba(100, 150, 100, 0.12),
+                rgba(100, 150, 100, 0.04)
+            );
+            border: 1px solid rgba(100, 150, 100, 0.18);
         }
 
         .welcome-box h2 {
             margin-top: 0;
-            color: #0B4F9C;
         }
 
         .welcome-box p {
             max-width: 760px;
             margin: 10px auto 0;
             line-height: 1.8;
-            color: #68737D;
         }
 
-        /* =====================================
+        /* =========================================
            DARK MODE
-           ===================================== */
-
-        body.dark .guide-hero h1,
-        body.dark .guide-section-title h2,
-        body.dark .guide-card h3,
-        body.dark .language-card h3,
-        body.dark .feature-item h3,
-        body.dark .welcome-box h2 {
-            color: #8FC5FF;
-        }
-
-        body.dark .guide-hero p,
-        body.dark .guide-card li,
-        body.dark .language-card li,
-        body.dark .feature-item p,
-        body.dark .welcome-box p {
-            color: #B5C0C9;
-        }
+        ========================================= */
 
         body.dark .guide-card {
-            background: #18232D;
-            border-color: #2D3A45;
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.10);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
         }
 
         body.dark .language-card,
         body.dark .feature-item {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.045);
         }
 
         body.dark .welcome-box {
-            background: #182C3D;
+            background: rgba(255, 255, 255, 0.045);
             border-color: rgba(255, 255, 255, 0.10);
         }
 
-        /* =====================================
+
+        /* =========================================
+           GUIDE PAGE NAVIGATION
+           Keep the navigation clean and consistent
+        ========================================= */
+        .site-header .navbar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .site-header .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex: 1;
+        }
+
+        .site-header .nav-menu a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background-color .2s ease, color .2s ease;
+        }
+
+        .site-header .nav-menu a:hover {
+            background: rgba(100, 150, 100, 0.10);
+        }
+
+        .site-header .nav-menu a.active {
+            font-weight: 600;
+            background: rgba(100, 150, 100, 0.14);
+        }
+
+        .site-header .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Dark-mode styling for the guide page */
+        body.dark,
+        body.dark .site-header,
+        body.dark .site-footer {
+            color: #f2f2f2;
+        }
+
+        body.dark .guide-page {
+            background: transparent;
+        }
+
+        body.dark .guide-page h1,
+        body.dark .guide-page h2,
+        body.dark .guide-page h3,
+        body.dark .guide-page p,
+        body.dark .guide-page li,
+        body.dark .guide-page strong {
+            color: inherit;
+        }
+
+        body.dark .guide-card,
+        body.dark .language-card,
+        body.dark .feature-item {
+            color: #f2f2f2;
+        }
+
+        body.dark .guide-card a,
+        body.dark .language-card a,
+        body.dark .feature-item a {
+            color: inherit;
+        }
+
+        body.dark .nav-menu a.active {
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        body.dark .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        @media (max-width: 900px) {
+            .site-header .nav-menu {
+                gap: 2px;
+            }
+
+            .site-header .nav-menu a {
+                padding: 8px 8px;
+            }
+        }
+
+        /* =========================================
            MOBILE
-           ===================================== */
+        ========================================= */
 
         @media (max-width: 768px) {
+
             .guide-page {
                 padding: 45px 16px 60px;
             }
@@ -346,6 +345,7 @@
         }
 
         @media (max-width: 480px) {
+
             .guide-hero h1 {
                 font-size: 1.75rem;
             }
@@ -362,113 +362,114 @@
     </style>
 </head>
 
+
 <body>
 
     <!-- =========================================
-     NAVIGATION
-     ========================================= -->
+         HEADER / NAVIGATION
+    ========================================== -->
 
-    <header>
+    <header class="site-header">
+
         <nav class="navbar">
 
-            <!-- LOGO -->
+            <!-- Logo -->
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Central Florida EverGreen Seniors Club Logo">
+                <img src="assets/images/logo.jpeg"
+                    alt="EverGreen Club Logo">
             </a>
 
-            <!-- NAVIGATION LINKS -->
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html" data-en="Home" data-zh="首页">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html" data-en="About" data-zh="关于我们">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="members.html" data-en="Members" data-zh="会员">
-                        Members
-                    </a>
-                </li>
-                <li>
-                    <a href="events.html" data-en="Events" data-zh="活动">
-                        Events
-                    </a>
-                </li>
-                <li>
-                    <a href="photos.html" data-en="Photos" data-zh="相册">
-                        Photos
-                    </a>
-                </li>
-                <li>
-                    <a href="videos.html" data-en="Videos" data-zh="视频">
-                        Videos
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html" data-en="Contact" data-zh="联系我们">
-                        Contact
-                    </a>
-                </li>
-                <li>
-                    <a href="guide.html" data-en="Guide" data-zh="使用说明">
-                        Guide
-                    </a>
-                </li>
-            </ul>
+            <!-- Mobile Menu Button -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu">
+                ☰
+            </button>
 
-            <!-- NAVIGATION ACTIONS -->
-            <div class="nav-actions">
+            <!-- Navigation -->
+            <div class="nav-menu" id="navMenu">
 
-                <!-- LANGUAGE -->
-                <div class="language-switcher">
-                    <button id="languageButton" aria-label="Select language" title="Select language">
-                        🌐 English
-                    </button>
-                    <div id="languageMenu" class="language-menu">
-                        <button id="englishButton">
-                            🇺🇸 English
-                        </button>
-                        <button id="chineseButton">
-                            🇨🇳 中文
-                        </button>
-                    </div>
-                </div>
+                <a href="index.html"
+                    data-en="Home"
+                    data-zh="首页">
+                    首页
+                </a>
 
-                <!-- DARK MODE -->
-                <button id="darkModeButton" aria-label="Toggle dark mode" title="Toggle dark mode">
-                    🌙
+                <a href="about.html"
+                    data-en="About"
+                    data-zh="关于我们">
+                    关于我们
+                </a>
+
+                <a href="members.html"
+                    data-en="Members"
+                    data-zh="会员">
+                    会员
+                </a>
+
+                <a href="events.html"
+                    data-en="Events"
+                    data-zh="活动">
+                    活动
+                </a>
+
+                <a href="photos.html"
+                    data-en="Photos"
+                    data-zh="照片">
+                    照片
+                </a>
+
+                <a href="videos.html"
+                    data-en="Videos"
+                    data-zh="视频">
+                    视频
+                </a>
+
+                <a href="contact.html"
+                    data-en="Contact"
+                    data-zh="联系我们">
+                    联系我们
+                </a>
+
+                <a href="guide.html"
+                    class="active"
+                    data-en="Guide"
+                    data-zh="使用说明">
+                    使用说明
+                </a>
+
+            </div>
+
+            <!-- Controls -->
+            <div class="header-controls">
+
+                <!-- Language -->
+                <button
+                    id="languageButton"
+                    class="language-button"
+                    aria-label="Change language">
+                    🌐 <span id="currentLanguage">中文</span>
                 </button>
 
-                <!-- MOBILE MENU -->
-                <button id="menuButton" aria-label="Open navigation menu" title="Open navigation menu">
-                    ☰
+                <!-- Dark Mode -->
+                <button
+                    id="darkModeToggle"
+                    class="dark-mode-toggle"
+                    aria-label="Toggle dark mode">
+                    🌙
                 </button>
 
             </div>
 
         </nav>
+
     </header>
 
-    <!-- =========================================
-     PAGE BANNER
-     ========================================= -->
-
-    <section class="page-banner">
-        <h1 data-en="Website User Guide" data-zh="网站使用说明">
-            Website User Guide
-        </h1>
-        <p data-en="Learn how to navigate and use the EverGreen Club website" data-zh="了解如何使用长青社网站的各项功能">
-            Learn how to navigate and use the EverGreen Club website
-        </p>
-    </section>
 
     <!-- =========================================
-     MAIN CONTENT
-     ========================================= -->
+         MAIN CONTENT
+    ========================================== -->
 
     <main class="guide-page">
 
@@ -476,15 +477,22 @@
 
             <!-- Hero -->
             <section class="guide-hero">
-                <h1 data-en="EverGreen Club Website User Guide" data-zh="长青社网站使用说明">
-                    EverGreen Club Website User Guide
+
+                <h1
+                    data-en="EverGreen Club Website User Guide"
+                    data-zh="长青社网站使用说明">
+                    长青社网站使用说明
                 </h1>
-                <p data-en="Welcome to the EverGreen Club website! This guide explains how to navigate the website and use its main features."
+
+                <p
+                    data-en="Welcome to the EverGreen Club website! This guide explains how to navigate the website and use its main features."
                     data-zh="欢迎浏览长青社网站！本说明将帮助您了解网站的主要功能和使用方法。">
-                    Welcome to the EverGreen Club website!
-                    This guide explains how to navigate the website and use its main features.
+                    欢迎浏览长青社网站！
+                    本说明将帮助您了解网站的主要功能和使用方法。
                 </p>
+
             </section>
+
 
             <!-- =================================
                  WEBSITE NAVIGATION
@@ -494,8 +502,11 @@
 
                 <div class="guide-section-title">
                     <span class="icon">🏠</span>
-                    <h2 data-en="Website Navigation" data-zh="网站主要功能">
-                        Website Navigation
+
+                    <h2
+                        data-en="Website Navigation"
+                        data-zh="网站主要功能">
+                        网站主要功能
                     </h2>
                 </div>
 
@@ -505,80 +516,105 @@
 
                         <!-- Chinese -->
                         <div class="language-card">
+
                             <h3>中文</h3>
+
                             <ul>
+
                                 <li>
                                     <strong>首页 Home：</strong>
                                     查看俱乐部最新信息。
                                 </li>
+
                                 <li>
                                     <strong>关于我们 About：</strong>
                                     了解俱乐部及我们的宗旨。
                                 </li>
+
                                 <li>
                                     <strong>会员 Members：</strong>
                                     查看会员及相关信息。
                                 </li>
+
                                 <li>
                                     <strong>活动 Events：</strong>
                                     查看近期及往期活动。
                                 </li>
+
                                 <li>
                                     <strong>相册 Photos：</strong>
                                     按年份浏览活动照片。
                                 </li>
+
                                 <li>
                                     <strong>视频 Videos：</strong>
                                     按年份观看活动视频。
                                 </li>
+
                                 <li>
                                     <strong>联系我们 Contact：</strong>
                                     联系我们或提交信息。
                                 </li>
+
                                 <li>
                                     <strong>使用说明 Guide：</strong>
                                     查看网站使用方法和功能说明。
                                 </li>
+
                             </ul>
+
                         </div>
+
 
                         <!-- English -->
                         <div class="language-card">
+
                             <h3>English</h3>
+
                             <ul>
+
                                 <li>
                                     <strong>Home:</strong>
                                     View the latest club information.
                                 </li>
+
                                 <li>
                                     <strong>About:</strong>
                                     Learn about the club and our mission.
                                 </li>
+
                                 <li>
                                     <strong>Members:</strong>
                                     View member and club information.
                                 </li>
+
                                 <li>
                                     <strong>Events:</strong>
                                     View upcoming and past activities.
                                 </li>
+
                                 <li>
                                     <strong>Photos:</strong>
                                     Browse activity photos by year.
                                 </li>
+
                                 <li>
                                     <strong>Videos:</strong>
                                     Watch activity videos by year.
                                 </li>
+
                                 <li>
                                     <strong>Contact:</strong>
                                     Contact us or submit an inquiry.
                                 </li>
+
                                 <li>
                                     <strong>Guide:</strong>
                                     Learn how to use the website and its main features.
                                 </li>
+
                             </ul>
+
                         </div>
 
                     </div>
@@ -586,6 +622,7 @@
                 </div>
 
             </section>
+
 
             <!-- =================================
                  MAIN FEATURES
@@ -595,60 +632,98 @@
 
                 <div class="guide-section-title">
                     <span class="icon">✨</span>
-                    <h2 data-en="Main Features" data-zh="主要功能">
-                        Main Features
+
+                    <h2
+                        data-en="Main Features"
+                        data-zh="主要功能">
+                        主要功能
                     </h2>
                 </div>
 
                 <div class="feature-grid">
 
                     <div class="feature-item">
+
                         <div class="feature-icon">🌐</div>
-                        <h3 data-en="Language" data-zh="语言切换">
-                            Language
+
+                        <h3
+                            data-en="Language"
+                            data-zh="语言切换">
+                            语言切换
                         </h3>
-                        <p data-en="Click 🌐 English / 中文 in the upper-right corner to switch between English and Chinese."
+
+                        <p
+                            data-en="Click 🌐 English / 中文 in the upper-right corner to switch between English and Chinese."
                             data-zh="点击右上角的 🌐 English / 中文，即可在中文和英文之间切换。">
-                            Click 🌐 English / 中文 in the upper-right corner to switch between English and Chinese.
+                            点击右上角的
+                            🌐 English / 中文，
+                            即可在中文和英文之间切换。
                         </p>
+
                     </div>
 
+
                     <div class="feature-item">
+
                         <div class="feature-icon">🌙</div>
-                        <h3 data-en="Dark Mode" data-zh="深色模式">
-                            Dark Mode
+
+                        <h3
+                            data-en="Dark Mode"
+                            data-zh="深色模式">
+                            深色模式
                         </h3>
-                        <p data-en="Click 🌙 to switch between light and dark mode."
+
+                        <p
+                            data-en="Click 🌙 to switch between light and dark mode."
                             data-zh="点击 🌙 图标，可以在浅色模式和深色模式之间切换。">
-                            Click 🌙 to switch between light and dark mode.
+                            点击 🌙 图标，可以在浅色模式和深色模式之间切换。
                         </p>
+
                     </div>
 
+
                     <div class="feature-item">
+
                         <div class="feature-icon">📷</div>
-                        <h3 data-en="Photos" data-zh="照片">
-                            Photos
+
+                        <h3
+                            data-en="Photos"
+                            data-zh="照片">
+                            照片
                         </h3>
-                        <p data-en="Click a photo in Photos to enlarge it and use the arrows to browse other photos."
+
+                        <p
+                            data-en="Click a photo in Photos to enlarge it and use the arrows to browse other photos."
                             data-zh="在照片中点击照片可以放大查看，并使用左右箭头浏览其他照片。">
-                            Click a photo in Photos to enlarge it and use the arrows to browse other photos.
+                            在照片中点击照片可以放大查看，
+                            并使用左右箭头浏览其他照片。
                         </p>
+
                     </div>
 
+
                     <div class="feature-item">
+
                         <div class="feature-icon">🎬</div>
-                        <h3 data-en="Videos" data-zh="视频">
-                            Videos
+
+                        <h3
+                            data-en="Videos"
+                            data-zh="视频">
+                            视频
                         </h3>
-                        <p data-en="Click a video in Videos to play it directly on the website."
+
+                        <p
+                            data-en="Click a video in Videos to play it directly on the website."
                             data-zh="在视频页面点击视频即可直接播放。">
-                            Click a video in Videos to play it directly on the website.
+                            在视频页面点击视频即可直接播放。
                         </p>
+
                     </div>
 
                 </div>
 
             </section>
+
 
             <!-- =================================
                  PHOTOS & VIDEOS
@@ -658,8 +733,11 @@
 
                 <div class="guide-section-title">
                     <span class="icon">📷</span>
-                    <h2 data-en="Photos & Videos" data-zh="查看照片和视频">
-                        Photos & Videos
+
+                    <h2
+                        data-en="Photos & Videos"
+                        data-zh="查看照片和视频">
+                        查看照片和视频
                     </h2>
                 </div>
 
@@ -668,46 +746,63 @@
                     <div class="guide-bilingual">
 
                         <div class="language-card">
+
                             <h3>中文</h3>
+
                             <ul>
+
                                 <li>
                                     在<strong>相册 Photos</strong>中，
                                     点击照片可以放大查看。
                                 </li>
+
                                 <li>
                                     使用左右箭头可以浏览同一活动中的其他照片。
                                 </li>
+
                                 <li>
                                     在<strong>视频 Videos</strong>页面，
                                     点击视频即可直接播放。
                                 </li>
+
                                 <li>
                                     相册和视频按照年份整理，
                                     方便浏览和查找。
                                 </li>
+
                             </ul>
+
                         </div>
 
+
                         <div class="language-card">
+
                             <h3>English</h3>
+
                             <ul>
+
                                 <li>
                                     In <strong>Photos</strong>,
                                     click a photo to enlarge it.
                                 </li>
+
                                 <li>
                                     Use the left and right arrows
                                     to browse other photos.
                                 </li>
+
                                 <li>
                                     In <strong>Videos</strong>,
                                     click a video to play it directly.
                                 </li>
+
                                 <li>
                                     Photos and videos are organized
                                     by year for easy browsing.
                                 </li>
+
                             </ul>
+
                         </div>
 
                     </div>
@@ -715,6 +810,7 @@
                 </div>
 
             </section>
+
 
             <!-- =================================
                  MOBILE GUIDE
@@ -723,11 +819,17 @@
             <section class="guide-section">
 
                 <div class="guide-section-title">
+
                     <span class="icon">📱</span>
-                    <h2 data-en="Mobile User Guide" data-zh="手机使用指南">
-                        Mobile User Guide
+
+                    <h2
+                        data-en="Mobile User Guide"
+                        data-zh="手机使用指南">
+                        手机使用指南
                     </h2>
+
                 </div>
+
 
                 <div class="guide-card">
 
@@ -735,16 +837,21 @@
 
                         <!-- Chinese -->
                         <div class="language-card">
+
                             <h3>中文</h3>
+
                             <ol>
+
                                 <li>
                                     在手机浏览器中打开长青社网站。
                                 </li>
+
                                 <li>
                                     点击右上角的
                                     <strong>☰ 菜单</strong>，
                                     打开网站导航。
                                 </li>
+
                                 <li>
                                     选择
                                     <strong>
@@ -753,80 +860,100 @@
                                     或
                                     <strong>联系我们</strong>。
                                 </li>
+
                                 <li>
                                     点击
                                     <strong>🌐 English / 中文</strong>
                                     切换网站语言。
                                 </li>
+
                                 <li>
                                     点击
                                     <strong>🌙</strong>
                                     切换浅色和深色模式。
                                 </li>
+
                                 <li>
                                     在<strong>相册</strong>中点击照片可以放大查看，
                                     并使用左右箭头浏览其他照片。
                                 </li>
+
                                 <li>
                                     在<strong>视频</strong>页面点击视频即可播放。
                                 </li>
+
                                 <li>
                                     使用手机的正常
                                     <strong>返回键</strong>
                                     或浏览器的返回按钮返回上一页。
                                 </li>
+
                             </ol>
+
                         </div>
+
 
                         <!-- English -->
                         <div class="language-card">
+
                             <h3>English</h3>
+
                             <ol>
+
                                 <li>
                                     Open the EverGreen Club website
                                     in your mobile browser.
                                 </li>
+
                                 <li>
                                     Tap the
                                     <strong>☰ menu</strong>
                                     in the upper-right corner
                                     to open the navigation menu.
                                 </li>
+
                                 <li>
                                     Choose
                                     <strong>
-                                        Home, About, Members, Events, Photos,
-                                        Videos
+                                        Home, About, Events, Photos,
+                                        Videos, Members
                                     </strong>
                                     or
                                     <strong>Contact</strong>.
                                 </li>
+
                                 <li>
                                     Tap
                                     <strong>🌐 English / 中文</strong>
                                     to switch languages.
                                 </li>
+
                                 <li>
                                     Tap
                                     <strong>🌙</strong>
                                     to switch between light and dark mode.
                                 </li>
+
                                 <li>
                                     In <strong>Photos</strong>,
                                     tap a photo to enlarge it and use
                                     the arrows to view other photos.
                                 </li>
+
                                 <li>
                                     In <strong>Videos</strong>,
                                     tap a video to play it.
                                 </li>
+
                                 <li>
                                     Use your phone's normal
                                     <strong>Back</strong> button or
                                     browser controls to return
                                     to the previous page.
                                 </li>
+
                             </ol>
+
                         </div>
 
                     </div>
@@ -835,6 +962,7 @@
 
             </section>
 
+
             <!-- =================================
                  WELCOME
             ================================== -->
@@ -842,18 +970,27 @@
             <section class="guide-section">
 
                 <div class="welcome-box">
-                    <h2 data-en="💚 Enjoy the EverGreen Club Website!" data-zh="💚 欢迎浏览长青社网站！">
+
+                    <h2
+                        data-en="💚 Enjoy the EverGreen Club Website!"
+                        data-zh="💚 欢迎浏览长青社网站！">
                         💚 欢迎浏览长青社网站！
                     </h2>
-                    <p data-en="Enjoy exploring the EverGreen Club website, learning more about our club, participating in our activities, and sharing our wonderful memories together!"
+
+                    <p
+                        data-en="Enjoy exploring the EverGreen Club website, learning more about our club, participating in our activities, and sharing our wonderful memories together!"
                         data-zh="欢迎大家浏览长青社网站，了解我们的俱乐部、参加精彩活动，并分享长青俱乐部的美好回忆！">
-                        Enjoy exploring the EverGreen Club website,
-                        learning more about our club, participating in our activities,
-                        and sharing our wonderful memories together!
+                        欢迎大家浏览长青社网站，
+                        了解我们的俱乐部、参加精彩活动，
+                        并分享长青俱乐部的美好回忆！
                     </p>
-                    <p data-en="Thank you for visiting EverGreen Club!" data-zh="感谢您的访问！">
-                        Thank you for visiting EverGreen Club!
+
+                    <p
+                        data-en="Thank you for visiting EverGreen Club!"
+                        data-zh="感谢您的访问！">
+                        感谢您的访问！
                     </p>
+
                 </div>
 
             </section>
@@ -862,27 +999,202 @@
 
     </main>
 
-    <!-- =========================================
-     FOOTER
-     ========================================= -->
 
-    <footer>
-        <img src="assets/images/logo.png" width="180" alt="Central Florida EverGreen Seniors Club Logo">
-        <p data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang."
-            data-zh="© 2026 中佛州长青社。版权所有。">
-            © 2026 Central Florida EverGreen Seniors Club.
-            All Rights Reserved.
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <p
+        data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang."
+        data-zh="© 2026 中佛州长青社。版权所有。">
+
+        © 2026 Central Florida EverGreen Seniors Club.
+        All Rights Reserved.
         </p>
+
     </footer>
 
-    <!-- =========================================
-     JAVASCRIPT
-     ========================================= -->
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/darkmode.js"></script>
-    <script src="assets/js/language.js"></script>
+    <!-- =========================================
+         LANGUAGE SWITCHER
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const languageButton =
+                    document.getElementById("languageButton");
+
+                const currentLanguage =
+                    document.getElementById("currentLanguage");
+
+                let language =
+                    localStorage.getItem("language") || "zh";
+
+                function updateLanguage() {
+
+                    document
+                        .querySelectorAll("[data-en][data-zh]")
+                        .forEach(function (element) {
+
+                            if (language === "en") {
+                                element.textContent =
+                                    element.getAttribute("data-en");
+                            } else {
+                                element.textContent =
+                                    element.getAttribute("data-zh");
+                            }
+
+                        });
+
+                    document.documentElement.lang =
+                        language === "en"
+                            ? "en"
+                            : "zh-CN";
+
+                    currentLanguage.textContent =
+                        language === "en"
+                            ? "中文"
+                            : "English";
+
+                    localStorage.setItem(
+                        "language",
+                        language
+                    );
+                }
+
+
+                languageButton.addEventListener(
+                    "click",
+                    function () {
+
+                        language =
+                            language === "en"
+                                ? "zh"
+                                : "en";
+
+                        updateLanguage();
+
+                    }
+                );
+
+
+                updateLanguage();
+
+            }
+        );
+
+    </script>
+
+
+    <!-- =========================================
+         MOBILE MENU
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const menuToggle =
+                    document.getElementById("menuToggle");
+
+                const navMenu =
+                    document.getElementById("navMenu");
+
+                if (menuToggle && navMenu) {
+
+                    menuToggle.addEventListener(
+                        "click",
+                        function () {
+
+                            navMenu.classList.toggle("active");
+
+                        }
+                    );
+
+
+                    navMenu
+                        .querySelectorAll("a")
+                        .forEach(function (link) {
+
+                            link.addEventListener(
+                                "click",
+                                function () {
+
+                                    navMenu.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+                        });
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <!-- Existing Dark Mode Script -->
+    <script>
+        /* =========================================
+           DARK MODE
+           Page-level fallback so Guide works even
+           if the shared darkmode.js is missing or
+           uses a different class name.
+        ========================================= */
+        document.addEventListener("DOMContentLoaded", function () {
+            const darkModeToggle =
+                document.getElementById("darkModeToggle");
+
+            if (!darkModeToggle) return;
+
+            function applyDarkMode(isDark) {
+                document.body.classList.toggle("dark", isDark);
+                darkModeToggle.textContent = isDark ? "☀️" : "🌙";
+                darkModeToggle.setAttribute(
+                    "aria-label",
+                    isDark ? "Switch to light mode" : "Switch to dark mode"
+                );
+                darkModeToggle.setAttribute(
+                    "title",
+                    isDark ? "Light mode" : "Dark mode"
+                );
+            }
+
+            const savedMode = localStorage.getItem("darkMode");
+            const initialDark =
+                savedMode === "dark" ||
+                (savedMode === null &&
+                    window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+            applyDarkMode(initialDark);
+
+            darkModeToggle.addEventListener("click", function () {
+                const isDark =
+                    !document.body.classList.contains("dark");
+
+                applyDarkMode(isDark);
+                localStorage.setItem(
+                    "darkMode",
+                    isDark ? "dark" : "light"
+                );
+            });
+        });
+    </script>
 
 </body>
 
 </html>
+

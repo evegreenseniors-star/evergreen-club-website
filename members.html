@@ -5,34 +5,27 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          data-en="Meet the EverGreen Club leadership team and members who help our community grow."
-          data-zh="认识帮助常青俱乐部社区发展的领导团队和会员。"
-          content="Meet the EverGreen Club leadership team and members who help our community grow.">
+    <meta name="description" data-en="Meet the EverGreen Club leadership team and members who help our community grow."
+        data-zh="认识帮助常青俱乐部社区发展的领导团队和会员。"
+        content="Meet the EverGreen Club leadership team and members who help our community grow.">
 
-    <title
-        data-en="EverGreen Club | Members"
-        data-zh="常青俱乐部 | 会员">
+    <title data-en="EverGreen Club | Members" data-zh="常青俱乐部 | 会员">
 
         EverGreen Club | Members
 
     </title>
 
-    <link rel="icon"
-          href="assets/images/logo.png">
+    <link rel="icon" href="assets/images/logo.png">
 
-    <link rel="stylesheet"
-          href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
 
     <style>
-
         /* =====================================
            MEMBERS PAGE
            ===================================== */
@@ -187,6 +180,18 @@
         }
 
         /* =====================================
+           PAST PRESIDENTS SECTION
+           ===================================== */
+
+        .past-presidents-grid {
+            max-width: 1120px;
+            margin: 0 auto 75px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        /* =====================================
            FUTURE BOARD MEMBERS
            Hidden until content is added
            ===================================== */
@@ -275,6 +280,10 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .past-presidents-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
             .member-directory-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -290,6 +299,10 @@
             }
 
             .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .past-presidents-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -525,7 +538,6 @@
             }
 
         }
-
     </style>
 
 </head>
@@ -534,561 +546,574 @@
 <body>
 
 
-<!-- =========================================
+    <!-- =========================================
      NAVIGATION
      ========================================= -->
 
-<header>
+    <header>
 
-    <nav class="navbar">
-
-
-        <!-- LOGO -->
-
-        <a href="index.html"
-           class="logo">
-
-            <img
-                src="assets/images/logo.png"
-                alt="Central Florida EverGreen Seniors Club Logo">
-
-        </a>
+        <nav class="navbar">
 
 
-        <!-- NAVIGATION LINKS -->
+            <!-- LOGO -->
 
-        <ul class="nav-links">
+            <a href="index.html" class="logo">
 
+                <img src="assets/images/logo.png" alt="Central Florida EverGreen Seniors Club Logo">
 
-            <li>
-
-                <a href="index.html"
-                   data-en="Home"
-                   data-zh="首页">
-
-                    Home
-
-                </a>
-
-            </li>
+            </a>
 
 
-            <li>
+            <!-- NAVIGATION LINKS -->
 
-                <a href="about.html"
-                   data-en="About"
-                   data-zh="关于我们">
-
-                    About
-
-                </a>
-
-            </li>
+            <ul class="nav-links">
 
 
-            <li>
+                <li>
 
-                <a href="events.html"
-                   data-en="Events"
-                   data-zh="活动">
+                    <a href="index.html" data-en="Home" data-zh="首页">
 
-                    Events
+                        Home
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="photos.html"
-                   data-en="Photos"
-                   data-zh="照片">
+                    <a href="about.html" data-en="About" data-zh="关于我们">
 
-                    Photos
+                        About
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
+                <li>
 
+                    <a href="members.html" data-en="Members" data-zh="会员">
 
-            <li>
+                        Members
 
-                <a href="videos.html"
-                   data-en="Videos"
-                   data-zh="视频">
+                    </a>
 
-                    Videos
+                </li>
 
-                </a>
+                <li>
 
-            </li>
+                    <a href="events.html" data-en="Events" data-zh="活动">
 
+                        Events
 
-            <li>
+                    </a>
 
-                <a href="members.html"
-                   data-en="Members"
-                   data-zh="会员">
-
-                    Members
-
-                </a>
-
-            </li>
+                </li>
 
 
-            <li>
+                <li>
 
-                <a href="contact.html"
-                   data-en="Contact"
-                   data-zh="联系我们">
+                    <a href="photos.html" data-en="Photos" data-zh="照片">
 
-                    Contact
+                        Photos
 
-                </a>
+                    </a>
 
-            </li>
+                </li>
 
 
-        </ul>
+                <li>
+
+                    <a href="videos.html" data-en="Videos" data-zh="视频">
+
+                        Videos
+
+                    </a>
+
+                </li>
 
 
-        <!-- =================================
+                <li>
+
+                    <a href="contact.html" data-en="Contact" data-zh="联系我们">
+
+                        Contact
+
+                    </a>
+
+                </li>
+                </li>
+
+                <li>
+                    <a href="guide.html" data-en="Guide" data-zh="使用说明">
+                        Guide
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- =================================
              NAVIGATION ACTIONS
              ================================= -->
 
-        <div class="nav-actions">
+            <div class="nav-actions">
 
 
-            <!-- LANGUAGE -->
+                <!-- LANGUAGE -->
 
-            <div class="language-switcher">
+                <div class="language-switcher">
 
 
-                <button
-                    id="languageButton"
-                    aria-label="Select language"
-                    title="Select language">
+                    <button id="languageButton" aria-label="Select language" title="Select language">
 
-                    🌐 English
+                        🌐 English
+
+                    </button>
+
+
+                    <div id="languageMenu" class="language-menu">
+
+
+                        <button id="englishButton">
+
+                            🇺🇸 English
+
+                        </button>
+
+
+                        <button id="chineseButton">
+
+                            🇨🇳 中文
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- DARK MODE -->
+
+                <button id="darkModeButton" aria-label="Toggle dark mode" title="Toggle dark mode">
+
+                    🌙
 
                 </button>
 
 
-                <div
-                    id="languageMenu"
-                    class="language-menu">
+                <!-- MOBILE MENU -->
 
+                <button id="menuButton" aria-label="Open navigation menu">
 
-                    <button
-                        id="englishButton">
+                    ☰
 
-                        🇺🇸 English
+                </button>
 
-                    </button>
-
-
-                    <button
-                        id="chineseButton">
-
-                        🇨🇳 中文
-
-                    </button>
-
-
-                </div>
 
             </div>
 
+        </nav>
 
-            <!-- DARK MODE -->
-
-            <button
-                id="darkModeButton"
-                aria-label="Toggle dark mode"
-                title="Toggle dark mode">
-
-                🌙
-
-            </button>
-
-
-            <!-- MOBILE MENU -->
-
-            <button
-                id="menuButton"
-                aria-label="Open navigation menu">
-
-                ☰
-
-            </button>
-
-
-        </div>
-
-    </nav>
-
-</header>
+    </header>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      PAGE BANNER
      ========================================= -->
 
-<section class="page-banner">
+    <section class="page-banner">
 
 
-    <h1
-        data-en="Our Team"
-        data-zh="我们的团队">
+        <h1 data-en="Our Team" data-zh="我们的团队">
 
-        Our Team
+            Our Team
 
-    </h1>
+        </h1>
 
 
-    <p
-        data-en="Meet the people who help EverGreen grow"
-        data-zh="认识帮助常青俱乐部发展的成员">
+        <p data-en="Meet the people who help EverGreen grow" data-zh="认识帮助常青俱乐部发展的成员">
 
-        Meet the people who help EverGreen grow
+            Meet the people who help EverGreen grow
 
-    </p>
+        </p>
 
 
-</section>
+    </section>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      MEMBERS
      ========================================= -->
 
-<section class="members-section">
+    <section class="members-section">
 
-    <div class="members-intro">
+        <div class="members-intro">
 
-        <span
-            class="members-eyebrow"
-            data-en="EverGreen Community"
-            data-zh="常青社区">
-            EverGreen Community
-        </span>
+            <span class="members-eyebrow" data-en="EverGreen Community" data-zh="常青社区">
+                EverGreen Community
+            </span>
 
-        <h2
-            data-en="Leadership & Community"
-            data-zh="领导团队与社区">
-            Leadership & Community
-        </h2>
+            <h2 data-en="Leadership & Community" data-zh="领导团队与社区">
+                Leadership & Community
+            </h2>
 
-        <p
-            data-en="Meet the dedicated people who help guide EverGreen Club, organize activities, and build a welcoming community for everyone."
-            data-zh="认识帮助常青俱乐部发展、组织活动并为大家建设温馨社区的成员。">
-            Meet the dedicated people who help guide EverGreen Club,
-            organize activities, and build a welcoming community for everyone.
-        </p>
+            <p data-en="Meet the dedicated people who help guide EverGreen Club, organize activities, and build a welcoming community for everyone."
+                data-zh="认识帮助常青俱乐部发展、组织活动并为大家建设温馨社区的成员。">
+                Meet the dedicated people who help guide EverGreen Club,
+                organize activities, and build a welcoming community for everyone.
+            </p>
 
-    </div>
+        </div>
 
 
-    <!-- =====================================
+        <!-- =====================================
          BOARD & LEADERSHIP
          ===================================== -->
 
-    <div class="member-section-heading">
+        <div class="member-section-heading">
 
-        <span class="heading-accent"></span>
+            <span class="heading-accent"></span>
 
-        <div>
-            <h2
-                data-en="Board & Leadership"
-                data-zh="董事会与领导团队">
-                Board & Leadership
-            </h2>
+            <div>
+                <h2 data-en="Board & Leadership" data-zh="董事会与领导团队">
+                    Board & Leadership
+                </h2>
 
-            <p
-                data-en="Our current club leadership"
-                data-zh="我们的现任领导团队">
-                Our current club leadership
-            </p>
-        </div>
-
-    </div>
-
-
-    <div class="leadership-grid">
-
-        <!-- PRESIDENT -->
-
-        <div class="member-card">
-
-            <img
-                class="member-photo"
-                src="assets/images/members/president.jpeg"
-                alt="Bing Zhang, President"
-                loading="lazy">
-
-            <span
-                class="member-role"
-                data-en="President"
-                data-zh="会长">
-                President
-            </span>
-
-            <h3>Bing Zhang</h3>
-
-            <p
-                class="member-description"
-                data-en="Leading club activities and community programs while helping guide the EverGreen community."
-                data-zh="负责领导俱乐部活动和社区项目，并协助指导常青俱乐部社区。">
-                Leading club activities and community programs
-                while helping guide the EverGreen community.
-            </p>
+                <p data-en="Our current club leadership" data-zh="我们的现任领导团队">
+                    Our current club leadership
+                </p>
+            </div>
 
         </div>
 
 
-        <!-- VICE PRESIDENT -->
+        <div class="leadership-grid">
 
-        <div class="member-card">
+            <!-- PRESIDENT -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/president.jpeg" alt="Bing Zhang, President"
+                    loading="lazy">
+                <span class="member-role" data-en="President" data-zh="会长">
+                    President
+                </span>
+                <h3>Bing Zhang</h3>
+                <p class="member-description"
+                    data-en="Leading club activities and community programs while helping guide the EverGreen community."
+                    data-zh="负责领导俱乐部活动和社区项目，并协助指导常青俱乐部社区。">
+                    Leading club activities and community programs
+                    while helping guide the EverGreen community.
+                </p>
+            </div>
 
-            <img
-                class="member-photo"
-                src="assets/images/members/vice-president.jpeg"
-                alt="Chunying Zheng, Vice President"
-                loading="lazy">
+            <!-- VICE PRESIDENT -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/vice-president.jpeg"
+                    alt="Chunying Zheng, Vice President" loading="lazy">
+                <span class="member-role" data-en="Vice President" data-zh="副会长">
+                    Vice President
+                </span>
+                <h3>Chunying Zheng</h3>
+                <p class="member-description"
+                    data-en="Supporting members and organizing events that bring the community together."
+                    data-zh="支持会员并组织各种活动，让社区成员更加紧密地联系在一起。">
+                    Supporting members and organizing events
+                    that bring the community together.
+                </p>
+            </div>
 
-            <span
-                class="member-role"
-                data-en="Vice President"
-                data-zh="副会长">
-                Vice President
-            </span>
+            <!-- SECRETARY -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/secretary.jpeg" alt="Christy Malandra, Secretary"
+                    loading="lazy">
+                <span class="member-role" data-en="Secretary" data-zh="秘书">
+                    Secretary
+                </span>
+                <h3>Christy Malandra</h3>
+                <p class="member-description"
+                    data-en="Managing communications and coordination to ensure smooth information flow."
+                    data-zh="负责日常联络、信息传达与沟通协调，保障俱乐部内外信息畅通。">
+                    Managing communications, records,
+                    and important club information.
+                </p>
+            </div>
 
-            <h3>Chunying Zheng</h3>
+            <!-- DIRECTOR 1: Xiaoping Yu -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/yuxiaoping.jpeg"Xiaoping Yu, Director"
+                    loading="lazy">
+                <span class="member-role" data-en="Director" data-zh="理事">
+                    Director
+                </span>
+                <h3>Xiaoping Yu</h3>
+                <p class="member-description"
+                    data-en="Director — Assists daily activities."
+                    data-zh="理事 — 协助日常管理。">
+                    Director — Assists daily activities.
+                </p>
+            </div>
 
-            <p
-                class="member-description"
-                data-en="Supporting members and organizing events that bring the community together."
-                data-zh="支持会员并组织各种活动，让社区成员更加紧密地联系在一起。">
-                Supporting members and organizing events
-                that bring the community together.
-            </p>
+            <!-- TREASURER: Shuhua Pu -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/sophia.jpeg" alt="Sophia Pu, Treasurer"  loading="lazy">
+                <span class="member-role" data-en="Treasurer" data-zh="财务">
+                    Treasurer
+                </span>
+                <h3>Sophia Pu</h3>
+                <p class="member-description"
+                    data-en="Maintaining accurate financial records, including income, expenses, and donations."
+                    data-zh="维护准确且最新的财务记录，包括收入、支出、捐款和资助款项。">
+                    Responsible for maintaining accurate and up-to-date financial records,
+                    including income, expenses, donations and grants.
+                </p>
+            </div>
+
+            <!-- DIRECTOR 2: Yongxin Liu (Joy) -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/joy.jpeg" alt="Joy Liu, Director" loading="lazy">
+                <span class="member-role" data-en="Director" data-zh="理事">
+                    Director
+                </span>
+                <h3>Joy Liu</h3>
+                <p class="member-description"
+                    data-en="Organizing dance performances to keep members active and engaged."
+                    data-zh="负责舞蹈队的节目编排、排练与演出，让大家老有所艺，玩得开心，跳得高兴！">
+                    Planning, rehearsing, and coordinating dance performances,
+                    helping members stay active, enjoy the arts, and have fun together.
+                </p>
+            </div>
+
+            <!-- DIRECTOR 3: Zhonghui Lu -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/lulu.jpeg" alt="Lulu Lu, Director" loading="lazy"> 
+                <span class="member-role" data-en="Director" data-zh="理事">
+                    Director
+                </span>
+                <h3>Lulu Lu</h3>
+                <p class="member-description"
+                    data-en="Director — Assists daily activities."
+                    data-zh="理事 — 协助日常管理。">
+                    Director — Assists daily activities.
+                </p>
+            </div>
+
+            <!-- DIRECTOR 4: Ying Chen (Arts & Culture) -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/chenying.jpeg" alt="Ying Chen, Director"
+                    loading="lazy">
+                <span class="member-role" data-en="Arts & Culture Director" data-zh="文艺理事">
+                    Arts & Culture Director
+                </span>
+                <h3>Ying Chen</h3>
+                <p class="member-description"
+                    data-en="Arts & Culture Director — Manages dance rehearsals and audio equipment for events."
+                    data-zh="文艺理事 — 协助集体舞的排练，文艺活动的音响管理。">
+                    Arts & Culture Director — Assists with group dance rehearsals
+                    and manages audio equipment for cultural and artistic events.
+                </p>
+            </div>
 
         </div>
 
 
-        <!-- SECRETARY -->
+        <!-- =====================================
+         PAST PRESIDENTS
+         ===================================== -->
 
-        <div class="member-card">
+        <div class="member-section-heading">
 
-            <img
-                class="member-photo"
-                src="assets/images/members/secretary.jpeg"
-                alt="Christy Malandra, Secretary"
-                loading="lazy">
+            <span class="heading-accent"></span>
 
-            <span
-                class="member-role"
-                data-en="Secretary"
-                data-zh="秘书">
-                Secretary
-            </span>
+            <div>
+                <h2 data-en="Past Presidents" data-zh="前任社长">
+                    Past Presidents
+                </h2>
 
-            <h3>Christy Malandra</h3>
-
-            <p
-                class="member-description"
-                data-en="Managing communications, records, and important club information."
-                data-zh="负责管理沟通、记录以及重要的俱乐部信息。">
-                Managing communications, records,
-                and important club information.
-            </p>
+                <p data-en="Our former club leaders who continue to contribute to the community" data-zh="继续为社区贡献力量的前任领导">
+                    Our former club leaders who continue to contribute to the community
+                </p>
+            </div>
 
         </div>
 
-    </div>
+
+        <div class="past-presidents-grid">
+
+            <!-- PAST PRESIDENT: RT Wu -->
+            <div class="member-card">
+                <img class="member-photo" src="assets/images/members/past_president.jpeg" alt="RT Wu, Past President"
+                    loading="lazy">
+                <span class="member-role" data-en="Past President" data-zh="前任社长">
+                    Past President
+                </span>
+                <h3>RT Wu</h3>
+                <p class="member-description"
+                    data-en="Former President Wu and his wife lead Baduanjin qigong and line dance."
+                    data-zh="前任吴社长和夫人继续带领大家练八段锦气功和跳排舞。">
+                    Former President Wu and his wife continue to lead
+                    Baduanjin qigong and line dance activities.
+                </p>
+            </div>
+
+            <!-- Add more past presidents here as needed -->
+
+        </div>
 
 
-    <!-- =====================================
+        <!-- =====================================
          FUTURE BOARD MEMBERS
          Add new cards here later.
          The section stays invisible until enabled.
          ===================================== -->
 
-    <div class="future-board">
+        <div class="future-board">
 
-        <div class="member-section-heading">
+            <div class="member-section-heading">
 
-            <span class="heading-accent"></span>
+                <span class="heading-accent"></span>
 
-            <div>
-                <h2
-                    data-en="Board Members"
-                    data-zh="董事会成员">
-                    Board Members
-                </h2>
+                <div>
+                    <h2 data-en="Board Members" data-zh="董事会成员">
+                        Board Members
+                    </h2>
 
-                <p
-                    data-en="Additional EverGreen Club board members"
-                    data-zh="其他常青俱乐部董事会成员">
-                    Additional EverGreen Club board members
-                </p>
+                    <p data-en="Additional EverGreen Club board members" data-zh="其他常青俱乐部董事会成员">
+                        Additional EverGreen Club board members
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="leadership-grid">
+
+                <!-- COPY A MEMBER CARD HERE FOR EACH NEW BOARD MEMBER -->
+
             </div>
 
         </div>
 
-        <div class="leadership-grid">
 
-            <!-- COPY A MEMBER CARD HERE FOR EACH NEW BOARD MEMBER -->
-
-        </div>
-
-    </div>
-
-
-    <!-- =====================================
+        <!-- =====================================
          MEMBERS DIRECTORY
          Ready for future members.
          Cards are hidden until information is added.
          ===================================== -->
 
-    <div class="members-directory">
+        <div class="members-directory">
 
-        <div class="member-section-heading">
+            <div class="member-section-heading">
 
-            <span class="heading-accent"></span>
+                <span class="heading-accent"></span>
 
-            <div>
-                <h2
-                    data-en="Our Members"
-                    data-zh="我们的会员">
-                    Our Members
-                </h2>
+                <div>
+                    <h2 data-en="Our Members" data-zh="我们的会员">
+                        Our Members
+                    </h2>
 
-                <p
-                    data-en="The people who make EverGreen a welcoming community"
-                    data-zh="让常青社区更加温暖的每一位会员">
-                    The people who make EverGreen a welcoming community
-                </p>
+                    <p data-en="The people who make EverGreen a welcoming community" data-zh="让常青社区更加温暖的每一位会员">
+                        The people who make EverGreen a welcoming community
+                    </p>
+                </div>
+
             </div>
 
-        </div>
 
+            <div class="member-directory-grid">
 
-        <div class="member-directory-grid">
-
-            <!-- =================================
+                <!-- =================================
                  FUTURE MEMBER CARD TEMPLATE
                  Copy this card and change the
                  photo, name, and language text.
                  ================================= -->
 
-            <div class="directory-card">
+                <div class="directory-card">
 
-                <img
-                    class="directory-photo"
-                    src="assets/images/members/member-01.jpeg"
-                    alt="EverGreen Club Member"
-                    loading="lazy">
+                    <img class="directory-photo" src="assets/images/members/member-01.jpeg" alt="EverGreen Club Member"
+                        loading="lazy">
 
-                <h3
-                    data-en="Member Name"
-                    data-zh="会员姓名">
-                    Member Name
-                </h3>
+                    <h3 data-en="Member Name" data-zh="会员姓名">
+                        Member Name
+                    </h3>
+
+                </div>
+
+                <!-- Add additional member cards here -->
 
             </div>
 
-            <!-- Add additional member cards here -->
-
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================
+    <!-- =========================================
      JOIN SECTION
      ========================================= -->
 
-<section class="mission">
+    <section class="mission">
 
 
-    <h2
-        data-en="Want to Get Involved?"
-        data-zh="想参与进来吗？">
+        <h2 data-en="Want to Get Involved?" data-zh="想参与进来吗？">
 
-        Want to Get Involved?
+            Want to Get Involved?
 
-    </h2>
+        </h2>
 
 
-    <p
-        data-en="EverGreen is always looking for members who want to participate, volunteer, and help make our community stronger."
-        data-zh="常青俱乐部欢迎愿意参与活动、参加志愿服务并帮助社区变得更加美好的会员。">
+        <p data-en="EverGreen is always looking for members who want to participate, volunteer, and help make our community stronger."
+            data-zh="常青俱乐部欢迎愿意参与活动、参加志愿服务并帮助社区变得更加美好的会员。">
 
-        EverGreen is always looking for members
-        who want to participate, volunteer,
-        and help make our community stronger.
+            EverGreen is always looking for members
+            who want to participate, volunteer,
+            and help make our community stronger.
 
-    </p>
-
-
-    <a
-        class="btn primary"
-        href="contact.html"
-        data-en="Contact Us"
-        data-zh="联系我们">
-
-        Contact Us
-
-    </a>
+        </p>
 
 
-</section>
+        <a class="btn primary" href="contact.html" data-en="Contact Us" data-zh="联系我们">
+
+            Contact Us
+
+        </a>
+
+
+    </section>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      FOOTER
      ========================================= -->
 
-<footer>
+    <footer>
 
 
-    <img
-        src="assets/images/logo.png"
-        width="180"
-        alt="Central Florida EverGreen Seniors Club Logo">
+        <img src="assets/images/logo.png" width="180" alt="Central Florida EverGreen Seniors Club Logo">
 
 
-    <p
-        data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang."
-        data-zh="© 2026 中佛州长青社。版权所有。">
+        <p data-en="© 2026 Central Florida EverGreen Seniors Club. Site by Yumei Wang." data-zh="© 2026 中佛州长青社。版权所有。">
 
-        © 2026 Central Florida EverGreen Seniors Club.
-        All Rights Reserved.
+            © 2026 Central Florida EverGreen Seniors Club.
+            All Rights Reserved.
 
-    </p>
+        </p>
 
 
-</footer>
+    </footer>
 
 
 
-<!-- =========================================
+    <!-- =========================================
      JAVASCRIPT
      ========================================= -->
 
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
-<script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/darkmode.js"></script>
 
-<script src="assets/js/language.js"></script>
+    <script src="assets/js/language.js"></script>
 
 
 </body>
